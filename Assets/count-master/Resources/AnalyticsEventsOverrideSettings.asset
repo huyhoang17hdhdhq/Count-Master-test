@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1162242913, guid: bab928c8f714ee077329651941191d5c, type: 3}
+  m_Name: AnalyticsEventsOverrideSettings
+  m_EditorClassIdentifier:
+  ModulesToOverride: 6
+  _overridableModulesData:
+  - AnalyticsModule: 2
+    GameEventsOverride:
+    - 5
+    - 10
+    - 15
+    - 20
+    - 25
+    - 30
+    - 35
+    - 40
+    - 45
+    - 50
+    - 75
+    - 100
+    RewardedEventsOverride:
+    - 5
+    - 10
+    - 15
+    - 20
+    - 25
+    - 30
+    InterstitialEventsOverride:
+    - 5
+    - 10
+    - 15
+    - 20
+    - 25
+    - 30
+    - 35
+  - AnalyticsModule: 4
+    GameEventsOverride:
+    - 5
+    - 10
+    - 15
+    - 20
+    - 25
+    - 30
+    - 35
+    - 40
+    - 45
+    - 50
+    RewardedEventsOverride:
+    - 5
+    - 10
+    - 15
+    - 20
+    - 25
+    - 30
+    InterstitialEventsOverride:
+    - 5
+    - 10
+    - 15
+    - 20
+    - 25
+    - 30
+    - 35

@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1970841269, guid: 8a9a187bf49b1827eb89879d14fc8507, type: 3}
+  m_Name: FreeplaySDKSettings
+  m_EditorClassIdentifier:
+  AppIconTexture: {fileID: 2800000, guid: 1cc118085454b03499e89a42b6595eaa, type: 3}
+  _coreSettings:
+    _isPrivacyPolicyEnabled: 1
+    _isAttEnabled: 1
+    _isAnalyticsEnabled: 1
+    _isAdvertisingEnabled: 1
+    _useInAppWebPresenter: 1
+    _isInAppPurchaseEnabled: 1
+    _isDebugEnabled: 1
+  _privacyPolicySettings:
+    _privacyPolicyPrefab: {fileID: 1335349675940327, guid: 78e457a53f0a32c43a234296619b109e, type: 2}
+    _iosPrivacyPolicyLink: https://freeplay.io/games/ios/privacy-policy/
+    _iosTermsLink: https://freeplay.io/games/ios/terms-of-use/
+    _androidPrivacyPolicyLink: https://freeplay.io/games/android/privacy-policy/
+    _androidTermsLink: https://freeplay.io/games/android/terms-of-use/
+    _useAdMobConsentForn: 1
+  _loggingSettings:
+    _editorLogLevel: 0
+    _debugBuildLogLevel: 0
+    _releaseBuildLogLevel: 1
+    _isIosDebugBuildLogsInConsoleEnabled: 1
+  _analyticsSettings:
+    _useLegacyEventSystem: 1
+    _isFacebookEnabled: 1
+    _isGameAnalyticsEnabled: 1
+    _isAppMetricaEnabled: 1
+    _isAppsFlyerEnabled: 1
+    _isFirebaseEnabled: 1
+    _isFlyAnalyticsEnabled: 1
+  _facebookSDKSettings:
+    _appName:
+    _appId: 365408771198586
+    _clientToken: 3ecb109004445d86d687880cd86d71c4
+  _gameAnalyticsSettings:
+    _iosGameAnalyticsGameKey: 3b6713904dccb9778381bb841ac70176
+    _iosGameAnalyticsSecretKey: 5803d673e48df071184e66f6e9902d4543cb5052
+    _androidGameAnalyticsGameKey: 9d6b00569e6fdb458da3cb9ed85c4500
+    _androidGameAnalyticsSecretKey: 56d717144ef8caf8975b2095aff9a66b71080f57
+  _appMetricaSettings:
+    _appMetricaApiKey: 2a7fd5eb-3e1d-4ae2-b140-1bba73bac38f
+  _firebaseSettings:
+    _activeModules: 7
+  _appsFlyerSettings:
+    _appsFlyerDevKey: DYMqNdeZNN32g4VHMPJsVD
+    _appsFlyerAndroidDevKey: DYMqNdeZNN32g4VHMPJsVD
+    _iosAppId: 1568245971
+  _flyAnalyticsSettings:
+    _iosApiKey: 76f6a00e-fb0e-fcca-14d5-08ce2a6fa8bb
+    _androidApiKey: 6659704e-14d2-77a9-6efb-b3874ff00dcc
+    _iosServerName: EU1
+    _adnroidServerName: EU1
+  _advertisingSettings:
+    _isAdAutoLoadingEnabled: 1
+    _isEditorAdsEnabled: 0
+    _isIronSourceEnabled: 0
+    _isAppLovinEnabled: 1
+    _isCrossPromoEnabled: 1
+    _supportedAdModules: 7
+    _loadingAdTypes: 7
+    _timeBeforeLoadMediationBannerAfterCrossPromoShow: 1
+  _ironSourceSettings:
+    _ironSourceIosAppKey: f8fe7d79
+    _ironSourceAndroidAppKey: f6307921
+    _bannerPosition: 2
+    _bannerSize: 3
+  _appLovinSdkSettings:
+    _sdkKey: XvUoRCu37HlTVMHJ_v5gSakPO8GNwR3tE7T1q5QfTMPv0lFwQheac-WFP24LLkfIeOrXQfKWc0UUOqhXrJFWdh
+    _adModulesSettings:
+    - _adType: 4
+      _androidModuleId: 2dbaff1541472690
+      _iosModuleIds:
+      - 08c9260607083051
+    - _adType: 2
+      _androidModuleId: e8c52425acecf5e6
+      _iosModuleIds:
+      - 8386646b419cd30a
+      - 754f1d8113bfcc5f
+      - 11fa74f86f4d66cd
+    - _adType: 1
+      _androidModuleId: ec7032fa6977dd4f
+      _iosModuleIds:
+      - 01e628ec2eddb18d
+    _appLovinBannerPosition: 7
+    _bannerBackgroundColor: {r: 0, g: 0, b: 0, a: 0}
+  _crossPromoSettings:
+    _supportedAdModules: 4
+    _localCreativesJson: {fileID: 4900000, guid: 8b618ca0e5c4f004cac0002f088dead8, type: 3}
+    _appId:
+    _secretKey:
+    _bannerSettings:
+      _sizeType: 4
+      _position: 1
+      _customBannerSize: {x: 0, y: 0}
+      _useNotchArea: 1
+      _useHomeButtonArea: 1
+      refreshTime: 60
+    _inGameAdsSettings: {}
+  _adMobSettings:
+    _adMobIosAppID: ca-app-pub-8236392776689719~3837591824
+    _aDMobAndroidAppId: ca-app-pub-8236392776689719~5420803671
+  _amazonSettings:
+    _appId:
+      _ios: 1aa5ee0f-af26-464e-9ff2-90a5512b3177
+      _android: 1da93ec2-8e5b-48d2-bceb-3418f2a9d22a
+    _bannerSlotId:
+      _ios: 47ed4ce9-696b-4803-8788-b733e1591b81
+      _android: ddf65daa-d76c-4e25-86e4-c96ea3790865
+    _rewardSlotId:
+      _ios: ef0ce78f-3a1b-4695-8d00-b24a0c0b5161
+      _android: f47761b3-9f11-4ed7-8980-580aace399d3
+    _interVideoSlotId:
+      _ios: 0ded492e-3ca9-4c27-b343-4abd6c9482b1
+      _android: 3428c29f-e792-4125-8709-2f28c40d040e
+    _interStaticSlotId:
+      _ios: 7bb738fe-7859-4cf1-bd43-7860c85c2712
+      _android: 972ba1e6-3d12-49db-859c-8122ef17a1be

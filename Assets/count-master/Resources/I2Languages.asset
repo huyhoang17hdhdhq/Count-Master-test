@@ -1,0 +1,2224 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3def4f9b9791e4ac309c3241680dc3ee, type: 3}
+  m_Name: I2Languages
+  m_EditorClassIdentifier:
+  mSource:
+    UserAgreesToHaveItOnTheScene: 0
+    UserAgreesToHaveItInsideThePluginsFolder: 0
+    GoogleLiveSyncIsUptoDate: 1
+    mTerms:
+    - Term: FONT_TMP
+      TermType: 9
+      Languages:
+      - 
+      - 8 Russian/OpenSans-RU-Bold SDF
+      - 
+      - 1 Hindi/Poppins-Regular SDF
+      - 
+      - 
+      - 
+      - 
+      - 2 Vietnamese/OpenSans-Regular SDF
+      - 3 Thai/Prompt-Regular SDF
+      - 4 Korean/NotoSansKR-Regular SDF
+      - 
+      - 6 Chinese Simplified/NotoSansSC-Regular SDF
+      - 5 Chinese Traditional/NotoSansTC-Regular SDF
+      - 
+      - 7 Japanese/NotoSansJP-Regular SDF
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: LEVEL
+      TermType: 0
+      Languages:
+      - LEVEL {0}
+      - УРОВЕНЬ {0}
+      - NÍVEL {0}
+      - लेवल {0}
+      - NIVEL {0}
+      - TINGKAT {0}
+      - NIVEAU {0}
+      - LEVEL {0}
+      - CẤP {0}
+      - ระดับ {0}
+      - 레벨 {0}
+      - SEVİYE {0}
+      - 第{0}级
+      - 第{0}關
+      - LIVELLO {0}
+      - レベル {0}
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_INCOME
+      TermType: 0
+      Languages:
+      - Income
+      - Доход
+      - GANHOS
+      - आय
+      - SALDO
+      - PENDAPATAN
+      - REVENU
+      - EINKOMMEN
+      - THU NHẬP
+      - แต้ม
+      - 소득
+      - GELİR
+      - 收入
+      - 收入
+      - GUADAGNO
+      - 収入
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_UNITS
+      TermType: 0
+      Languages:
+      - Start Units
+      - Отряд
+      - Unidades de partida
+      - शुरुआती यूनिट
+      - Unidades de inicio
+      - Mulai Unit
+      - Unités de départ
+      - Start-Einheiten
+      - Quân số khởi đầu
+      - จำนวนเริ่มต้น
+      - 시작 유닛
+      - Başlangıç Birimler
+      - 起始人数
+      - 先鋒小隊
+      - Unità iniziali
+      - スタートユニット
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_SKINS
+      TermType: 0
+      Languages:
+      - SKINS
+      - СКИНЫ
+      - SKINS
+      - स्किन्‍स
+      - PIELES
+      - KULIT
+      - SKINS
+      - SKINS
+      - TRANG PHỤC
+      - ผิว
+      - 외모
+      - GÖRÜNÜMLER
+      - 皮肤
+      - 皮膚
+      - PELLE
+      - スキン
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_COLOR
+      TermType: 0
+      Languages:
+      - COLOR
+      - ЦВЕТ
+      - COR
+      - रंग
+      - COLOR
+      - WARNAI
+      - COULEUR
+      - FARBE
+      - MÀU SẮC
+      - สี
+      - 색깔
+      - RENK
+      - 颜色
+      - 顏色
+      - COLORE
+      - 色
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: TUTOR
+      TermType: 0
+      Languages:
+      - HOLD & MOVE
+      - ЗАЖМИ И ПЕРЕДВИГАЙ
+      - SEGURAR E MOVER
+      - पकड़ें और मूव करें
+      - SUJETAR Y MOVER
+      - TAHAN & PINDAHKAN
+      - MAINTENEZ ET DÉPLACEZ
+      - HALTEN & BEWEGEN
+      - GIỮ & DI CHUYỂN
+      - แตะค้างไว้แล้วลาก
+      - 누르고 움직이
+      - TUT VE GÖTÜR
+      - 按住并移动
+      - 按住並移動
+      - TIENI PREMUTO E SPOSTA
+      - ホールドで移動
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: LEVEL_FAILED
+      TermType: 0
+      Languages:
+      - LEVEL FAILED
+      - ПОРАЖЕНИЕ
+      - VOCÊ PERDEU
+      - आप हार गए
+      - HAS PERDIDO
+      - KAMU KALAH
+      - VOUS PERDEZ
+      - DU VERLIERST
+      - BẠN ĐÃ THUA
+      - คุณแพ้
+      - 패배
+      - KAYBETTİNİZ
+      - 你输了
+      - 你輸了
+      - HAI PERSO
+      - あなたの負け
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: LEVEL_FAILED_BOSS_1
+      TermType: 0
+      Languages:
+      - ALMOST
+      - ПОБЕДА
+      - ESTEVE
+      - लगभग
+      - CASI
+      - HAMPIR
+      - PRESQUE
+      - FAST
+      - CHÚT XÍU NỮA
+      - เกือบ
+      - 거의
+      - NEREDEYSE
+      - 离成功仅
+      - 就快
+      - CI SEI QUASI
+      - あと
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: LEVEL_FAILED_BOSS_2
+      TermType: 0
+      Languages:
+      - SUCCEEDED
+      - БЫЛА БЛИЗКА
+      - QUASE
+      - सफल हुए
+      - LO LOGRAS
+      - BERHASIL
+      - RÉUSSI
+      - ERFOLGREICH
+      - LÀ THÀNH CÔNG
+      - สำเร็จ
+      - 성공
+      - BAŞARIYORDUN
+      - 一步之遥
+      - 成功了
+      - RIUSCITO
+      - 一歩
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: YOU_EARNED
+      TermType: 0
+      Languages:
+      - 'YOU EARNED:'
+      - 'ЗАРАБОТАНО:'
+      - 'VOCÊ GANHOU:'
+      - 'आपने कमाए:'
+      - 'HAS GANADO:'
+      - 'PENGHASILANMU:'
+      - 'VOUS AVEZ GAGNÉ :'
+      - 'DU HAST VERDIENT:'
+      - 'BẠN ĐÃ KIẾM ĐƯỢC:'
+      - 'เงินได้:'
+      - '획득:'
+      - 'KAZANCINIZ:'
+      - '您获得了:'
+      - '您獲得了:'
+      - 'HAI GUADAGNATO:'
+      - '獲得しました:'
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_TRY_AGAIN
+      TermType: 0
+      Languages:
+      - TRY AGAIN
+      - ПОВТОРИТЬ
+      - TENTAR DE NOVO
+      - पुनः प्रयास करें
+      - INTENTARLO DE NUEVO
+      - COBA LAGI
+      - RÉESSAYER
+      - ERNEUT VERSUCHEN
+      - THỬ LẠI
+      - ลองอีกครั้ง
+      - 다시 시도하십시오
+      - TEKRAR DENE
+      - 再试
+      - 再試
+      - RIPROVA
+      - やり直す
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_NEXT_LEVEL
+      TermType: 0
+      Languages:
+      - NEXT LEVEL
+      - СЛЕДУЮЩИЙ УРОВЕНЬ
+      - PRÓXIMO NÍVEL
+      - अगला स्तर
+      - SIGUIENTE NIVEL
+      - LEVEL SELANJUTNYA
+      - NIVEAU SUIVANT
+      - NÄCHSTES LEVEL
+      - MÀN CHƠI TIẾP THEO
+      - เลเวลถัดไป
+      - 다음레벨
+      - SONRAKİ SEVİYE
+      - 下一关卡
+      - 下一關
+      - LIVELLO SUCCESSIVO
+      - 次のレベル
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: LEVEL_COMPLETED
+      TermType: 0
+      Languages:
+      - LEVEL COMPLETED
+      - УРОВЕНЬ ПРОЙДЕН
+      - NÍVEL CONCLUÍDO
+      - स्तर पूरा हुआ
+      - NIVEL COMPLETADO
+      - LEVEL SELESAI
+      - NIVEAU TERMINÉ
+      - LEVEL ABGESCHLOSSEN
+      - MÀN CHƠI HOÀN TẤT
+      - จบเลเวล
+      - 레벨 완료
+      - SEVİYE TAMAMLANDI
+      - 关卡已完成
+      - 已完成此關
+      - LIVELLO COMPLETATO
+      - レベルクリア
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: STORE
+      TermType: 0
+      Languages:
+      - STORE
+      - МАГАЗИН
+      - LOJA
+      - स्टोर
+      - TIENDA
+      - TOKO
+      - MAGASIN
+      - SHOP
+      - CỬA HÀNG
+      - ร้านค้า
+      - 스토어
+      - MAĞAZA
+      - 商店
+      - 商店
+      - STORE
+      - ストア
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_OPEN
+      TermType: 0
+      Languages:
+      - OPEN
+      - ОТКРЫТЬ
+      - ABRIR
+      - खोलें
+      - ABRIR
+      - BUKA
+      - OUVRIR
+      - ÖFFNEN
+      - MỞ
+      - เปิด
+      - 열기
+      - AÇ
+      - 打开
+      - 開啟
+      - APRI
+      - 開く
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BEST_REWARD
+      TermType: 0
+      Languages:
+      - BEST REWARD
+      - ЛУЧШАЯ НАГРАДА
+      - MELHOR RECOMPENSA
+      - सबसे अच्‍छा रिवार्ड
+      - MEJOR RECOMPENSA
+      - HADIAH TERBAIK
+      - MEILLEURE RÉCOMPENSE
+      - BESTE BELOHNUNG
+      - PHẦN THƯỞNG TỐT
+      - รางวัลที่ดีที่สุด
+      - 최고 리워드
+      - EN İYİ ÖDÜL
+      - 最佳奖励
+      - 最佳獎勵
+      - MIGLIOR RICOMPENSA
+      - ベスト賞
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: NEW_SKIN
+      TermType: 0
+      Languages:
+      - NEW SKIN
+      - НОВЫЙ СКИН
+      - NOVA SKIN
+      - नयी स्किन
+      - NUEVA PIEL
+      - KULIT BARU
+      - NOUVEAU SKIN
+      - NEUER SKIN
+      - TRANG PHỤC MỚI
+      - ผิวใหม่
+      - 새로운 외모
+      - YENİ DIŞ GÖRÜNÜM
+      - 新皮肤
+      - 新皮膚
+      - NUOVA PELLE
+      - 新しいスキン
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_GET_IT
+      TermType: 0
+      Languages:
+      - GET IT
+      - ПОЛУЧИТЬ
+      - OBTENHA-A
+      - उसे लें
+      - 'CONSÍGUELO '
+      - DAPATKAN
+      - OBTENIR
+      - HOL IHN DIR
+      - NHẬN NGAY
+      - รับมัน
+      - 갖기
+      - AL
+      - 领取
+      - 取得
+      - PRENDILA
+      - 入手
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_LOSE_IT
+      TermType: 0
+      Languages:
+      - LOSE IT
+      - ПОТЕРЯТЬ
+      - IGNORAR
+      - छोड़ें
+      - SALTAR
+      - LEWATI
+      - IGNORER
+      - ÜBERSPRINGEN
+      - BỎ QUA
+      - 'ข้าม '
+      - 넘어가기
+      - ATLA
+      - 跳过
+      - 跳過
+      - SALTA
+      - スキップ
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BONUS_GATE
+      TermType: 0
+      Languages:
+      - BONUS
+      - БОНУС
+      - BÓNUS
+      - बोनस
+      - BONIFICACIÓN
+      - BONUS
+      - BONUS
+      - BONUS
+      - PHẦN THƯỞNG TỐT
+      - โบนัส
+      - 보너스
+      - BONUS
+      - 额外奖励
+      - 獎勵
+      - BONUS
+      - ボーナス
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: TAP_TO_CHOICE
+      TermType: 0
+      Languages:
+      - TAP TO CHOOSE
+      - ВЫБЕРИ БОНУС
+      - 'TOQUE PARA ESCOLHER  '
+      - चुनने के लिए टैप करें
+      - TOCA PARA ELEGIR
+      - KETUK UNTUK MEMILIH
+      - APPUYEZ POUR CHOISIR
+      - ZUM AUSWÄHLEN TIPPEN
+      - CHẠM ĐỂ CHỌN
+      - แตะเพื่อเลือก
+      - 선택하려면 탭하세요
+      - SEÇMEK İÇİN DOKUN
+      - 点击以选择
+      - '點按選擇 '
+      - TOCCA PER SCEGLIERE
+      - タップして選択
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_RATE_US
+      TermType: 0
+      Languages:
+      - OK
+      - ОК
+      - OK
+      - ठीक है
+      - BIEN
+      - OKE
+      - OK
+      - OK
+      - OK
+      - ตกลง
+      - 확인
+      - TAMAM
+      - 好
+      - 好
+      - OK
+      - OK
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: RATE_US_HEADING
+      TermType: 0
+      Languages:
+      - Enjoying Count Masters?
+      - Нравится Count Masters?
+      - Gostando do Count Masters?
+      - Count Masters का आनंद लें?
+      - ¿Te gusta Count Masters?
+      - Suka Count Masters?
+      - Tu aimes Count Masters ?
+      - Genießt du Count Masters?
+      - "Bạn có thích\nCount Masters không?"
+      - "สนุกกับการ\nCount Masters หรือไม่?"
+      - "Count Masters가\n마음에 드세요?"
+      - "Count Masters\nHoşuna gidiyor mu?"
+      - 喜欢Count Masters吗？
+      - 喜歡Count Masters嗎？
+      - Ti piace Count Masters?
+      - "Count Mastersを\nお楽しみいただいていますか？"
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_CONTINUE
+      TermType: 0
+      Languages:
+      - CONTINUE
+      - ПРОДОЛЖИТЬ
+      - CONTINUAR
+      - जारी रखें
+      - CONTINUAR
+      - LANJUTKAN
+      - CONTINUER
+      - WEITER
+      - TIẾP TỤC
+      - ทำต่อ
+      - 계속
+      - DEVAM
+      - 继续
+      - 繼續
+      - CONTINUA
+      - 続行
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PUSH_TITLE_1
+      TermType: 0
+      Languages:
+      - 'Hey, come back  🙏🏻 '
+      - Эй, вернись! 🙏🏻
+      - Olá, não quer voltar? 🙏🏻
+      - अरे, वापस आइए 🙏🏻
+      - Ey, regresa 🙏🏻
+      - Hei, kembalilah 🙏🏻
+      - Hé, revenez 🙏🏻
+      - Hey, komm zurück 🙏🏻
+      - Bạn ơi, chơi tiếp nhé 🙏🏻
+      - เฮ้ กลับมาก่อน 🙏🏻
+      - 친구, 돌아오게나! 🙏🏻
+      - Hey, geri dön 🙏🏻
+      - 嘿，快回来🙏🏻
+      - 嘿，回來吧🙏🏻
+      - Ehi, torna indietro 🙏🏻
+      - ねえ、戻ってきてください🙏🏻
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PUSH_BODY_1
+      TermType: 0
+      Languages:
+      - Your stickman warriors are waiting for you!
+      - Твои воины ждут тебя!
+      - Os seus guerreiros-pauzinho estão à espera!
+      - आपके स्टिकमैन योद्धा आपका इंतजार कर रहे हैं!
+      - ¡Tus guerreros de figuritas te están esperando!
+      - Prajurit stickman kamu sedang menunggumu!
+      - Vos guerriers stickman vous attendent !
+      - Deine Strichmännchen-Krieger warten auf dich!
+      - Các chiến binh người que đang chờ bạn!
+      - นักรบสติ๊กแมนของคุณกำลังรอคุณอยู่!
+      - 너의 스틱맨전사들이 널 기다리고있어!
+      - Çöp adam savaşçıların seni bekliyor!
+      - 你的火柴人战士正等着你呢！
+      - 你的火柴人戰士正等著你呢！
+      - I tuoi guerrieri stickman ti stanno aspettando!
+      - 棒人間の戦士たちがあなたを待っていますよ！
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PUSH_TITLE_2
+      TermType: 0
+      Languages:
+      - Hey, hey, hey 👋
+      - Эй, эй, эй 👋
+      - Olá, olá, olá! 👋
+      - हे, हे, हे 👋
+      - Eh, eh, eh 👋
+      - Hei, hei, hei 👋
+      - Hé, hé, hé 👋
+      - Hey, hey, hey 👋
+      - Này bạn hỡi 👋
+      - เฮ้ เฮ้ เฮ้ 👋
+      - 헤이,헤이,헤이 👋
+      - Hey, hey, hey 👋
+      - 嘿嘿嘿👋
+      - 嘿嘿嘿👋
+      - Hey Hey Hey 👋
+      - ねえ、ねえ、ねえ👋
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PUSH_BODY_2
+      TermType: 0
+      Languages:
+      - It’s time to come back to the game! Your loyal gang needs you 😎
+      - Самое время вернуться в игру! Твоя верная команда ждет тебя 😎
+      - Está na hora de retomar o jogo! A sua fiel quadrilha precisa de si 😎
+      - खेल में वापस आने का समय आ गया है! आपके वफादार गिरोह को आपकी जरूरत है 😎
+      - ¡Es hora de volver al juego! Tu pandilla leal te necesita 😎
+      - Saatnya kembali bermain lagi! Geng setiamu sedang membutuhkanmu 😎
+      - Il est temps de revenir jouer ! Votre gang loyal a besoin de vous 😎
+      - Es ist Zeit, zum Spiel zurückzukehren! Deine treue Truppe braucht dich 😎
+      - Đến lúc chơi tiếp rồi! Các chiến binh trung thành cần bạn chỉ huy 😎
+      - ได้เวลากลับมาเล่นเกมแล้ว! แก๊งที่จงรักภักดีต่อคุณต้องการคุณ 😎
+      - 너의 충성스러운 조직멤버들이 널 필요로해 게임으로 돌아가야돼! 😎
+      - Şimdi oyuna dönme vakti! Sadık ekibinin sana ihtiyacı var 😎
+      - 是时候回来玩游戏了！你忠诚的部队需要你😎
+      - 是時候回到遊戲裡了！你那忠心的朋友需要你😎
+      - È ora di tornare al gioco! La tua leale banda ha bisogno di te 😎
+      - ゲームに復帰する時です！あなたの忠実なギャングたちが、あなたを必要としています😎
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PUSH_TITLE_3
+      TermType: 0
+      Languages:
+      - Feel bored?
+      - Тебе скучно?
+      - Está aborrecido?
+      - क्या आप बोर हो रहे हैं?
+      - ¿Te sientes aburrido?
+      - Bosan?
+      - Vous vous ennuyez ?
+      - Ist dir langweilig?
+      - Bạn đang chán ư?
+      - รู้สึกเบื่อหรือ
+      - 지루하다고?
+      - Canın mı sıkılıyor?
+      - 觉得无聊？
+      - 覺得無聊？
+      - Ti senti annoiato?
+      - 退屈してますか？
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PUSH_BODY_3
+      TermType: 0
+      Languages:
+      - Dive into the world of crazy stickman battles  🎮   It's such fun 👍
+      - Погрузись в мир безумных сражений 🎮 Это же так весело 👍
+      - Mergulhe no mundo louco das batalhas de pauzinhos 🎮 É tão divertido 👍
+      - पागल स्टिकमैन लड़ाइयों की दुनिया को आजमाएं 🎮यह बहुत मजेदार है 👍
+      - Sumérgete en el mundo de las locas batallas de figuritas. 🎮Es tan divertido 👍
+      - Masuk ke dunia pertempuran stickman gila-gilaan 🎮 Sangat menyenangkan 👍
+      - Plongez dans le monde des folles batailles de stickman 🎮C'est tellement amusant 👍
+      - Tauch ein in die Welt der verrückten Strichmännchen-Kämpfe 🎮Es macht so viel Spaß 👍
+      - Hãy xông pha vào những trận chiến hoành tráng của thế giới người que 🎮 Hay tuyệt là hay đấy 👍
+      - โดดเข้าสู่โลกแห่งการต่อสู้ของสติ๊กแมนที่บ้าคลั่งสิ 🎮สนุกนะ 👍
+      - 스틱맨 전투의 세상으로 널 인도할게 🎮엄청 재밌어 👍
+      - Çılgın çöp adam savaşları dünyasının içine dal 🎮Bu çok eğlenceli 👍
+      - 那就来沉浸到疯狂的火柴人战斗世界吧 🎮真有趣👍
+      - 來深入瘋狂火柴人的戰鬥世界吧 🎮超好玩的👍
+      - Tuffati nel mondo delle folli battaglie stickman 🎮È davvero divertente 👍
+      - クレイジーな棒人間の戦いの世界に飛び込みましょう 🎮本当に楽しいです👍
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PUSH_TITLE_4
+      TermType: 0
+      Languages:
+      - Come and win! 🏆
+      - Заходи и побеждай! 🏆
+      - Venha e ganhe! 🏆
+      - आइए और जीतिए! 🏆
+      - Ven y gana 🏆
+      - Mainkan dan menangkan! 🏆
+      - Venez gagner ! 🏆
+      - Komm und gewinne! 🏆
+      - Hãy tham gia và giành chiến thắng! 🏆
+      - มาปราบให้เรียบ! 🏆
+      - 여기 와서 마음껏 이겨 🏆
+      - Gel ve kazan! 🏆
+      - 快来赢！🏆
+      - 來玩並得勝吧！🏆
+      - Vieni e vinci! 🏆
+      - ぜひプレイして勝ちましょう！🏆
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PUSH_BODY_4
+      TermType: 0
+      Languages:
+      - Don’t let your crowd down! 🤞🥷
+      - Не подведи свою команду! 🤞🥷
+      - Não desiluda a sua tribo! 🤞🥷
+      - अपने लोगों को निराश मत कीजिए! 🤞🥷
+      - No defraudes a la multitud 🤞🥷
+      - Jangan biarkan kelompokmu kalah! 🤞🥷
+      - Ne laissez pas tomber votre groupe ! 🤞🥷
+      - Lass deine Leute nicht hängen! 🤞🥷
+      - Đừng để băng nhóm của bạn thất vọng! 🤞🥷
+      - อย่าปล่อยให้คนของคุณผิดหวัง! 🤞🥷
+      - 네 스틱맨들의 기대를 저버리지마! 🤞🥷
+      - Arkadaşlarını yüzüstü bırakma! 🤞🥷
+      - 不要让你的部队失望！🤞🥷
+      - 別讓你的夥伴失望！🤞🥷
+      - Non deludere la tua platea! 🤞🥷
+      - 群衆をがっかりさせないでください！🤞🥷
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PUSH_TITLE_5
+      TermType: 0
+      Languages:
+      - Feel the taste of 🏆 victory 🏆
+      - Почувствую вкус 🏆победы 🏆
+      - Prove o sabor da 🏆vitória 🏆
+      - '🏆जीत🏆का स्वाद महसूस करें '
+      - Siente el sabor de la 🏆victoria 🏆
+      - Nikmatilah 🏆kemenangan 🏆
+      - Sentez le goût de la 🏆victoire 🏆
+      - Spüre den Geschmack des 🏆Sieges 🏆
+      - Hãy cảm nhận hương vị của 🏆 chiến thắng 🏆
+      - สัมผัสรสชาติแห่ง 🏆ชัยชนะ 🏆
+      - 🏆승리의 달콤함을 만끽해봐 🏆
+      - 🏆Zaferin tadını hisset 🏆
+      - 🏆感受胜利的滋味🏆
+      - 🏆 品嘗勝利 的滋味🏆
+      - Senti il sapore della 🏆 vittoria 🏆
+      - 🏆勝利の味を感じましょう🏆
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PUSH_BODY_5
+      TermType: 0
+      Languages:
+      - 'Get back and win the main clash of your life 🔥⚔️🔥 '
+      - Возвращайся и иди навстречу главному сражению своей жизни🔥⚔️🔥
+      - Volte e ganhe o combate mais importante da sua vida 🔥⚔️🔥
+      - वापस आकर अपने जीवन के मुख्य संघर्ष को जीतें🔥⚔️🔥
+      - Vuelve y gana el gran enfrentamiento de tu vida. 🔥⚔️🔥
+      - Masuk dan menangkan perselisihan utama dalam hidupmu 🔥⚔️🔥
+      - Revenez et gagnez la plus grosse confrontation de votre vie 🔥⚔️🔥
+      - Komm zurück und gewinne den wichtigsten Kampf deines Lebens 🔥⚔️🔥
+      - Hãy trở lại và giành lấy thắng lợi để đời của bạn nào 🔥⚔️🔥
+      - กลับมาคว้าชัยในการต่อสู้ครั้งสำคัญของชีวิตคุณ 🔥⚔️🔥
+      - 돌아와서 네 인생의 클래시를 이겨봐 🔥⚔️🔥
+      - Geri dön ve hayatının ana çatışmasını kazan 🔥⚔️🔥
+      - 回来并赢下你生命中的主要战斗🔥⚔️🔥
+      - 回來並在你人生中最重要的打鬥中得勝 🔥⚔️🔥
+      - Torna indietro e vinci lo scontro principale della tua vita 🔥⚔️🔥
+      - 戻ってきてあなたの人生の主な衝突に勝ちましょう🔥⚔️🔥
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PUSH_TITLE_6
+      TermType: 0
+      Languages:
+      - Are you playing today🧐?
+      - Хочешь поиграть🧐?
+      - Está a pensar jogar hoje🧐?
+      - क्या आप आज खेल रहे हैं🧐?
+      - ¿Hoy juegas🧐?
+      - Kamu bermain hari ini🧐?
+      - Vous jouez aujourd'hui🧐 ?
+      - Spielst du heute🧐?
+      - Hôm nay bạn sẽ chơi chứ🧐?
+      - วันนี้คุณเล่นแล้วหรือยัง🧐
+      - 오늘 게임 할거니🧐?
+      - Bugün oynuyor musun🧐?
+      - 你今天玩了吗🧐？
+      - 今天要來玩嗎🧐？
+      - Vuoi giocare oggi🧐?
+      - 今日はプレイしていますか🧐？
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PUSH_BODY_6
+      TermType: 0
+      Languages:
+      - Get in the game and crush all enemies right NOW 👊
+      - Заходи в игру и разгроми всех соперников прямо СЕЙЧАС 👊
+      - Entre no jogo e destrua JÁ todos os inimigos 👊
+      - खेल में शामिल हों और अभी अपने सभी दुश्मनों को कुचल दें 👊
+      - Entra al juego y aplasta a todos los enemigos AHORA MISMO 👊
+      - Masuk ke game dan hancurkan semua musuh SEKARANG juga 👊
+      - Entrez dans le jeu et écrasez tous les ennemis DÈS MAINTENANT 👊
+      - Steige ins Spiel ein und vernichte alle Feinde gleich JETZT 👊
+      - Vào chơi và quét sạch kẻ địch NGAY nào 👊
+      - เข้าเกมไปบดขยี้ศัตรูให้ราบเป็นหน้ากลองเลย 👊
+      - 당장 게임으로 돌아와서 네 적들을 무참히 짓눌러버려 👊
+      - Oyuna gir ve tüm düşmanları HEMEN ez geç 👊
+      - 立即进入游戏并击碎所有敌人👊
+      - 立即進入遊戲並粉碎所有敵人👊
+      - Entra nel gioco e schiaccia subito tutti i nemici ORA 👊
+      - ゲームに参加して、今すぐすべての敵を粉砕しましょう👊
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PUSH_TITLE_7
+      TermType: 0
+      Languages:
+      - You know what? 😏
+      - Ты еще не в игре? 😏
+      - Sabe que mais? 😏
+      - क्या आपको पता है? 😏
+      - ¿Sabes qué? 😏
+      - Kamu tau apa? 😏
+      - Vous savez quoi ? 😏
+      - Weißt du was? 😏
+      - Bạn biết gì không? 😏
+      - คุณรู้มั้ย 😏
+      - 너 그거 알아? 😏
+      - Biliyor musun? 😏
+      - 你知道吗？😏
+      - 你知道嗎？😏
+      - Sai cosa? 😏
+      - ねえねえ？😏
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PUSH_BODY_7
+      TermType: 0
+      Languages:
+      - It’s time to come back and show them who is the boss 😎😎
+      - Самое время вернуться и показать всем, кто здесь главный 😎😎
+      - É tempo de voltar e mostrar-lhes quem é o chefe 😎😎
+      - यह वापस आने और उन्हें यह दिखाने का समय है कि बॉस कौन है 😎😎
+      - Es hora de volver y mostrarles quién manda. 😎😎
+      - Kembalilah dan tunjukkan pada mereka siapa bosnya 😎😎
+      - Il est temps de revenir et de leur montrer qui est le patron 😎😎
+      - Es ist Zeit, zurückzukommen und ihnen zu zeigen, wer der Boss ist 😎😎
+      - Đã đến lúc trở lại và cho họ thấy ai mới là trùm cuối 😎😎
+      - ถึงเวลากลับมาแสดงให้พวกเขาเห็นแล้วว่าใครเป็นเจ้านาย 😎😎
+      - 이제 게임으로 돌아가서 누가 진정한 승자인지 보여줄 시간이야 😎😎
+      - Şimdi geri dönme ve onlara kimin patron olduğunu gösterme vakti 😎😎
+      - 是时候回来告诉他们谁是老大了😎😎
+      - 是時候回來讓大家瞧瞧誰是老大了😎😎
+      - È ora di tornare e mostrare loro chi è il capo 😎😎
+      - ゲームに戻り、ボスが誰かを彼らに示す時です😎😎
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PUSH_TITLE_8
+      TermType: 0
+      Languages:
+      - 'You were 👍 last time! '
+      - Ты показал 👍 в прошлый раз!
+      - Foi 👍da última vez!
+      - आप पिछली बार👍थे!
+      - ¡Estuviste 👍 la última vez!
+      - Kamu berada 👍 terakhir kali!
+      - Vous étiez 👍 la dernière fois !
+      - Letztes Mal warst du 👍!
+      - Lần trước bạn chơi 👍 cừ lắm!
+      - ครั้งที่แล้วคุณ 👍!
+      - 저번에 너 엄청👍 !
+      - Geçen sefer 👍 çok iyiydin!
+      - 你上次是👍！
+      - 你上次真 👍！
+      - Sei stato 👍 l'ultima volta!
+      - 前回は👍でした！
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PUSH_BODY_8
+      TermType: 0
+      Languages:
+      - Bet you can do even better 💪😎💪
+      - Докажи, что можешь еще больше 💪😎💪
+      - Aposto que consegue fazer ainda melhor 💪😎💪
+      - यकीन मानिए आप और बेहतर कर सकते हैं 💪😎💪
+      - Apuesto a que puedes hacerlo aún mejor 💪😎💪
+      - Kamu pasti bisa lebih baik lagi 💪😎💪
+      - Je parie que vous pouvez faire encore mieux 💪😎💪
+      - Jede Wette, du kannst das sogar noch besse 💪😎💪
+      - Cá là lần này bạn còn chơi xuất sắc hơn 💪😎💪
+      - คราวนี้คุณต้องทำได้ดียิ่งขึ้นไปกว่านั้นอีกแน่เลย 💪😎💪
+      - 장담하건데 이번엔 더 잘할거야 💪😎💪
+      - Daha da iyisini yapabileceğine bahse girerim 💪😎💪
+      - 相信你可以做得更好的💪😎💪
+      - 我敢打賭你能做得更好💪😎💪
+      - Scommetto che puoi fare ancora meglio 💪😎💪
+      - でもさらに上手くできるはずです💪😎💪
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PUSH_TITLE_9
+      TermType: 0
+      Languages:
+      - Leave your troubles away...
+      - Забудь о своих проблемах...
+      - Esqueça os seus problemas...
+      - अपनी परेशानियों को दूर छोड़िए...
+      - Deja tus problemas atrás...
+      - Hilangkan semua masalahmu...
+      - Laissez vos soucis de côté...
+      - Vergiss deine Sorgen ...
+      - Hãy quên đi những muộn phiền...
+      - ลืมปัญหาของคุณซะ...
+      - 너의 머리를 복잡하게 만드는 문제들은 잠시 접어두고..
+      - Sorunlarını geride bırak...
+      - 抛开烦恼...
+      - 拋開你的煩惱……
+      - Lascia stare i tuoi problemi...
+      - あなたの悩みを遠ざけましょう...
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PUSH_BODY_9
+      TermType: 0
+      Languages:
+      - Have fun with these 🤩 AWESOME 🤩 game! Start NOW 🔥
+      - Расслабься и получай удовольствие в этой 🤩ПОТРЯСАЮЩЕЙ 🤩 игре! Начни прямо СЕЙЧАС 🔥
+      - Divirta-se com este jogo 🤩 FANTÁSTICO 🤩! Comece AGORA 🔥
+      - इन 🤩शानदार 🤩 खेल के साथ मज़े करें! अभी शुरू करें 🔥
+      - ¡Diviértete con este juego 🤩INCREÍBLE🤩! Empieza YA 🔥
+      - Bersenang-senanglah dengan game 🤩 LUAR BIASA 🤩 ini! Mulai SEKARANG 🔥
+      - Amusez-vous avec ce jeu 🤩 GÉNIAL 🤩 ! Commencez DÈS MAINTENANT 🔥
+      - Hab Spaß mit diesem 🤩FANTASTISCHEN 🤩 Spiel! Starte JETZT 🔥
+      - Chúc bạn chơi vui với game 🤩 HAY TUYỆT 🤩 này! Bắt đầu NGAY 🔥
+      - แล้วมาสนุกกับเกมที่ 🤩ยอดเยี่ยม🤩 เหล่านี้! เริ่มต้นเดี๋ยวนี้ 🔥
+      - 이 🤩엄청난🤩 게임을 즐겨봐! 지금 시작해 🔥
+      - Bu 🤩MÜTHİŞ🤩 oyunla eğlenceli dakikalar geçir! HEMEN başla 🔥
+      - 玩这个🤩非常棒🤩游戏！马上开始🔥
+      - 好好來玩這個 🤩 超讚的 🤩 遊戲！立即開始🔥
+      - Divertiti con questi🤩 FANTASTICI 🤩giochi! Inizia ORA 🔥
+      - これらの🤩素晴らしい🤩ゲームを楽しみましょう！すぐ始めましょう🔥
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PUSH_TITLE_10
+      TermType: 0
+      Languages:
+      - '🔥 Survival of the fittest 🔥 '
+      - 🔥 Выживет сильнейший 🔥
+      - 🔥 A sobrevivência do mais apto 🔥
+      - 🔥 योग्य ही जीवित बचते हैं 🔥
+      - 🔥 Supervivencia del más apto 🔥
+      - 🔥 Sintasan yang paling tepat 🔥
+      - 🔥 La survie du plus fort 🔥
+      - 🔥 Überleben des Stärkeren 🔥
+      - 🔥 Chỉ kẻ mạnh mới có quyền tồn tại 🔥
+      - 🔥 ผู้แข็งแรงที่สุดเป็นฝ่ายอยู่รอด 🔥
+      - 🔥 적자생존 🔥
+      - 🔥 En güçlüler hayatta kalır 🔥
+      - 🔥适者生存🔥
+      - 🔥適者生存🔥
+      - 🔥 La sopravvivenza del più forte 🔥
+      - 🔥適者生存🔥
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PUSH_BODY_10
+      TermType: 0
+      Languages:
+      - Win your epic battle! ⚔️
+      - Сегодня самое время для больших побед! ⚔️
+      - Ganhe a sua batalha épica!⚔️
+      - अपना महायुद्ध जीतें!⚔️
+      - Gana tu batalla épica⚔️
+      - Menangkan pertempuran epik kamu! ⚔️
+      - Gagnez votre bataille épique ! ⚔️
+      - Gewinne deine epische Schlacht!
+      - Giành thắng lợi huy hoàng! ⚔️
+      - ชนะการต่อสู้ครั้งยิ่งใหญ่ของคุณ! ⚔️
+      - 너의 웅장한 전투를 이겨봐! ⚔️
+      - Destansı savaşını kazan! ⚔️
+      - 赢下你史诗级的战斗！⚔️
+      - 贏得你的史詩級戰鬥！⚔️
+      - Vinci la tua battaglia epica!⚔️
+      - 素晴らしい戦いに勝利しましょう！⚔️
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: TUTOR_BUILD
+      TermType: 0
+      Languages:
+      - GO TO ISLAND
+      - ПОСЕТИ ОСТРОВ
+      - VÁ PARA A ILHA
+      - द्वीप पर जाएँ
+      - DIRÍGETE A LA ISLA
+      - KE PULAU
+      - ALLER SUR L'ÎLE
+      - ZUR INSEL
+      - RA ĐẢO
+      - ไปที่เกาะ
+      - 섬으로 이동하세요
+      - ADAYA GİT
+      - 前往小岛
+      - 前往小島
+      - VAI ALL'ISOLA
+      - 島へ行く
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: TUTOR_TAP_BUILD
+      TermType: 0
+      Languages:
+      - TAP & BUILD
+      - НАЖМИ И ПОСТРОЙ
+      - TOQUE E CONSTRUA
+      - टैप और निर्माण करें
+      - TOCA Y CONSTRUYE
+      - KETUK & BANGUN
+      - TOUCHER ET CONSTRUIRE
+      - ANTIPPEN UND BAUEN
+      - CHẠM & XÂY
+      - แตะและสร้าง
+      - 탭하여 건설하세요
+      - DOKUN & İNŞA ET
+      - 点击并建造
+      - 點擊並建造
+      - TOCCA E COSTRUISCI
+      - タップ & 構築
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_BUILD
+      TermType: 0
+      Languages:
+      - BUILD
+      - СТРОИТЬ
+      - CONSTRUIR
+      - निर्माण करे
+      - CONSTRUIR
+      - BANGUN
+      - CONSTRUIRE
+      - BAUEN
+      - XÂY
+      - สร้าง
+      - 건설하기
+      - İNŞA ET
+      - 建造
+      - 建造
+      - COSTRUISCI
+      - 構築
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_BUILD_MENU
+      TermType: 0
+      Languages:
+      - BUILD
+      - ОСТРОВ
+      - CONSTRUIR
+      - निर्माण करे
+      - CONSTRUIR
+      - BANGUN
+      - CONSTRUIRE
+      - BAUEN
+      - XÂY
+      - สร้าง
+      - 건설하기
+      - İNŞA ET
+      - 建造
+      - 建造
+      - COSTRUISCI
+      - 構築
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_ATTACK
+      TermType: 0
+      Languages:
+      - ATTACK
+      - АТАКА
+      - ATACAR
+      - हमला करें
+      - ATACAR
+      - SERANG
+      - ATTAQUER
+      - ATTACKIEREN
+      - TẤN CÔNG
+      - โจมตี
+      - 공격하기
+      - SALDIR
+      - 攻击
+      - 攻擊
+      - ATTACCA
+      - 攻撃
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: TUTOR_ATTACK
+      TermType: 0
+      Languages:
+      - ATTACK NOW
+      - ЖМИ ДЛЯ АТАКИ
+      - ATAQUE AGORA
+      - अभी हमला करें
+      - ATACA AHORA
+      - SERANG SEKARANG
+      - ATTAQUER MAINTENANT
+      - JETZT ATTACKIEREN
+      - TẤN CÔNG NGAY
+      - โจมตีเลย
+      - 지금 공격하세요
+      - ŞİMDİ SALDIR
+      - 立即攻击
+      - 立即攻擊
+      - ATTACCA ORA
+      - 今すぐ攻撃
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: TUTOR_SOLDIERS
+      TermType: 0
+      Languages:
+      - RECRUIT SOLDIERS
+      - НАНИМАЙ СОЛДАТ
+      - RECRUTE SOLDADOS
+      - सैनिकों को भर्ती करें
+      - RECLUTA SOLDADOS
+      - REKRUT PASUKAN
+      - RECRUTER DES SOLDATS
+      - SOLDATEN REKRUTIEREN
+      - TUYỂN QUÂN
+      - เกณฑ์ทหาร
+      - 병사를 모집하세요
+      - ASKERLER TOPLA
+      - 招募士兵
+      - 招募士兵
+      - RECLUTA SOLDATI
+      - 兵士を雇う
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: ATTACK_WON
+      TermType: 0
+      Languages:
+      - YOUR SQUAD WON
+      - ТВОЯ КОМАНДА ПОБЕДИЛА
+      - SEU PELOTÃO GANHOU
+      - आपकी टीम जीती
+      - GANÓ TU ESCUADRÓN
+      - PASUKANMU MENANG
+      - VOTRE ESCOUADE A GAGNÉ
+      - IHRE TRUPPE HAT GEWONNEN
+      - ĐỘI CỦA BẠN THẮNG
+      - ทีมของคุณชนะแล้ว
+      - 내 분대의 승리
+      - TAKIMINIZ KAZANDI
+      - 你的小队胜利了
+      - 你的小隊勝利了
+      - LA TUA SQUADRA HA VINTO
+      - あなたのスクワッドの勝利
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_CLAIM
+      TermType: 0
+      Languages:
+      - CLAIM
+      - ЗАБРАТЬ
+      - PEGAR
+      - क्लेम करें
+      - ACEPTAR
+      - KLAIM
+      - RÉCLAMER
+      - BEANSPRUCHEN
+      - NHẬN
+      - รับ
+      - 보상 받기
+      - TALEP ET
+      - 收取
+      - 收取
+      - RICHIEDI
+      - 獲得
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_GET
+      TermType: 0
+      Languages:
+      - GET
+      - ПОЛУЧИТЬ
+      - OBTER
+      - पाएँ
+      - CONSIGUE
+      - DAPATKAN
+      - OBTENEZ
+      - HOL DIR
+      - NHẬN
+      - ได้
+      - 받기
+      - AL
+      - 获取
+      - 取得
+      - OTTIENI
+      - 獲得
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: MARK_MAX
+      TermType: 0
+      Languages:
+      - MAX
+      - МАКС
+      - MÁX
+      - सर्वाधिक
+      - MÁX
+      - MAKS
+      - MAX
+      - MAX
+      - TỐI ĐA
+      - สูงสุด
+      - 최대
+      - MAKS
+      - 最大
+      - 最大限度
+      - MAX
+      - 最大
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_FREE
+      TermType: 0
+      Languages:
+      - FREE
+      - БЕСПЛАТНО
+      - GRÁTIS
+      - मुफ़्त
+      - GRATIS
+      - 'GRATIS '
+      - 'GRATUIT '
+      - GRATIS
+      - MIỄN PHÍ
+      - ฟรี
+      - 무료
+      - ÜCRETSİZ
+      - 免费
+      - 免費
+      - GRATIS
+      - 無料
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_ADS_PLAY_NOW
+      TermType: 0
+      Languages:
+      - PLAY NOW
+      - ИГРАТЬ СЕЙЧАС
+      - JOGAR AGORA
+      - अभी खेलें
+      - JUGAR AHORA
+      - MAIN SEKARANG
+      - JOUER MAINTENANT
+      - JETZT SPIELEN
+      - CHƠI NGAY
+      - เล่นตอนนี้
+      - 지금 플레이
+      - ŞİMDİ OYNA
+      - 马上游戏
+      - 立即遊玩
+      - GIOCA ORA
+      - 今すぐプレイ
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: LEVEL_COMPLETE_BOSS
+      TermType: 0
+      Languages:
+      - BOSS DEFEATED
+      - БОСС ПОБЕЖДЕН
+      - 'CHEFE DERROTADO '
+      - बॉस को हरा दिया
+      - JEFE DERROTADO
+      - BOSS TAKLUK
+      - BOSS BATTU
+      - BOSS BESIEGT
+      - ĐÃ DIỆT TRÙM
+      - ปราบบอสสำเร็จ
+      - 보스 격파됨
+      - BOSS YENİLDİ
+      - 首领已击败
+      - 打敗魔王了
+      - BOSS SCONFITTO
+      - ボスが倒されました
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: VICTORY!
+      TermType: 0
+      Languages:
+      - VICTORY
+      - ПОБЕДА
+      - VITÓRIA
+      - जीत हुई
+      - VICTORIA
+      - Menang
+      - VICTOIRE
+      - GEWONNEN
+      - CHIẾN THẮNG
+      - ชนะ
+      - 승리
+      - Zafer Senin
+      - 胜利
+      - 勝利
+      - VITTORIA
+      - 勝利
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: DEFEAT
+      TermType: 0
+      Languages:
+      - YOU LOSE
+      - ПОРАЖЕНИЕ
+      - VOCÊ PERDEU
+      - आप हार गए
+      - HAS PERDIDO
+      - KAMU KALAH
+      - VOUS PERDEZ
+      - DU VERLIERST
+      - BẠN ĐÃ THUA
+      - คุณแพ้
+      - 패배
+      - KAYBETTİNİZ
+      - 你输了
+      - 你輸了
+      - HAI PERSO
+      - あなたの負け
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: CHOOSE THE BEST WAY
+      TermType: 0
+      Languages:
+      - CHOOSE THE BEST WAY
+      - ВЫБЕРИ НАИЛУЧШИЙ ПУТЬ
+      - ESCOLHA A MELHOR MANEIRA
+      - सबसे अच्छा तरीका चुनें
+      - ELIGE LA MEJOR MANERA
+      - PILIH CARA TERBAIK
+      - HOISISSEZ LA MEILLEURE FAÇON
+      - WÄHLEN SIE DEN BESTEN WEG
+      - CHỌN CÁCH TỐT NHẤT
+      - เลือกวิธีที่ดีที่สุด
+      - 최선의 방법을 선택하십시오
+      - EN İYİ YOLU SEÇ
+      - 选择最佳方式
+      - 選擇最佳方式
+      - SCEGLI IL MODO MIGLIORE
+      - 最良の方法を選択してください
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PURCHASE_SUCCESSFUL
+      TermType: 0
+      Languages:
+      - Purchase successful
+      - Покупка прошла успешно
+      - Comprado com sucesso
+      - खरीद सफल रहा
+      - Compra realizada
+      - Pembelian berhasil
+      - Achat réussi
+      - Erfolgreich erworben
+      - Mua thành công
+      - ซื้อได้สำเร็จแล้ว
+      - 구입 성공
+      - Satın alma başarılı
+      - 购买成功
+      - 購買成功
+      - Acquisto riuscito
+      - 購入に成功しました
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PURCHASE_FAILED
+      TermType: 0
+      Languages:
+      - Purchase failed
+      - Ошибка покупки
+      - A compra falhou
+      - खरीद विफल रहा
+      - Error en la compra
+      - Pembelian gagal
+      - Échec de l'achat
+      - Kauf fehlgeschlagen
+      - Mua thất bại
+      - ซื้อไม่สำเร็จ
+      - 구입하지 못했습니다
+      - Satın alma başarısız
+      - 购买失败
+      - 購買失敗
+      - Acquisto non riuscito
+      - 購入失敗
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: RESTORE_FAILED
+      TermType: 0
+      Languages:
+      - Failed to restore purchases
+      - Ошибка восстановления покупок
+      - Não é possível restaurar as compras
+      - खरीदों को रीस्टोर करने में विफल रहा
+      - No se puede restablecer las compras
+      - Gagal memulihkan pembelian
+      - Impossible de restaurer les achats
+      - Deine Käufe konnten nicht wiederhergestellt werden
+      - Không thể khôi phục các giao dịch mua hàng
+      - เรียกคืนการซื้อไม่สำเร็จ
+      - 구입 내역을 복원할 수 없습니다
+      - Satın alımlar geri yüklenemedi
+      - 无法还原购买
+      - 恢復購買失敗
+      - Impossibile ripristinare gli acquisti
+      - 購入を復元することができません
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: RESTORE_SUCCESSFUL
+      TermType: 0
+      Languages:
+      - Purchases were successfully restored
+      - Покупки успешно восстановлены
+      - As compras foram restauradas com sucesso
+      - आपने खरीद को सफलतापूर्वक बहाल किया है।
+      - Tus compras se restablecieron satisfactoriamente
+      - Pembelian berhasil dipulihkan
+      - Vous avez restauré l'achat avec succès
+      - Deine Käufe wurden erfolgreich wiederhergestellt
+      - Các giao dịch mua hàng đã được khôi phục thành công
+      - ฟื้นคืนไอเท็มที่คุณเคยซื้อสำเร็จแล้ว
+      - 구매 내용이 복구되었습니다
+      - Satın aldıklarınız başarıyla geri yüklendi
+      - 你的购买已成功还原
+      - 你的購買已成功還原
+      - Hai ripristinato correttamente l'acquisto.
+      - 購入は正常に復元されました
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: SETTINGS
+      TermType: 0
+      Languages:
+      - SETTINGS
+      - НАСТРОЙКИ
+      - AJUSTES
+      - सेटिंग्स
+      - AJUSTES
+      - PENGATURAN
+      - RÉGLAGES
+      - EINSTELLUNGEN
+      - CÀI ĐẶT
+      - การตั้งค่า
+      - 설정
+      - AYARLAR
+      - 设置
+      - 設定
+      - IMPOSTAZIONI
+      - 設定
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: VIBRATION
+      TermType: 0
+      Languages:
+      - VIBRATION
+      - ВИБРАЦИЯ
+      - VIBRAÇÃO
+      - स्पंदन
+      - VIBRACIÓN
+      - GETARAN
+      - VIBRATIONS
+      - VIBRATION
+      - ĐỘ RUNG
+      - การสั่นสะเทือน
+      - 진동
+      - TİTREŞİM
+      - 振动
+      - 振動
+      - VIBRAZIONE
+      - バイブレーション
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_RESTORE
+      TermType: 0
+      Languages:
+      - RESTORE PURCHASE
+      - ВОССТАНОВИТЬ ПОКУПКУ
+      - RESTAURAR COMPRA
+      - खरीदारी वापस लौटाएं
+      - RESTAURAR COMPRA
+      - KEMBALIKAN PEMBELIAN
+      - RESTAURER L'ACHAT
+      - KAUF WIEDERHERSTELLEN
+      - KHÔI PHỤC MUA HÀNG
+      - ซื้อใหม่อีกครั้ง
+      - 구입내역 복원
+      - SATIN ALMAYI GERİ YÜKLE
+      - 还原购买
+      - 還原購買
+      - RIPRISTINA ACQUISTO
+      - 購入復元
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BACK_TO_BUILD
+      TermType: 0
+      Languages:
+      - BACK TO BUILD
+      - К СТРОИТЕЛЬСТВУ
+      - VOLTAR À CONSTRUÇÃO
+      - निर्माण के लिए वापस
+      - VOLVER A CONSTRUIR
+      - KEMBALI UNTUK MEMBANGUN
+      - RETOUR À LA CONSTRUCTION
+      - ZURÜCK ZUM BAUEN
+      - QUAY LẠI XÂY DỰNG
+      - กลับไปสร้าง
+      - 빌드로 돌아가기
+      - BİNA GERİ DÖN
+      - 返回建造
+      - 返回建造
+      - TORNA A COSTRUIRE
+      - ビルドに戻る
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: GO
+      TermType: 0
+      Languages:
+      - GO
+      - GO
+      - IR
+      - जाओ
+      - IR
+      - PERGILAH
+      - ALLER
+      - GEHEN
+      - ĐI
+      - ไป
+      - 가다
+      - GİT
+      - 走
+      - 走
+      - ANDARE
+      - 行く
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: ZONE
+      TermType: 0
+      Languages:
+      - ZONE
+      - ЗОНА
+      - ZONA
+      - क्षेत्र
+      - ZONA
+      - DAERAH
+      - ZONE
+      - ZONE
+      - VÙNG
+      - โซน
+      - 존
+      - ALAN
+      - 区
+      - 區
+      - ZONA
+      - ゾーン
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: NEXT_TRY
+      TermType: 0
+      Languages:
+      - NEXT ATTEMPT
+      - СЛЕДУЮЩАЯ ПОПЫТКА
+      - PRÓXIMA TENTATIVA
+      - अगला प्रयास
+      - PRÓXIMO INTENTO
+      - UPAYA BERIKUTNYA
+      - PROCHAINE TENTATIVE
+      - NÄCHSTER VERSUCH
+      - ATTEMPT TIẾP THEO
+      - ความพยายามครั้งต่อไป
+      - 다음 시도
+      - SONRAKİ DENEYİM
+      - 下一次嘗試
+      - 下一次嘗試
+      - PROSSIMO TENTATIVO
+      - 次の試み
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: SOUND
+      TermType: 0
+      Languages:
+      - SOUND
+      - ЗВУКИ
+      - SONS
+      - ध्वनियां
+      - SONIDOS
+      - SUARA
+      - SONS
+      - TÖNE
+      - ÂM THANH
+      - เสียง
+      - 소리
+      - SESLER
+      - 声音
+      - 聲音
+      - SUONI
+      - サウンド
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: WATCH_ADS
+      TermType: 0
+      Languages:
+      - WATCH ADS
+      - ПОСМОТРЕТЬ РЕКЛАМУ
+      - ASSISTIR ANÚNCIOS
+      - विज्ञापन देखें
+      - VER ANUNCIOS
+      - LIHAT IKLAN
+      - REGARDER LES ANNONCES
+      - ANZEIGEN ANSEHEN
+      - XEM QUẢNG CÁO
+      - ดูโฆษณา
+      - 광고 보기
+      - REKLAMLARI İZLE
+      - 观看广告
+      - 觀看廣告
+      - GUARDA GLI ANNUNCI
+      - 広告を見る
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_REFUSE
+      TermType: 0
+      Languages:
+      - NO, THANKS
+      - НЕТ, СПАСИБО
+      - NÃO, OBRIGADO
+      - नहीं, धन्यवाद
+      - NO, GRACIAS
+      - TIDAK, TERIMA KASIH
+      - NON MERCI
+      - NEIN, DANKE
+      - KHÔNG, CẢM ƠN
+      - ไม่ ขอบคุณ
+      - 아뇨, 괜찮아요
+      - HAYIR, ALMAYAYIM
+      - 不用了，谢谢
+      - 不用了，謝謝
+      - NO, GRAZIE
+      - ノーサンキュー
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: SPECIAL_OFFER
+      TermType: 0
+      Languages:
+      - SPECIAL OFFER
+      - СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ
+      - OFERTA ESPECIAL
+      - स्पेशल ऑफ़र
+      - OFERTA ESPECIAL
+      - PENAWARAN ISTIMEWA
+      - OFFRE SPÉCIALE
+      - SONDERANGEBOT
+      - ƯU ĐÃI ĐẶC BIỆT
+      - ข้อเสนอพิเศษ
+      - 특별 프로모션
+      - ÖZEL TEKLİF
+      - 特别优惠
+      - 特別優惠
+      - OFFERTA SPECIALE
+      - スペシャルオファー
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: GET_FREE
+      TermType: 0
+      Languages:
+      - GET FREE
+      - ПОЛУЧИТЬ БЕСПЛАТНО
+      - OBTER GRÁTIS
+      - 'नि: शुल्क पाएं'
+      - OBTENER GRATIS
+      - AMBIL GRATIS
+      - OBTENIR GRATUITEMENT
+      - ERHALTEN SIE KOSTENLOSES
+      - NHẬN MIỄN PHÍ
+      - รับฟรี
+      - 무료로 받기
+      - ÜCRETSİZ AL
+      - 免费获取
+      - 免費獲取
+      - OTTIENI GRATIS
+      - 無料で入手する
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: SPECIAL_OFFER_BOSS
+      TermType: 0
+      Languages:
+      - Special Boss Offer
+      - Особое Босс-Предложение
+      - Oferta Especial do Chefe
+      - विशेष बॉस ऑफर
+      - Oferta especial de jefe
+      - Promo Boss Spesial
+      - Offre spéciale boss
+      - Spezielles Boss-Angebot
+      - Ưu đãi đặc biệt trước trùm cuối
+      - ข้อเสนอสำหรับบอสพิเศษ
+      - 특별 보스 기능
+      - Özel Boss Teklifi
+      - 特别BOSS优惠
+      - 特別頭目優惠
+      - Offerta speciale per il capo
+      - スペシャルボス提供
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: EXTRA_MEN
+      TermType: 0
+      Languages:
+      - +{0} men
+      - +{0} человек
+      - +{0} homens
+      - + {0} पुरुष
+      - +{0} hombres
+      - + {0} orang
+      - +{0} hommes
+      - +{0} Männer
+      - +{0} người
+      - +{0} คน
+      - 사람 {0}명
+      - '{0} kişi'
+      - +{0}
+      - +{0}
+      - +{0} uomini
+      - +{0}人の男が
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: NEXT_LEVEL_CONDITION
+      TermType: 0
+      Languages:
+      - for the next level
+      - для следующего уровня
+      - para o próximo nível
+      - अगले स्तर के लिए
+      - para el próximo nivel
+      - untuk level berikutnya
+      - pour le niveau suivant
+      - für das nächste Level
+      - cho cấp độ mới
+      - สำหรับด่านถัดไป
+      - 다음 레벨에서 추가
+      - sonraki seviye için
+      - 下个关卡人数
+      - 下個關卡人數
+      - per il livello successivo
+      - 次のレベルに移動
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PP_HEADER
+      TermType: 0
+      Languages:
+      - Thanks for choosing this game
+      - Спасибо, что выбрали эту игру
+      - Obrigado por escolher este jogo
+      - इस गेम को चुनने के लिए शुक्रिया
+      - Gracias por elegir este juego
+      - Terima kasih telah memilih game ini
+      - Merci d'avoir choisi ce jeu
+      - "Danke, dass Sie dieses\nSpiel gewählt haben"
+      - "Cảm ơn bạn\nđã lựa chọn trò chơi này"
+      - ขอบคุณสำหรับการเลือกเกมนี้
+      - ' 이 게임을 선택해주셔서 감사합니다'
+      - "Bu oyunu tercih ettiğiniz\niçin teşekkürler"
+      - 感谢您选择本游戏
+      - 感謝您選擇此遊戲
+      - Grazie per aver scelto questo gioco
+      - "このゲームを選んでくれて\nありがとうございます"
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PP_DESC_REGULAR
+      TermType: 0
+      Languages:
+      - "Please read our Terms of Use, which sets out the terms of use of this game, and our Privacy Policy, which explains what information of yours we process, how we process your information, the privacy rights available to you, and instructions on exercising such privacy rights.\n\nBy tapping the “Continue” button, you confirm that you acknowledge and accept our Terms of Use and Privacy Policy."
+      - "Пожалуйста, ознакомьтесь с нашими Условиями Использования, в которых изложены условия использования данной игры, и с нашей Политикой Конфиденциальности, в которой объясняется, какую информацию о вас мы обрабатываем, как мы обрабатываем вашу информацию, какие права на конфиденциальность вам доступны, а также инструкции по осуществлению этих прав на конфиденциальность.\n\nНажимая на кнопку “Продолжить”, вы подтверждаете, что вы ознакомились с нашими Условиями Использования и Политикой Конфиденциальности, а также приняли их."
+      - "Leia nossos Termos de Uso, que estabelecem os termos de uso deste jogo e nossa Política de Privacidade, que explica quais informações suas processamos, como processamos suas informações, os direitos de privacidade disponíveis para você e instruções sobre como exercer tais direitos de privacidade.\n\nAo tocar no botão “Continuar”, você confirma que reconhece e aceita nossos Termos de Uso e Política de Privacidade."
+      - "कृपया हमारी <nobr>उपयोग की शर्तें </nobr>पढ़ें, जो इस गेम के उपयोग की शर्तों और हमारी <nobr>गोपनीयता नीति</nobr> को निर्धारित करती है, और बताती है कि हम आपकी कौन सी जानकारी, किस प्रकार संसाधित करते हैं। साथ ही यह शर्तें आपको मिलने वाले गोपनीयता अधिकार और उनके उपयोग की प्रक्रिया के बारे में भी बताती है।\n\n<nobr>\"जारी रखें\"</nobr> बटन पर टैप करके, आप इस बात की पुष्टि करते हैं कि आप हमारी <nobr>उपयोग की शर्तों</nobr> और <nobr>गोपनीयता नीति</nobr> को सही मानते हैं और उन्हें स्वीकार करते हैं।"
+      - "Lea nuestros Términos de Uso, que establecen los términos de uso de este juego, y nuestra Política de Privacidad, que explica qué información personal procesamos sobre usted, cómo procesamos sus datos, cuáles son sus derechos de privacidad y las instrucciones para ejercer estos derechos de privacidad.\n\nAl tocar el botón \"Continuar\", usted confirma que reconoce y acepta nuestros Términos de Uso y Política de Privacidad."
+      - "Harap baca Syarat Penggunaan kami, yang berisi syarat mengenai penggunaan game ini, serta Kebijakan Privasi kami, yang menjelaskan informasi apa saja yang kami proses, cara kami memproses informasi Anda, hak-hak privasi yang berlaku untuk Anda, dan petunjuk penggunaan hak-hak privasi tersebut.\n\nDengan mengetuk tombol \"Lanjutkan\", Anda mengonfirmasi bahwa Anda menyetujui dan menerima Syarat Penggunaan dan Kebijakan Privasi kami."
+      - "Merci de lire nos Conditions d'utilisation, qui définissent les conditions d'utilisation de ce jeu, de même que notre Politique de confidentialité, qui explique quelles sont les informations vous concernant que nous traitons, comment nous les traitons, les droits à la confidentialité dont vous disposez et comment exercer ces droits à la confidentialité.\n\nEn appuyant sur le bouton <nobr>« Continuer »</nobr>, vous confirmez que vous avez lu et acceptez nos Conditions d'utilisation et notre Politique de confidentialité."
+      - "Lesen Sie bitte unsere Nutzungsbedingungen, in denen die Nutzungsbedingungen für dieses Spiel festgelegt sind, und unsere Datenschutzrichtlinie, in der erläutert wird, welche Daten wir von Ihnen verarbeiten, wie wir Ihre Daten verarbeiten, welche Rechte Sie in Bezug auf den Datenschutz haben und wie Sie diese Rechte ausüben können.\n\nIndem Sie auf die Schaltfläche „Weiter“ tippen, bestätigen Sie, dass Sie unsere Nutzungsbedingungen und Datenschutzrichtlinie zur Kenntnis genommen und akzeptiert haben."
+      - "Vui lòng đọc Điều khoản sử dụng của chúng tôi, trong đó quy định điều khoản sử dụng trò chơi này, và Chính sách quyền riêng tư, trong đó giải thích chúng tôi xử lý thông tin nào của bạn, cách chúng tôi xử lý thông tin đó, những quyền riêng tư của bạn, cũng như hướng dẫn cách thực hiện những quyền riêng tư đó.\n\nBằng cách nhấp vào nút <nobr>\"Tiếp tục\"</nobr>, bạn xác nhận rằng bạn nhận biết và chấp nhận Điều khoản sử dụng và Chính sách quyền riêng tư của chúng tôi."
+      - "โ​ป​ร​ด​อ​่​า​น​<nobr>ข​้​อ​ก​ำ​ห​น​ด​ใ​น​ก​า​ร​ใ​ช​้​ง​า​น​</nobr>ข​อ​ง​เ​ร​า​ซ​ึ​่​ง​ก​ำ​ห​น​ด​ไ​ว​้​ใ​น​เ​ง​ื​่​อ​น​ไ​ข​ก​า​ร​ใ​ช​้​ง​า​น​ข​อ​ง​เ​ก​ม​น​ี​้​ ​แ​ล​ะ​<nobr>น​โ​ย​บ​า​ย​ค​ว​า​ม​เ​ป​็​น​ส​่​ว​น​ต​ั​ว​</nobr>ข​อ​ง​เ​ร​า​ ​ซ​ึ​่​ง​อ​ธ​ิ​บ​า​ย​ล​ั​ก​ษ​ณ​ะ​ข​้​อ​ม​ู​ล​ข​อ​ง​ค​ุ​ณ​ท​ี​่​เ​ร​า​ป​ร​ะ​ม​ว​ล​ผ​ล​ ​ว​ิ​ธ​ี​ท​ี​่​เ​ร​า​ป​ร​ะ​ม​ว​ล​ผ​ล​ข​้​อ​ม​ู​ล​ข​อ​ง​ค​ุ​ณ​ ​ส​ิ​ท​ธ​ิ​์​ค​ว​า​ม​เ​ป​็​น​ส​่​ว​น​ต​ั​ว​ท​ี​่​ค​ุ​ณ​ม​ี​ ​ต​ล​อ​ด​จ​น​ค​ำ​แ​น​ะ​น​ำ​ใ​น​ก​า​ร​ใ​ช​้​ส​ิ​ท​ธ​ิ​์​ค​ว​า​ม​เ​ป​็​น​ส​่​ว​น​ต​ั​ว​ด​ั​ง​ก​ล​่​า​ว​\n​\n​ก​า​ร​แ​ต​ะ​ป​ุ​่​ม​ <nobr>​\"​ด​ำ​เ​น​ิ​น​ก​า​ร​ต​่​อ​\"</nobr>​ ​จ​ะ​ถ​ื​อ​เ​ป​็​น​ก​า​ร​ย​ื​น​ย​ั​น​ว​่​า​ค​ุ​ณ​ร​ั​บ​ท​ร​า​บ​แ​ล​ะ​ย​อ​ม​ร​ั​บ​<nobr>ข​้​อ​ก​ำ​ห​น​ด​ใ​น​ก​า​ร​ใ​ช​้​ง​า​น​</nobr>แ​ล​ะ​น​โ​ย​บ​า​ย​ค​ว​า​ม​เ​ป​็​น​ส​่​ว​น​ต​ั​ว​ข​อ​ง​เ​ร​า​"
+      - "당사의 <nobr>이용약관</nobr>과 <nobr>개인정보처리방침</nobr>을 읽어주시기 바랍니다. <nobr>이용약관</nobr>에서는 본 게임의 이용약관을 명시하고, <nobr>개인정보처리방침</nobr>에서는 당사가 처리하는 귀하의 정보, 당사가 귀하의 정보를 처리하는 방법, 귀하에게 해당하는 개인정보 보호 권리 및 그러한 개인정보 보호 권리를 행사하는 지침을 설명합니다.\n\n<nobr>'계속'</nobr> 버튼을 누르면 당사의 <nobr>이용약관</nobr> 및 <nobr>개인정보처리방침</nobr>을 인정하고 이에 동의함을 확인하는 것입니다."
+      - "Lütfen oyunun kullanım koşullarını düzenleyen Kullanım Koşullarımızı ve size ait hangi bilgileri işlediğimizi, bu bilgileri nasıl işlediğimizi, ne gibi gizlilik haklarına sahip olduğunuzu ve bu gizlilik haklarını kullanma talimatlarını açıklayan ve düzenleyen Gizlilik Politikamızı okuyun.\n\n\"Devam\" butonuna dokunarak Kullanım Koşullarımızı ve Gizlilik Politikamızı kabul ettiğinizi onaylamış olursunuz."
+      - "请阅读我们的<nobr>《使用条款》</nobr>和<nobr>《隐私政策》</nobr>。<nobr>《使用条款》</nobr>规定了本游戏的使用条款，<nobr>《隐私政策》</nobr>解释了我们会处理您的哪些信息、我们如何处理您的信息、您享有的隐私权，以及有关行使此类隐私权的说明。\n\n点按<nobr>“继续”</nobr>按钮，即表示您确认您了解并接受我们的<nobr>《使用条款》</nobr>和<nobr>《隐私政策》。</nobr>"
+      - "請閱讀我們的<nobr>《使用條款》</nobr>和<nobr>《隱私權政策》</nobr>。<nobr>《使用條款》</nobr>規定了此遊戲的使用條款，<nobr>《隱私權政策》</nobr>解釋了我們會處理您的哪些資訊、我們如何處理您的資訊、您享有的隱私權，以及有關行使此類隱私權的說明。\n\n點按<nobr>「繼續」</nobr>按鈕，即表示您確認您了解並接受我們的<nobr>《使用條款》</nobr>和<nobr>《隱私權政策》。</nobr>"
+      - "Leggi le nostre Condizioni per l'uso, che stabiliscono le condizioni di utilizzo di questo gioco, e la nostra Informativa sulla privacy, che spiega quali informazioni sul tuo conto vengono trattate, come vengono trattate, i diritti alla privacy a tua disposizione e le istruzioni per l'esercizio di tali diritti.\n\nToccando il pulsante \"Continua\" confermi di aver preso atto e di accettare le nostre Condizioni per l'uso e l'Informativa sulla privacy."
+      - "当社の<nobr>利用規約</nobr>をご確認ください。そしてそれは、このゲームの<nobr>利用規約</nobr>を定めるものです。さらに、当社が処理するお客様情報の内容、当社によるお客様情報の処理方法、お客様が行使可能な<nobr>プライバシー</nobr>の権利、およびこのようなプライバシーの権利の行使に関する説明について解説する<nobr>プライバシーポリシー</nobr>もご確認ください。\n\n<nobr>「続行」</nobr>ボタンをタップすると、お客様は、当社の<nobr>利用規約</nobr>と<nobr>プライバシーポリシー</nobr>を承認および同意したことを確認したことになります。"
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PP_DESC_CMP
+      TermType: 0
+      Languages:
+      - "Please read our Terms of Use, which sets out the terms of use of this game, and our Privacy Policy, which explains what information of yours we process, how we process your information, the privacy rights available to you, and instructions on exercising such privacy rights.\n\nTap the “Continue” button to select your privacy choices before you start the game. You can change your selection later in the Privacy Settings section in the game settings menu.\n\nBy tapping the “Continue” button and setting up your privacy choices, you confirm that you acknowledge and accept our Terms of Use and Privacy Policy."
+      - "Пожалуйста, ознакомьтесь с нашими Условиями Использования, в которых изложены условия использования данной игры, и с нашей Политикой Конфиденциальности, в которой объясняется, какую информацию о вас мы обрабатываем, как мы обрабатываем вашу информацию, какие права на конфиденциальность вам доступны, а также инструкции по осуществлению этих прав на конфиденциальность.\n\nНажмите на кнопку “Продолжить”, чтобы выбрать ваши параметры конфиденциальности перед началом игры. Позже вы можете изменить выбор в разделе \"Настройка Конфиденциальности\" в меню настроек игры.\n\nНажав на кнопку “Продолжить” и выбрав ваши параметры конфиденциальности, вы подтверждаете, что вы ознакомились с нашими Условиями Использования и Политикой Конфиденциальности, а также приняли их."
+      - "Leia nossos Termos de Uso, que estabelecem os termos de uso deste jogo e nossa Política de Privacidade, que explica quais informações suas processamos, como processamos suas informações, os direitos de privacidade disponíveis para você e instruções sobre como exercer tais direitos de privacidade.\n\nToque no botão “Continuar” para selecionar suas opções de privacidade antes de iniciar o jogo. Você pode alterar sua seleção posteriormente na seção Configurações de Privacidade no menu de configurações do jogo.\n\nAo tocar no botão “Continuar” e configurar suas opções de privacidade, você confirma que reconhece e aceita nossos Termos de Uso e Política de Privacidade."
+      - "कृपया हमारी <nobr>उपयोग की शर्तें</nobr> पढ़ें, जो इस गेम के उपयोग की शर्तों और हमारी <nobr>गोपनीयता नीति</nobr> को निर्धारित करती है, और बताती है कि हम आपकी कौन सी जानकारी, किस प्रकार संसाधित करते हैं। साथ ही यह शर्तें आपको मिलने वाले गोपनीयता अधिकार और उनके उपयोग की प्रक्रिया के बारे में भी बताती है।\n\nगेम शुरू करने से पहले अपनी गोपनीयता विकल्प चुनने के लिए <nobr>\"जारी रखें\"</nobr> बटन पर टैप करें। आप बाद में गेम सेटिंग्स मेनू में जाकर <nobr>गोपनीयता सेटिंग्स</nobr> सेक्शन में अपना चुना गया विकल्प बदल सकते हैं।\n\n<nobr>\"जारी रखें\"</nobr> बटन को टैप करके और गोपनीयता से संबंधित अपने विकल्पों को सेट करके आप हमारी <nobr>उपयोग की शर्तों</nobr> और <nobr>गोपनीयता नीति</nobr> को स्वीकार करते हैं।"
+      - "Lea nuestros Términos de Uso, que establecen los términos de uso de este juego, y nuestra Política de Privacidad, que explica qué información personal procesamos sobre usted, cómo procesamos sus datos, cuáles son sus derechos de privacidad y las instrucciones para ejercer estos derechos de privacidad.\n\nToque el botón de \"Continuar\" para seleccionar sus opciones de privacidad antes de empezar el juego. Usted puede cambiar su selección más tarde en la sección de Ajustes de Privacidad en el menú de ajustes del juego.\n\nAl tocar el botón de \"Continuar\" y establecer sus opciones de privacidad, usted confirma que reconoce y acepta nuestros Términos de Uso y Política de Privacidad."
+      - "Harap baca Syarat Penggunaan kami, yang berisi syarat mengenai penggunaan game ini, serta Kebijakan Privasi kami, yang menjelaskan informasi apa saja yang kami proses, cara kami memproses informasi Anda, hak-hak privasi yang berlaku untuk Anda, dan petunjuk penggunaan hak-hak privasi tersebut.\n\nKetuk tombol \"Lanjutkan\" untuk memilih pilihan privasi Anda sebelum memulai permainan. Anda dapat mengubah pilihan Anda nantinya di bagian Pengaturan Privasi pada menu pengaturan game.\n\nDengan mengetuk tombol “Lanjutkan” dan menyiapkan pilihan privasi Anda, Anda mengonfirmasi bahwa Anda mengakui dan menerima Syarat Penggunaan dan Kebijakan Privasi kami."
+      - "Merci de lire nos Conditions d'utilisation, qui définissent les conditions d'utilisation de ce jeu, de même que notre Politique de confidentialité, qui explique quelles sont les informations vous concernant que nous traitons, comment nous les traitons, les droits à la confidentialité dont vous disposez et comment exercer ces droits à la confidentialité.\n\nAppuyez sur le bouton <nobr>« Continuer »</nobr> pour sélectionner vos choix de confidentialité avant de commencer à jouer . Vous pourrez modifier votre sélection ultérieurement dans la section Paramètres de confidentialité du menu des paramètres du jeu.\n\nEn appuyant sur le bouton <nobr>« Continuer »</nobr> et en configurant vos choix de confidentialité, vous confirmez que vous avez lu et acceptez nos Conditions d'utilisation et notre Politique de confidentialité."
+      - "Lesen Sie bitte unsere Nutzungsbedingungen, in denen die Nutzungsbedingungen für dieses Spiel festgelegt sind, und unsere Datenschutzrichtlinie, in der erläutert wird, welche Daten wir von Ihnen verarbeiten, wie wir Ihre Daten verarbeiten, welche Rechte Sie in Bezug auf den Datenschutz haben und wie Sie diese Rechte ausüben können.\n\nTippen Sie auf die Schaltfläche „Weiter“, um Ihre Datenschutzoptionen auszuwählen, bevor Sie das Spiel starten. Sie können Ihre Auswahl später im Abschnitt Datenschutzeinstellungen im Menü Spieleinstellungen ändern.\n\nIndem Sie auf die Schaltfläche „Weiter“ tippen und Ihre Datenschutzoptionen festlegen, bestätigen Sie, dass Sie unsere Nutzungsbedingungen und Datenschutzrichtlinie zur Kenntnis genommen und akzeptiert haben."
+      - "Vui lòng đọc Điều khoản sử dụng của chúng tôi, trong đó quy định điều khoản sử dụng trò chơi này, và Chính sách quyền riêng tư, trong đó giải thích chúng tôi xử lý thông tin nào của bạn, cách chúng tôi xử lý thông tin đó, những quyền riêng tư của bạn, cũng như hướng dẫn cách thực hiện những quyền riêng tư đó.\n\nHãy nhấn vào nút <nobr>\"Tiếp tục\"</nobr> để chọn các lựa chọn quyền riêng tư của bạn trước khi bắt đầu trò chơi. Bạn có thể thay đổi lựa chọn của mình sau trong phần Cài đặt quyền riêng tư trong trình đơn cài đặt trò chơi.\n\nBằng cách nhấp vào nút <nobr>\"Tiếp tục\"</nobr> và thiết lập lựa chọn quyền riêng tư, bạn xác nhận rằng bạn hiểu và chấp nhận Điều khoản sử dụng cũng như Chính sách quyền riêng tư của chúng tôi."
+      - "โ​ป​ร​ด​อ​่​า​น​<nobr>ข​้​อ​ก​ำ​ห​น​ด​ใ​น​ก​า​ร​ใ​ช​้​ง​า​น​</nobr>ข​อ​ง​เ​ร​า​ซ​ึ​่​ง​ก​ำ​ห​น​ด​ไ​ว​้​ใ​น​เ​ง​ื​่​อ​น​ไ​ข​ก​า​ร​ใ​ช​้​ง​า​น​ข​อ​ง​เ​ก​ม​น​ี​้​ ​แ​ล​ะ​<nobr>น​โ​ย​บ​า​ย​ค​ว​า​ม​เ​ป​็​น​ส​่​ว​น​ต​ั​ว​</nobr>ข​อ​ง​เ​ร​า​ ​ซ​ึ​่​ง​อ​ธ​ิ​บ​า​ย​ล​ั​ก​ษ​ณ​ะ​ข​้​อ​ม​ู​ล​ข​อ​ง​ค​ุ​ณ​ท​ี​่​เ​ร​า​ป​ร​ะ​ม​ว​ล​ผ​ล​ ​ว​ิ​ธ​ี​ท​ี​่​เ​ร​า​ป​ร​ะ​ม​ว​ล​ผ​ล​ข​้​อ​ม​ู​ล​ข​อ​ง​ค​ุ​ณ​ ​ส​ิ​ท​ธ​ิ​์​ค​ว​า​ม​เ​ป​็​น​ส​่​ว​น​ต​ั​ว​ท​ี​่​ค​ุ​ณ​ม​ี​ ​ต​ล​อ​ด​จ​น​ค​ำ​แ​น​ะ​น​ำ​ใ​น​ก​า​ร​ใ​ช​้​ส​ิ​ท​ธ​ิ​์​ค​ว​า​ม​เ​ป​็​น​ส​่​ว​น​ต​ั​ว​ด​ั​ง​ก​ล​่​า​ว​\n​\n​แ​ต​ะ​ป​ุ​่​ม​ ​<nobr>\"​ด​ำ​เ​น​ิ​น​ก​า​ร​ต​่​อ​\"​</nobr> ​เ​พ​ื​่​อ​เ​ล​ื​อ​ก​ท​า​ง​เ​ล​ื​อ​ก​ด​้​า​น​ค​ว​า​ม​เ​ป​็​น​ส​่​ว​น​ต​ั​ว​ข​อ​ง​ค​ุ​ณ​ก​่​อ​น​ท​ี​่​ค​ุ​ณ​จ​ะ​เ​ร​ิ​่​ม​เ​ล​่​น​เ​ก​ม​ ​ค​ุ​ณ​ส​า​ม​า​ร​ถ​เ​ป​ล​ี​่​ย​น​ก​า​ร​เ​ล​ื​อ​ก​ข​อ​ง​ค​ุ​ณ​ใ​น​ภ​า​ย​ห​ล​ั​ง​ไ​ด​้​จ​า​ก​ส​่​ว​น​ ​<nobr>ก​า​ร​ต​ั​้​ง​ค​่​า​ค​ว​า​ม​เ​ป​็​น​ส​่​ว​น​ต​ั​ว​</nobr> ​ท​ี​่​อ​ย​ู​่​ใ​น​เ​ม​น​ู​ก​า​ร​ต​ั​้​ง​ค​่​า​เ​ก​ม​\n​\n​ก​า​ร​แ​ต​ะ​ป​ุ​่​ม​ ​<nobr>\"​ด​ำ​เ​น​ิ​น​ก​า​ร​ต​่​อ​\"​</nobr> ​แ​ล​ะ​ก​า​ร​ต​ั​้​ง​ค​่​า​ต​ั​ว​เ​ล​ื​อ​ก​ค​ว​า​ม​เ​ป​็​น​ส​่​ว​น​ต​ั​ว​ข​อ​ง​ค​ุ​ณ​จ​ะ​ถ​ื​อ​เ​ป​็​น​ก​า​ร​ย​ื​น​ย​ั​น​ว​่​า​ค​ุ​ณ​ร​ั​บ​ท​ร​า​บ​แ​ล​ะ​ย​อ​ม​ร​ั​บ​<nobr>ข​้​อ​ก​ำ​ห​น​ด​ใ​น​ก​า​ร​ใ​ช​้​ง​า​น​</nobr>แ​ล​ะ​<nobr>น​โ​ย​บ​า​ย​ค​ว​า​ม​เ​ป​็​น​ส​่​ว​</nobr>น​ต​ั​ว​ข​อ​ง​เ​ร​า​"
+      - "당사의 <nobr>이용약관</nobr>과 <nobr>개인정보처리방침</nobr>을 읽어주시기 바랍니다. <nobr>이용약관</nobr>에서는 본 게임의 이용약관을 명시하고, <nobr>개인정보처리방침</nobr>에서는 당사가 처리하는 귀하의 정보, 당사가 귀하의 정보를 처리하는 방법, 귀하에게 해당하는 개인정보 보호 권리 및 그러한 개인정보 보호 권리를 행사하는 지침을 설명합니다.\n\n게임을 시작하기 전에 <nobr>'계속' </nobr>버튼을 눌러 개인정보 보호 옵션을 선택하세요. 향후 게임 설정 메뉴의 <nobr>개인정보 보호</nobr> 설정에서 선택 사항을 변경하실 수 있습니다.\n\n<nobr>'계속'</nobr> 버튼을 누르고 개인정보 보호 선택 사항을 설정하면 당사의 <nobr>이용약관</nobr> 및 <nobr>개인정보처리방침</nobr>을 인정하고 이에 동의함을 확인하는 것입니다."
+      - "Lütfen oyunun kullanım koşullarını düzenleyen Kullanım Koşullarımızı ve size ait hangi bilgileri işlediğimizi, bu bilgileri nasıl işlediğimizi, ne gibi gizlilik haklarına sahip olduğunuzu ve bu gizlilik haklarını kullanma talimatlarını açıklayan ve düzenleyen Gizlilik Politikamızı okuyun.\n\nOyuna başlarken öncelikli gizlilik tercihlerinizi seçmek için \"Devam\" butonuna dokunun. Seçiminizi daha sonra oyun ayarları menüsündeki Gizlilik Ayarları bölümünden değiştirebilirsiniz.\n\n\"Devam\" butonuna dokunarak ve gizlilik seçeneklerinizi belirleyerek, Kullanım Koşullarımızı ve Gizlilik Politikamızı anladığınızı ve kabul ettiğinizi onaylamış olursunuz."
+      - "请阅读我们的<nobr>《使用条款》</nobr>和<nobr>《隐私政策》</nobr>。<nobr>《使用条款》</nobr>规定了本游戏的使用条款，<nobr>《隐私政策》</nobr>解释了我们会处理您的哪些信息、我们如何处理您的信息、您享有的隐私权，以及有关行使此类隐私权的说明。\n\n在开始游戏之前，请点按<nobr>“继续”</nobr>按钮来选择您的隐私选项。您可以稍后在游戏设置菜单的<nobr>“隐私设置”</nobr>部分更改您的选择。\n\n点按<nobr>“继续”</nobr>按钮并设置您的隐私选项，即表示您确认您了解并接受我们的<nobr>《使用条款》</nobr>和<nobr>《隐私政策》。</nobr>"
+      - "請閱讀我們的<nobr>《使用條款》</nobr>和<nobr>《隱私權政策》</nobr>。<nobr>《使用條款》</nobr>規定了此遊戲的使用條款，<nobr>《隱私權政策》</nobr>解釋了我們會處理您的哪些資訊、我們如何處理您的資訊、您享有的隱私權，以及有關行使此類隱私權的說明。\n\n在開始遊戲之前，請點按<nobr>「繼續」</nobr>按鈕來選擇您的隱私權選項。您可以稍後在遊戲設定選單的<nobr>「隱私權設定」</nobr>區段變更您的選擇。\n\n點按<nobr>「繼續」</nobr>按鈕並設定您的隱私權選項，即表示您確認您了解並接受我們的<nobr>《使用條款》</nobr>和<nobr>《隱私權政策》。</nobr>"
+      - "Leggi le nostre Condizioni per l'uso, che stabiliscono le condizioni di utilizzo di questo gioco, e la nostra Informativa sulla privacy, che spiega quali informazioni sul tuo conto vengono trattate, come vengono trattate, i diritti alla privacy a tua disposizione e le istruzioni per l'esercizio di tali diritti.\n\nPrima di iniziare a giocare tocca il pulsante \"Continua\" per selezionare le scelte sulla privacy. Puoi modificare la tua selezione in un secondo momento nella sezione Impostazioni sulla privacy del menu delle impostazioni del gioco.\n\nToccando il pulsante \"Continua\" e impostando le scelte sulla privacy confermi di aver preso atto e di accettare le nostre Condizioni per l'uso e l'Informativa sulla privacy."
+      - "当社の<nobr>利用規約</nobr>をご確認ください。そしてそれは、このゲームの<nobr>利用規約</nobr>を定めるものです。さらに、当社が処理するお客様情報の内容、当社によるお客様情報の処理方法、お客様が行使可能な<nobr>プライバシー</nobr>の権利、およびこのようなプライバシーの権利の行使に関する説明について解説する<nobr>プライバシーポリシー</nobr>もご確認ください。\n\nゲームを開始する前に<nobr>「続行」</nobr>ボタンをタップし、プライバシーの種類を選択してください。後でゲームの設定メニューにある<nobr>「プライバシーの設定」</nobr>セクションで、選択内容を変更することができます。\n\n<nobr>「続行」</nobr>ボタンをタップし、プライバシーの選択を設定すると、お客様は当社の<nobr>「利用規約」</nobr>と<nobr>「プライバシーポリシー」</nobr>を確認し、同意したものとみなされます。"
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PP_DESC_MOVE
+      TermType: 0
+      Languages:
+      - "To be consistent with data protection laws in the EU, we are asking you to take a moment to review our Terms of Use, which sets out the terms of use of this game, and our Privacy Policy, which explains what information of yours we process, how we process your information, the privacy rights available to you, and instructions on exercising such privacy rights.\n\nTap the “Continue” button to select your privacy choices before you start the game. You can change your selection later in the Privacy Settings section in the game settings menu.\n\nBy tapping the “Continue” button and setting up your privacy choices, you confirm that you acknowledge and accept our Terms of Use and Privacy Policy."
+      - "Чтобы соответствовать законам о защите данных в ЕС, просим вас уделить время для ознакомления с нашими Условиями Пользования, в которых изложены условия использования данной игры, и с нашей Политикой Конфиденциальности, в которой объясняется, какую информацию о вас мы обрабатываем, как мы обрабатываем вашу информацию, какие права на конфиденциальность вам доступны, а также инструкции по осуществлению этих прав на конфиденциальность.\n\nНажмите на кнопку “Продолжить”, чтобы выбрать ваши параметры конфиденциальности перед началом игры. Позже вы можете изменить выбор в разделе \"Настройка Конфиденциальности\" в меню настроек игры.\n\nНажав на кнопку “Продолжить” и выбрав ваши параметры конфиденциальности, вы подтверждаете, что вы ознакомились с нашими Условиями Использования и Политикой Конфиденциальности, а также приняли их."
+      - "Para sermos coerentes com as leis de proteção de dados na UE, pedimos que você reserve um momento para analisar nossos Termos de Uso, que estabelecem os termos de uso deste jogo e nossa Política de Privacidade, que explica quais informações suas processamos, como processamos suas informações, os direitos de privacidade disponíveis para você e instruções sobre como exercer tais direitos de privacidade.\n\nToque no botão “Continuar” para selecionar suas opções de privacidade antes de iniciar o jogo. Você pode alterar sua seleção posteriormente na seção Configurações de Privacidade no menu de configurações do jogo.\n\nAo tocar no botão “Continuar” e configurar suas opções de privacidade, você confirma que reconhece e aceita nossos Termos de Uso e Política de Privacidade."
+      - "यूरोपीय संघ के डेटा संरक्षण संबंधी कानूनों का सुचारु रूप से पालन करने के लिए, कृपया कुछ समय निकालकर हमारी <nobr>उपयोग की शर्तों</nobr> को देखें, जो इस गेम के उपयोग की शर्तों और हमारी <nobr>गोपनीयता नीति</nobr> को निर्धारित करती है, और बताती है कि हम आपकी कौन सी जानकारी, किस प्रकार संसाधित करते हैं। साथ ही यह शर्तें आपको मिलने वाले गोपनीयता अधिकार और उनके उपयोग की प्रक्रिया के बारे में भी बताती है।\n\nगेम शुरू करने से पहले अपनी गोपनीयता विकल्प चुनने के लिए <nobr>\"जारी रखें\"</nobr> बटन पर टैप करें। आप बाद में गेम सेटिंग्स मेनू में जाकर<nobr> गोपनीयता सेटिंग्स</nobr> सेक्शन में अपना चुना गया विकल्प बदल सकते हैं।\n\n<nobr>\"जारी रखें\"</nobr> बटन को टैप करके और गोपनीयता से संबंधित अपने विकल्पों को सेट करके आप हमारी <nobr>उपयोग की शर्तों</nobr> और <nobr>गोपनीयता नीति</nobr> को स्वीकार करते हैं।"
+      - "Para poder cumplir con las leyes de protección de datos en la UE, le pedimos que se tome un momento para repasar nuestros Términos de Uso, que establecen los términos de uso de este juego, y nuestra Política de Privacidad, que explica qué información personal procesamos sobre usted, cómo procesamos sus datos, cuáles son sus derechos de privacidad y las instrucciones para ejercer estos derechos de privacidad.\n\nToque el botón de \"Continuar\" para seleccionar sus opciones de privacidad antes de empezar el juego. Usted puede cambiar su selección más tarde en la sección de Ajustes de Privacidad en el menú de ajustes del juego.\n\nAl tocar el botón de \"Continuar\" y establecer sus opciones de privacidad, usted confirma que reconoce y acepta nuestros Términos de Uso y Política de Privacidad."
+      - "Agar sesuai dengan undang-undang perlindungan data Uni Eropa, kami meminta Anda meluangkan waktu sejenak untuk meninjau Syarat Penggunaan kami, yang berisi syarat mengenai penggunaan game ini, serta Kebijakan Privasi kami, yang menjelaskan informasi apa saja yang kami proses, cara kami memproses informasi Anda, hak-hak privasi yang berlaku untuk Anda, dan petunjuk penggunaan hak-hak privasi tersebut.\n\nKetuk tombol \"Lanjutkan\" untuk memilih pilihan privasi Anda sebelum memulai permainan. Anda dapat mengubah pilihan Anda nantinya di bagian Pengaturan Privasi pada menu pengaturan game.\n\nDengan mengetuk tombol “Lanjutkan” dan menyiapkan pilihan privasi Anda, Anda mengonfirmasi bahwa Anda mengakui dan menerima Syarat Penggunaan dan Kebijakan Privasi kami."
+      - "Afin de nous conformer aux lois sur la protection des données en vigueur dans l'UE, nous vous demandons de prendre un moment pour consulter nos Conditions d'utilisation, qui définissent les conditions d'utilisation de ce jeu, de même que notre Politique de confidentialité, qui explique quelles sont les informations vous concernant que nous traitons, comment nous les traitons, les droits à la confidentialité dont vous disposez et comment exercer ces droits à la confidentialité.\n\nAppuyez sur le bouton «<nobr> Continuer »</nobr> pour sélectionner vos choix de confidentialité avant de commencer à jouer . Vous pourrez modifier votre sélection ultérieurement dans la section Paramètres de confidentialité du menu des paramètres du jeu.\n\nEn appuyant sur le bouton <nobr>« Continuer »</nobr> et en configurant vos choix de confidentialité, vous confirmez que vous avez lu et acceptez nos Conditions d'utilisation et notre Politique de confidentialité."
+      - "Um mit den Datenschutzgesetzen in der EU übereinzustimmen, bitten wir Sie, sich einen Moment Zeit zu nehmen, um unsere Nutzungsbedingungen zu lesen, in denen die Nutzungsbedingungen für dieses Spiel festgelegt sind, und unsere Datenschutzrichtlinie, in der erläutert wird, welche Daten wir von Ihnen verarbeiten, wie wir Ihre Daten verarbeiten, welche Rechte Sie in Bezug auf den Datenschutz haben und wie Sie diese Rechte ausüben können.\n\nTippen Sie auf die Schaltfläche „Weiter“, um Ihre Datenschutzoptionen auszuwählen, bevor Sie das Spiel starten. Sie können Ihre Auswahl später im Abschnitt Datenschutzeinstellungen im Menü Spieleinstellungen ändern.\n\nIndem Sie auf die Schaltfläche „Weiter“ tippen und Ihre Datenschutzoptionen festlegen, bestätigen Sie, dass Sie unsere Nutzungsbedingungen und Datenschutzrichtlinie zur Kenntnis genommen und akzeptiert haben."
+      - "Để nhất quán với luật về bảo vệ dữ liệu ở Liên minh Châu Âu, chúng tôi xin đề nghị bạn dành ít phút để xem xét Điều khoản sử dụng của chúng tôi, trong đó quy định điều khoản sử dụng trò chơi này, và Chính sách quyền riêng tư, trong đó giải thích chúng tôi xử lý thông tin nào của bạn, cách chúng tôi xử lý thông tin đó, những quyền riêng tư của bạn, cũng như hướng dẫn cách thực hiện những quyền riêng tư đó.\n\nHãy nhấn vào nút \"Tiếp tục\" để chọn các lựa chọn quyền riêng tư của bạn trước khi bắt đầu trò chơi. Bạn có thể thay đổi lựa chọn của mình sau trong phần Cài đặt quyền riêng tư trong trình đơn cài đặt trò chơi.\n\nBằng cách nhấp vào nút \"Tiếp tục\" và thiết lập lựa chọn quyền riêng tư, bạn xác nhận rằng bạn hiểu và chấp nhận Điều khoản sử dụng cũng như Chính sách quyền riêng tư của chúng tôi."
+      - "เ​พ​ื​่​อ​ใ​ห​้​ส​อ​ด​ค​ล​้​อ​ง​ก​ั​บ​ก​ฎ​ห​ม​า​ย​ค​ุ​้​ม​ค​ร​อ​ง​ข​้​อ​ม​ู​ล​ใ​น​ส​ห​ภ​า​พ​ย​ุ​โ​ร​ป​ ​เ​ร​า​ข​อ​ใ​ห​้​ค​ุ​ณ​ใ​ช​้​เ​ว​ล​า​ส​ั​ก​ค​ร​ู​่​เ​พ​ื​่​อ​ต​ร​ว​จ​ส​อ​บ​<nobr>ข​้​อ​ก​ำ​ห​น​ด​ใ​น​ก​า​ร​ใ​ช​้​ง​า​น​</nobr>ข​อ​ง​เ​ร​า​ซ​ึ​่​ง​ก​ำ​ห​น​ด​ไ​ว​้​ใ​น​เ​ง​ื​่​อ​น​ไ​ข​ก​า​ร​ใ​ช​้​ง​า​น​ข​อ​ง​เ​ก​ม​น​ี​้​ ​แ​ล​ะ​<nobr>น​โ​ย​บ​า​ย​ค​ว​า​ม​เ​ป​็​น​ส​่​ว​</nobr>น​ต​ั​ว​ข​อ​ง​เ​ร​า​ ​ซ​ึ​่​ง​อ​ธ​ิ​บ​า​ย​ล​ั​ก​ษ​ณ​ะ​ข​้​อ​ม​ู​ล​ข​อ​ง​ค​ุ​ณ​ท​ี​่​เ​ร​า​ป​ร​ะ​ม​ว​ล​ผ​ล​ ​ว​ิ​ธ​ี​ท​ี​่​เ​ร​า​ป​ร​ะ​ม​ว​ล​ผ​ล​ข​้​อ​ม​ู​ล​ข​อ​ง​ค​ุ​ณ​ ​ส​ิ​ท​ธ​ิ​์​ค​ว​า​ม​เ​ป​็​น​ส​่​ว​น​ต​ั​ว​ท​ี​่​ค​ุ​ณ​ม​ี​ ​ต​ล​อ​ด​จ​น​ค​ำ​แ​น​ะ​น​ำ​ใ​น​ก​า​ร​ใ​ช​้​ส​ิ​ท​ธ​ิ​์​ค​ว​า​ม​เ​ป​็​น​ส​่​ว​น​ต​ั​ว​ด​ั​ง​ก​ล​่​า​ว​\n​\n​แ​ต​ะ​ป​ุ​่​ม​ ​<nobr>\"​ด​ำ​เ​น​ิ​น​ก​า​ร​ต​่​อ​\"​</nobr> ​เ​พ​ื​่​อ​เ​ล​ื​อ​ก​ท​า​ง​เ​ล​ื​อ​ก​ด​้​า​น​ค​ว​า​ม​เ​ป​็​น​ส​่​ว​น​ต​ั​ว​ข​อ​ง​ค​ุ​ณ​ก​่​อ​น​ท​ี​่​ค​ุ​ณ​จ​ะ​เ​ร​ิ​่​ม​เ​ล​่​น​เ​ก​ม​ ​ค​ุ​ณ​ส​า​ม​า​ร​ถ​เ​ป​ล​ี​่​ย​น​ก​า​ร​เ​ล​ื​อ​ก​ข​อ​ง​ค​ุ​ณ​ใ​น​ภ​า​ย​ห​ล​ั​ง​ไ​ด​้​จ​า​ก​ส​่​ว​น​ ​<nobr>ก​า​ร​ต​ั​้​ง​ค​่​า​ค​ว​า​ม​เ​ป​็​น​ส​่​ว​น​ต​ั​ว​</nobr> ​ท​ี​่​อ​ย​ู​่​ใ​น​เ​ม​น​ู​ก​า​ร​ต​ั​้​ง​ค​่​า​เ​ก​ม​\n​\n​ก​า​ร​แ​ต​ะ​ป​ุ​่​ม​ ​<nobr>\"​ด​ำ​เ​น​ิ​น​ก​า​ร​ต​่​อ​\"​</nobr> ​แ​ล​ะ​ก​า​ร​ต​ั​้​ง​ค​่​า​ต​ั​ว​เ​ล​ื​อ​ก​ค​ว​า​ม​เ​ป​็​น​ส​่​ว​น​ต​ั​ว​ข​อ​ง​ค​ุ​ณ​จ​ะ​ถ​ื​อ​เ​ป​็​น​ก​า​ร​ย​ื​น​ย​ั​น​ว​่​า​ค​ุ​ณ​ร​ั​บ​ท​ร​า​บ​แ​ล​ะ​ย​อ​ม​ร​ั​บ​<nobr>ข​้​อ​ก​ำ​ห​น​ด​ใ​น​ก​า​ร​ใ​ช​้​ง​า​น​</nobr>แ​ล​ะ​<nobr>น​โ​ย​บ​า​ย​ค​ว​า​ม​เ​ป​็​น​ส​่​ว​</nobr>น​ต​ั​ว​ข​อ​ง​เ​ร​า​"
+      - "유럽연합의 데이터 보호법을 준수하기 위해 잠시 시간을 내어 당사의 <nobr>이용약관</nobr> 및 <nobr>개인정보처리방침</nobr>을 검토해주시기 바랍니다. <nobr>이용약관</nobr>에서는 본 게임의 이용약관을 명시하고, <nobr>개인정보처리방침</nobr>에서는 당사가 처리하는 귀하의 정보, 당사가 귀하의 정보를 처리하는 방법, 귀하에게 해당하는 개인정보 보호 권리 및 그러한 개인정보 보호 권리를 행사하는 지침을 설명합니다.\n\n게임을 시작하기 전에 <nobr>'계속'</nobr> 버튼을 눌러 개인정보 보호 옵션을 선택하세요. 향후 게임 설정 메뉴의 <nobr>개인정보 보호</nobr> 설정에서 선택 사항을 변경하실 수 있습니다.\n\n<nobr>'계속'</nobr> 버튼을 누르고 개인정보 보호 선택 사항을 설정하면 당사의 <nobr>이용약관</nobr> 및 개인정보처리방침을 인정하고 이에 동의함을 확인하는 것입니다."
+      - "Avrupa Birliği bünyesindeki veri koruma yasalarına uyum sağlamak amacıyla, lütfen oyunun kullanım koşullarını düzenleyen Kullanım Koşullarımızı ve size ait hangi bilgileri işlediğimizi, bu bilgileri nasıl işlediğimizi, ne gibi gizlilik haklarına sahip olduğunuzu ve bu gizlilik haklarını kullanma talimatlarını açıklayan ve düzenleyen Gizlilik Politikamızı okuyun.\n\nOyuna başlarken öncelikli gizlilik tercihlerinizi seçmek için \"Devam\" butonuna dokunun. Seçiminizi daha sonra oyun ayarları menüsündeki Gizlilik Ayarları bölümünden değiştirebilirsiniz.\n\n\"Devam\" butonuna dokunarak ve gizlilik seçeneklerinizi belirleyerek, Kullanım Koşullarımızı ve Gizlilik Politikamızı anladığınızı ve kabul ettiğinizi onaylamış olursunuz."
+      - "为了遵循欧盟的数据保护法，我们要求您花一点时间查看我们的<nobr>《使用条款》</nobr>和<nobr>《隐私政策》</nobr>。<nobr>《使用条款》</nobr>规定了本游戏的使用条款，<nobr>《隐私政策》</nobr>解释了我们会处理您的哪些信息、我们如何处理您的信息、您享有的隐私权，以及有关行使此类隐私权的说明。\n\n在开始游戏之前，请点按<nobr>“继续”</nobr>按钮来选择您的隐私选项。您可以稍后在游戏设置菜单的<nobr>“隐私设置”</nobr>部分更改您的选择。\n\n点按<nobr>“继续”</nobr>按钮并设置您的隐私选项，即表示您确认您了解并接受我们的<nobr>《使用条款》</nobr>和<nobr>《隐私政策》。</nobr>"
+      - "為了遵循歐盟的資料保護法，我們要求您花一點時間查看我們的<nobr>《使用條款》</nobr>和<nobr>《隱私權政策》</nobr>。<nobr>《使用條款》</nobr>規定了此遊戲的使用條款，<nobr>《隱私權政策》</nobr>解釋了我們會處理您的哪些資訊、我們如何處理您的資訊、您享有的隱私權，以及有關行使此類隱私權的說明。\n\n在開始遊戲之前，請點按<nobr>「繼續」</nobr>按鈕來選擇您的隱私權選項。您可以稍後在遊戲設定選單的<nobr>「隱私權設定」</nobr>區段變更您的選擇。\n\n點按<nobr>「繼續」</nobr>按鈕並設定您的隱私權選項，即表示您確認您了解並接受我們的<nobr>《使用條款》</nobr>和<nobr>《隱私權政策》。</nobr>"
+      - "Per essere in linea con le leggi sulla protezione dei dati nell'UE, ti chiediamo di visionare le nostre Condizioni per l'uso, che stabiliscono le condizioni di utilizzo di questo gioco, e la nostra Informativa sulla privacy, che spiega quali informazioni sul tuo conto vengono trattate, come vengono trattate, i diritti alla privacy a tua disposizione e le istruzioni per l'esercizio di tali diritti.\n\nPrima di iniziare a giocare tocca il pulsante \"Continua\" per selezionare le scelte sulla privacy. Puoi modificare la tua selezione in un secondo momento nella sezione Impostazioni sulla privacy del menu delle impostazioni del gioco.\n\nToccando il pulsante \"Continua\" e impostando le scelte sulla privacy confermi di aver preso atto e di accettare le nostre Condizioni per l'uso e l'Informativa sulla privacy."
+      - "EUのデータ保護法に準拠するために、少し時間をとって、当社の<nobr>利用規約</nobr>をご確認頂ければと思います。そしてそれは、このゲームの<nobr>利用規約</nobr>を定めるものです。さらに、当社が処理するお客様情報の内容、当社によるお客様情報の処理方法、お客様が行使可能な<nobr>プライバシー</nobr>の権利、およびこのようなプライバシーの権利の行使に関する説明について解説する<nobr>プライバシーポリシー</nobr>もご確認ください。\n\nゲームを開始する前に<nobr>「続行」</nobr>ボタンをタップし、プライバシーの種類を選択してください。後でゲームの設定メニューにある<nobr>「プライバシーの設定」</nobr>セクションで、選択内容を変更することができます。\n\n<nobr>「続行」</nobr>ボタンをタップし、プライバシーの選択を設定すると、お客様は当社の<nobr>「利用規約」</nobr>と<nobr>「プライバシーポリシー」</nobr>を確認し、同意したものとみなされます。"
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: TERMS_OF_USE
+      TermType: 0
+      Languages:
+      - Terms of Use
+      - Условия использования
+      - Termos de Uso
+      - उपयोग की शर्तें
+      - Términos de Uso
+      - Syarat Penggunaan
+      - Conditions d'utilisation
+      - Nutzungsbedingungen
+      - Điều khoản sử dụng
+      - ข้อกำหนดในการใช้งาน
+      - 이용약관
+      - Kullanım Koşulları
+      - 使用条款
+      - 使用條款
+      - Condizioni per l'uso
+      - 利用規約
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PRIVACY_POLICY
+      TermType: 0
+      Languages:
+      - Privacy Policy
+      - Политика конфиденциальности
+      - Política de privacidade
+      - गोपनीयता नीति
+      - Política de privacidad
+      - Kebijakan privasi
+      - Politique de confidentialité
+      - Datenschutzrichtlinie
+      - Chính sách quyền riêng tư
+      - นโยบายความเป็นส่วนตัว
+      - 개인정보처리방침
+      - Gizlilik politikası
+      - 隐私政策
+      - 隱私權政策
+      - Informativa sulla privacy
+      - プライバシーポリシー
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PP_CONTINUE
+      TermType: 0
+      Languages:
+      - Continue
+      - Продолжить
+      - Continuar
+      - जारी रखें
+      - Continuar
+      - Lanjutkan
+      - Continuer
+      - Weiter
+      - Tiếp tục
+      - ดำเนินการต่อ
+      - 계속
+      - Devam
+      - 继续
+      - 繼續
+      - Continua
+      - 続行
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: PRIVACY_SETTINGS
+      TermType: 0
+      Languages:
+      - Privacy Settings
+      - Настройка конфиденциальности
+      - Configurações de Privacidade
+      - गोपनीयता सेटिंग्स
+      - Ajustes de Privacidad
+      - Pengaturan Privasi
+      - Paramètres de confidentialité
+      - Datenschutzeinstellungen
+      - Cài đặt quyền riêng tư
+      - การตั้งค่าความเป็นส่วนตัว
+      - 개인정보 보호
+      - Gizlilik Ayarları
+      - 隐私设置
+      - 隱私權設定
+      - Impostazioni sulla privacy
+      - プライバシーの設定
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: HAMSTER_FIND_KEY
+      TermType: 0
+      Languages:
+      - Find a special {0}Key{1} in the levels
+      - Найди особый {0}Ключ{1}, когда проходишь уровни
+      - Encontre uma {0}Chave{1} especial nos níveis
+      - लेवल्स में एक विशेष {0}चाबी{1} ढूंढें
+      - Encuentra una {0}Llave{1} especial en los niveles
+      - Temukan {0}Kunci{1} spesial di level-level
+      - Trouvez une {0}Clé{1} spéciale dans les niveaux
+      - Finde einen speziellen {0}Schlüssel{1} in den Levels
+      - Tìm một {0}Chìa khóa{1} đặc biệt trong các cấp độ
+      - ค้นหาค {0}กุญแจ{1} พิเศษในระดับต่างๆ
+      - 레벨에서 특별한 {0}키{1}를 찾아보세요
+      - Seviyelerde özel bir {0}Anahtar{1} bulun
+      - 在关卡中找到一个特别的 {0}钥匙{1}
+      - 在關卡中找到一把特別的 {0}鑰匙{1}
+      - Trova una {0}Chiave{1} speciale nei livelli
+      - レベルで特別な {0}キー{1} を見つけよう
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: HAMSTER_GET_PROMO_CODE
+      TermType: 0
+      Languages:
+      - Get a {0}Promo Code{1} with a prize
+      - Получи {0}Промокод{1} с призом
+      - Pegue um {0}Código Promocional{1} com um prêmio
+      - एक {0}प्रोमो कोड{1} प्राप्त करें और पुरस्कार पाएं
+      - Obtén un {0}Código Promocional{1} con un premio
+      - Dapatkan {0}Kode Promo{1} dengan hadiah
+      - Obtenez un {0}Code Promo{1} avec un prix
+      - Erhalte einen {0}Promo-Code{1} mit einem Preis
+      - Nhận một {0}Mã khuyến mại{1} với phần thưởng
+      - รับ {0}รหัสโปรโมชัน{1} พร้อมรางวัล
+      - '{0}프로모션 코드{1}를 받아서 상품을 받으세요'
+      - Bir {0}Promosyon Kodu{1} al ve ödül kazan
+      - 获得一个 {0}促销码{1} 和奖励
+      - 獲得一個 {0}促銷代碼{1} 和獎勳
+      - Ottieni un {0}Codice Promo{1} con un premio
+      - '{0}プロモコード{1} を手に入れて、賞品をゲットしよう'
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: HAMSTER_TO_GET_NEW_CODE
+      TermType: 0
+      Languages:
+      - To get a new code, first redeem the previous one
+      - Чтобы получить новый код, сначала активируй предыдущий
+      - Para obter um novo código, primeiro resgate o anterior
+      - नया कोड प्राप्त करने के लिए, पहले पिछले कोड को रिडीम करें
+      - Para obtener un nuevo código, primero canjea el anterior
+      - Untuk mendapatkan kode baru, pertama-tama tukarkan kode yang sebelumnya
+      - Pour obtenir un nouveau code, d’abord échangez le précédent
+      - Um einen neuen Code zu erhalten, löse zuerst den vorherigen ein
+      - Để nhận mã mới, trước tiên hãy đổi mã trước đó
+      - เพื่อรับรหัสใหม่, ก่อนอื่นให้แลกรหัสก่อนหน้า
+      - 새로운 코드를 받으려면 먼저 이전 코드를 사용하세요
+      - Yeni bir kod almak için önce önceki kodu kullanın
+      - 要获取新代码，请先兑换之前的代码
+      - 要獲得新的代碼，首先請兌換之前的代碼
+      - Per ottenere un nuovo codice, prima riscatta quello precedente
+      - 新しいコードを取得するには、まず前のコードを使おう
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: HAMSTER_DO_IT
+      TermType: 0
+      Languages:
+      - DO IT
+      - УЧАСТВОВАТЬ
+      - FAÇA ISSO
+      - इसे करें
+      - ¡HAZLO!
+      - COBA SEKARANG
+      - FAITES-LE
+      - MACH ES
+      - THỰC HIỆN NGAY
+      - ทำสิ่งนี้
+      - 해보세요
+      - YAP
+      - 去做吧
+      - 去做吧
+      - FARLO
+      - やってみる
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: HAMSTER_YOUR_PROGRESS
+      TermType: 0
+      Languages:
+      - Your daily progress
+      - Твой ежедневный прогресс
+      - Teu progresso diário
+      - तुम्हारी दैनिक प्रगति
+      - Tu progreso diario
+      - Kemajuan harianmu
+      - Ta progression quotidienne
+      - Dein täglicher Fortschritt
+      - Tiến độ hàng ngày của bạn
+      - ความก้าวหน้าประจำวันของคุณ
+      - 너의 일일 진행 상황
+      - Günlük ilerlemen
+      - 你的每日进度
+      - 你的每日進度
+      - I tuoi progressi giornalieri
+      - あなたの日々の進捗
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: HAMSTER_COMPLETE_TASK
+      TermType: 0
+      Languages:
+      - Complete the task<br>To get {0}Promo Code{1}!
+      - Закончи задание<br>И получи {0}Промокод{1}!
+      - Complete a tarefa<br>Para ganhar {0}Código Promocional{1}!
+      - कार्य पूरा करें<br>{0}प्रचार कोड{1} प्राप्त करने के लिए!
+      - ¡Completa la tarea<br>Para obtener {0}Código Promocional{1}!
+      - Selesaikan tugas<br>Untuk mendapatkan {0}Kode Promo{1}!
+      - Accomplis la tâche<br>Pour obtenir {0}Code Promo{1} !
+      - Erfülle die Aufgabe<br>Um {0}Promo-Code{1} zu erhalten!
+      - Hoàn thành nhiệm vụ<br>Để nhận {0}Mã Khuyến Mãi{1}!
+      - ทำภารกิจให้เสร็จ<br>เพื่อรับ {0}โค้ดโปรโมชั่น{1}!
+      - 작업을 완료하세요<br>{0}프로모션 코드{1}를 받으세요!
+      - Görevi tamamla<br>{0}Promosyon Kodu{1} almak için!
+      - 完成任务<br>获取{0}促销代码{1}!
+      - 完成任務<br>獲取{0}促銷代碼{1}!
+      - Completa il compito<br>Per ottenere {0}Codice Promozionale{1}!
+      - タスクを完了して<br>{0}プロモーションコード{1}をゲット！
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: HAMSTER_PROMO
+      TermType: 0
+      Languages:
+      - 'Hamster Kombat Promo:'
+      - 'Промо-акция Hamster Kombat:'
+      - 'Promoção Hamster Kombat:'
+      - 'Hamster Combat प्रोमो:'
+      - 'Promoción de Hamster Kombat:'
+      - 'Promo Hamster Kombat:'
+      - 'Promotion Hamster Kombat :'
+      - 'Hamster Kombat Promo:'
+      - 'Khuyến mãi Hamster Kombat:'
+      - 'โปรโมชั่น Hamster Kombat:'
+      - Hamster Kombat 프로모션
+      - 'Hamster Kombat Promosyonu:'
+      - Hamster Kombat 促销：
+      - Hamster Kombat 促銷"：
+      - 'Promo Hamster Kombat:'
+      - Hamster Kombat プロモ：
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: HAMSTER_COPY
+      TermType: 0
+      Languages:
+      - COPY CODE
+      - СКОПИРОВАТЬ КОД
+      - COPIAR CÓDIGO
+      - कोड कॉपी करें
+      - COPIAR CÓDIGO
+      - SALIN KODE
+      - COPIER LE CODE
+      - CODE KOPIEREN
+      - SAO CHÉP MÃ
+      - คัดลอกรหัส
+      - 코드 복사
+      - KODU KOPYALA
+      - 复制代码
+      - 複製代碼
+      - COPIA CODICE
+      - コードをコピー
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: HAMSTER_NO_CODES
+      TermType: 0
+      Languages:
+      - You don't have available codes
+      - У тебя нет доступных кодов
+      - Você não tem códigos disponíveis
+      - आपके पास उपलब्ध कोड नहीं हैं
+      - No tienes códigos disponibles
+      - Kamu tidak memiliki kode yang tersedia
+      - Tu n'as pas de codes disponibles
+      - Du hast keine verfügbaren Codes
+      - Bạn không có mã khả dụng
+      - คุณไม่มีโค้ดที่ใช้ได้
+      - 사용 가능한 코드가 없습니다
+      - Mevcut kodların yok
+      - 你没有可用的代码
+      - 你沒有可用的代碼
+      - Non hai codici disponibili
+      - 利用可能なコードがありません
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: HAMSTER_COME_BACK
+      TermType: 0
+      Languages:
+      - COME BACK LATER
+      - ВЕРНИСЬ ПОЗЖЕ
+      - VOLTA MAIS TARDE
+      - बाद में वापस आओ
+      - VUELVE MÁS TARDE
+      - KEMBALI NANTI
+      - REVIENS PLUS TARD
+      - KOMM SPÄTER ZURÜCK
+      - QUAY LẠI SAU
+      - กลับมาใหม่ภายหลัง
+      - 나중에 다시 와
+      - DAHA SONRA GERİ GEL
+      - 稍后再来
+      - 稍後再來
+      - TORNA PIÙ TARDI
+      - 後で戻ってきて
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: HAMSTER_GET_CODE
+      TermType: 0
+      Languages:
+      - GET CODE!
+      - ПОЛУЧИТЬ КОД
+      - PEGAR CÓDIGO
+      - 'कोड लें '
+      - CONSEGUIR CÓDIGO
+      - DAPATKAN KODE
+      - OBTENIR CODE
+      - CODE ERHALTEN
+      - NHẬN MÃ
+      - รับรหัส
+      - 코드 얻기
+      - KODU AL
+      - 领取代码
+      - 取得代碼
+      - PRENDI CODICE
+      - コードをゲット
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: HAMSTER_EVENT_RULES
+      TermType: 0
+      Languages:
+      - Event rules
+      - Правила события
+      - Regras do evento
+      - इवेंट के नियम
+      - Reglas del evento
+      - Aturan acara
+      - Règles de l'événement
+      - Eventregeln
+      - Quy tắc sự kiện
+      - กฎของกิจกรรม
+      - 이벤트 규칙
+      - Etkinlik kuralları
+      - 赛事规则
+      - 賽事規則
+      - Regole dell'evento
+      - イベントのルール
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    - Term: BTN_BACK
+      TermType: 0
+      Languages:
+      - BACK
+      - НАЗАД
+      - VOLTAR
+      - वापस
+      - VOLVER
+      - KEMBALI
+      - RETOUR
+      - ZURÜCK
+      - TRỞ LẠI
+      - กลับ
+      - 뒤로
+      - GERİ
+      - 返回
+      - 返回
+      - INDIETRO
+      - 戻る
+      Flags: 00000000000000000000000000000000
+      Languages_Touch: []
+    CaseInsensitiveTerms: 0
+    OnMissingTranslation: 1
+    mTerm_AppName:
+    mLanguages:
+    - Name: English
+      Code: en
+      Flags: 0
+    - Name: Russian
+      Code: ru
+      Flags: 0
+    - Name: Portuguese
+      Code: pt
+      Flags: 0
+    - Name: Hindi
+      Code: hi
+      Flags: 0
+    - Name: Spanish
+      Code: es
+      Flags: 0
+    - Name: Indonesian
+      Code: id
+      Flags: 0
+    - Name: French
+      Code: fr
+      Flags: 0
+    - Name: German
+      Code: de
+      Flags: 0
+    - Name: Vietnamese
+      Code: vi
+      Flags: 0
+    - Name: Thai
+      Code: th
+      Flags: 0
+    - Name: Korean
+      Code: ko
+      Flags: 0
+    - Name: Turkish
+      Code: tr
+      Flags: 0
+    - Name: Chinese (Simplified)
+      Code: zh-CN
+      Flags: 0
+    - Name: Chinese (Traditional)
+      Code: zh-TW
+      Flags: 0
+    - Name: Italian
+      Code: it
+      Flags: 0
+    - Name: Japanese
+      Code: ja
+      Flags: 0
+    IgnoreDeviceLanguage: 0
+    _AllowUnloadingLanguages: 0
+    Google_WebServiceURL:
+    Google_SpreadsheetKey:
+    Google_SpreadsheetName:
+    Google_LastUpdatedVersion:
+    GoogleUpdateFrequency: 3
+    GoogleInEditorCheckFrequency: 2
+    GoogleUpdateSynchronization: 1
+    GoogleUpdateDelay: 0
+    Assets: []

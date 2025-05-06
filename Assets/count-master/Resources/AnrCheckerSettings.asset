@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1304886019, guid: 5e6e7593a0c454fc5c151ec177a29023, type: 3}
+  m_Name: AnrCheckerSettings
+  m_EditorClassIdentifier:
+  _isEnabled: 1
+  _checkerSettings:
+    _checkInterval: 1500
+    _checkTimeout: 3500
+    _healthCheckTimeout: 800
+    _useAutoKilling: 1
+    _useAutoRestart: 1
+    _logAllThreads: 0
+    _maxLinesNumberForStackTraceCache: 1
+    _analyticsVerbosityLevel: 0
