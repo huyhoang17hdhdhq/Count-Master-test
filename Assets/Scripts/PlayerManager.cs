@@ -98,6 +98,7 @@ public class PlayerManager : MonoBehaviour
             MoveThePlayer();
 
         }
+       
 
 
         if (transform.childCount == 1 && FinishLine)
@@ -175,7 +176,7 @@ public class PlayerManager : MonoBehaviour
 
 
                 if (numberOfStickmans > 50)
-                    control.x = Mathf.Clamp(control.x, -0.7f, 0.7f);
+                    control.x = Mathf.Clamp(control.x, -0.5f, 0.5f);
                 else
                     control.x = Mathf.Clamp(control.x, -1.1f, 1.1f);
 
@@ -209,6 +210,7 @@ public class PlayerManager : MonoBehaviour
         numberOfStickmans = transform.childCount - 1;
         CounterTxt.text = numberOfStickmans.ToString();
         FormatStickMan();
+       
     }
 
 
