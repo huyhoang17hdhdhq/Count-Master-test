@@ -245,6 +245,7 @@ public class PlayerManager : MonoBehaviour
             other.transform.GetChild(1).GetComponent<enemyManager>().AttackThem(transform);
 
             StartCoroutine(UpdateTheEnemyAndPlayerStickMansNumbers());
+            Debug.Log("Event True");
 
         }
 
@@ -256,6 +257,11 @@ public class PlayerManager : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(false);
 
         }
+        if (other.CompareTag("hammer"))
+        {
+           
+            Destroy(gameObject);
+        }    
     }
 
     IEnumerator UpdateTheEnemyAndPlayerStickMansNumbers()

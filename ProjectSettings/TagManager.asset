@@ -10,6 +10,9 @@ TagManager:
   - blue
   - jump
   - stair
+  - WellColor
+  - Location_UI
+  - hammer
   layers:
   - Default
   - TransparentFX
