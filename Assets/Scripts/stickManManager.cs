@@ -27,9 +27,9 @@ public class stickManManager : MonoBehaviour
         {
             case "red":
                 if (other.transform.parent.childCount > 0)
-                {
-                    Destroy(other.gameObject);
+                { Destroy(other.gameObject);
                     Destroy(gameObject);
+                   
                 }
 
                 break;
