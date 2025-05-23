@@ -259,7 +259,10 @@ public class PlayerManager : MonoBehaviour
         }
         if (other.CompareTag("kill"))
         {
-            
+           
+            numberOfStickmans = transform.childCount - 1;
+            CounterTxt.text = numberOfStickmans.ToString();
+            FormatStickMan();
         }
 
     }

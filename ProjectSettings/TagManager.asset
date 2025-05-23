@@ -13,6 +13,7 @@ TagManager:
   - WellColor
   - Location_UI
   - hammer
+  - kill
   layers:
   - Default
   - TransparentFX

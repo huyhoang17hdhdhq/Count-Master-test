@@ -43,6 +43,9 @@ public class stickManManager : MonoBehaviour
             case "kill":
 
                 Destroy(gameObject);
+                PlayerManager.PlayerManagerInstance.FormatStickMan();
+                                                 
+
 
                 break;
         }
