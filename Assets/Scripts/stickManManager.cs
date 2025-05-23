@@ -39,6 +39,12 @@ public class stickManManager : MonoBehaviour
                 transform.DOJump(transform.position, 1f, 1, 1f).SetEase(Ease.Flash).OnComplete(PlayerManager.PlayerManagerInstance.FormatStickMan);
 
                 break;
+
+            case "kill":
+
+                Destroy(gameObject);
+
+                break;
         }
 
         if (other.CompareTag("stair"))

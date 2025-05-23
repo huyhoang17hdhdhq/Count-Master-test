@@ -257,11 +257,11 @@ public class PlayerManager : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(false);
 
         }
-        if (other.CompareTag("hammer"))
+        if (other.CompareTag("kill"))
         {
-           
-            Destroy(gameObject);
-        }    
+            
+        }
+
     }
 
     IEnumerator UpdateTheEnemyAndPlayerStickMansNumbers()
