@@ -10,7 +10,7 @@ public class stickManManager : MonoBehaviour
     private void Start()
     {
         StickManAnimator = GetComponent<Animator>();
-        StickManAnimator.SetBool("run", true);
+        StickManAnimator.SetBool("run", false);
     }
 
     private void OnTriggerEnter(Collider other)
