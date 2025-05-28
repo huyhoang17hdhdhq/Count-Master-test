@@ -7,12 +7,23 @@ public class stickManManager : MonoBehaviour
 {
     [SerializeField] private ParticleSystem blood;
     private Animator StickManAnimator;
+    
     private void Start()
     {
         StickManAnimator = GetComponent<Animator>();
-        StickManAnimator.SetBool("run", false);
+
+        
+        
+            StickManAnimator.SetBool("run", true);
+
+       
+
     }
 
+    public void play()
+    {
+       
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("red") && other.transform.parent.childCount > 0)
