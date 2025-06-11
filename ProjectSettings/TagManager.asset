@@ -18,10 +18,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - no bake
   - Water
   - UI
-  - 
+  - bake
   - 
   - 
   - 

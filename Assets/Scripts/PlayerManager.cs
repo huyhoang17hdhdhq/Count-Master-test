@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using Cinemachine;
 using DG.Tweening;
 using TMPro;
@@ -29,6 +29,7 @@ public class PlayerManager : MonoBehaviour
     public ParticleSystem blood;
     public GameObject SecondCam;
     public bool FinishLine, moveTheCamera;
+    public bool moveThePlayer;
     void Start()
     {
         player = transform;
@@ -42,6 +43,8 @@ public class PlayerManager : MonoBehaviour
         PlayerManagerInstance = this;
 
         gameState = false;
+
+        moveThePlayer = true;
     }
 
     void Update()
@@ -93,7 +96,7 @@ public class PlayerManager : MonoBehaviour
 
             }
         }
-        else
+        else 
         {
             MoveThePlayer();
 
@@ -134,10 +137,16 @@ public class PlayerManager : MonoBehaviour
 
         }
 
+      
+
     }
 
     void MoveThePlayer()
     {
+        if (!moveThePlayer) return;
+
+
+
         if (Input.GetMouseButtonDown(0) && gameState)
         {
             moveByTouch = true;
@@ -253,10 +262,20 @@ public class PlayerManager : MonoBehaviour
         {
             SecondCam.SetActive(true);
             FinishLine = true;
-            Tower.TowerInstance.CreateTower(transform.childCount - 1);
-            transform.GetChild(0).gameObject.SetActive(false);
 
+            moveThePlayer = false;
+
+
+            transform.position = new Vector3(0f, transform.position.y, transform.position.z);
+
+            // Gọi tạo tháp
+            Tower.TowerInstance.CreateTower(transform.childCount - 1);
+
+            // Tắt Stickman chính (giả sử nằm ở index 0)
+            transform.GetChild(0).gameObject.SetActive(false);
         }
+
+
         if (other.CompareTag("kill"))
         {
            
