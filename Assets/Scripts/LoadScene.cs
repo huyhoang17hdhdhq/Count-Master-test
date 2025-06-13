@@ -13,4 +13,9 @@ public class LoadScene : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+    public void MapAttackMini()
+    {
+        SceneManager.LoadScene(2);
+    }
+
 }

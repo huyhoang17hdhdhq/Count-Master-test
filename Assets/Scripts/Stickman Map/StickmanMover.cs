@@ -9,15 +9,18 @@ public class StickmanMover : MonoBehaviour
     public float rotateSpeed = 5f;
     int index = 0;
     private Animator StickManAnimator;
+    private AudioSource StickManAudio;
 
     private void Start()
     {
 
         StickManAnimator = GetComponent<Animator>();
-
-
-
         StickManAnimator.SetBool("run", true);
+
+        StickManAudio = GetComponent<AudioSource>();
+        StickManAudio.Play();
+
+
     }
     private void Update()
     {
@@ -47,5 +50,6 @@ public class StickmanMover : MonoBehaviour
             }
            
         }
+       
     }
 }

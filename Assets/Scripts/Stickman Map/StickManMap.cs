@@ -23,8 +23,6 @@ public class StickManMap : MonoBehaviour
     [Header("Danh sách Button để bật StickManMover")]
     public List<Button> activateButtons;
 
-    [Header("Âm thanh")]
-    public List<AudioSource> audioSources;
 
     [Header("Image dùng để hiện trong 30s")]
     public List<Image> targetImages;
@@ -109,14 +107,7 @@ public class StickManMap : MonoBehaviour
         FindObjectOfType<StickmanLineupManager>()?.UpdateLineupAtIndex(index);
 
 
-        // Phát âm thanh nếu có
-        if (audioSources != null && index < audioSources.Count)
-        {
-            if (!audioSources[index].isPlaying)
-            {
-                audioSources[index].Play();
-            }
-        }
+        
 
         // Reset thanh fill & số lượng
         currentCounts[index] = 0;
