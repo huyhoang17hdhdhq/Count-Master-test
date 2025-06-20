@@ -132,7 +132,6 @@ MonoBehaviour:
   - {fileID: 0}
   speed: 20
   rotateSpeed: 30.6
-  audiorun: {fileID: 7763497543356366384}
 --- !u!82 &7763497543356366384
 AudioSource:
   m_ObjectHideFlags: 0

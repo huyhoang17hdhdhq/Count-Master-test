@@ -12,7 +12,6 @@ public class StickManMap : MonoBehaviour
     [Header("Parent chứa Stickman")]
     public List<Transform> parentContainers;
 
-
     [Header("Thanh fill thể hiện số lượng Stickman")]
     public List<Image> fillBars;
 
@@ -23,7 +22,6 @@ public class StickManMap : MonoBehaviour
     [Header("Danh sách Button để bật StickManMover")]
     public List<Button> activateButtons;
 
-
     [Header("Image dùng để hiện trong 30s")]
     public List<Image> targetImages;
 
@@ -32,9 +30,12 @@ public class StickManMap : MonoBehaviour
     private List<int> currentCounts = new List<int>();
     private List<bool> isPausedList = new List<bool>();
 
+    private BuyBuilding buyBuilding;
+
     void Start()
     {
-        // Khởi tạo các danh sách
+        buyBuilding = FindObjectOfType<BuyBuilding>();
+
         for (int i = 0; i < stickmanPrefabs.Count; i++)
         {
             int index = i;
@@ -43,13 +44,11 @@ public class StickManMap : MonoBehaviour
             currentCounts.Add(0);
             isPausedList.Add(false);
 
-            // Gán listener cho mỗi nút
             if (activateButtons != null && i < activateButtons.Count)
             {
                 activateButtons[i].onClick.AddListener(() => OnActivateButtonClicked(index));
             }
 
-            // Bắt đầu coroutine spawn cho từng nhóm Stickman
             StartCoroutine(SpawnStickmanRoutine(index));
         }
     }
@@ -58,6 +57,14 @@ public class StickManMap : MonoBehaviour
     {
         while (true)
         {
+            // ✳️ Chỉ spawn nếu building tương ứng đã được mua
+            if (buyBuilding != null &&
+                (index >= buyBuilding.buildingUnlocked.Count || !buyBuilding.buildingUnlocked[index]))
+            {
+                yield return new WaitForSeconds(spawnInterval);
+                continue;
+            }
+
             if (!isPausedList[index] && currentCounts[index] < maxStickmanCount)
             {
                 SpawnStickman(index);
@@ -75,14 +82,13 @@ public class StickManMap : MonoBehaviour
             stickmanPrefabs[index],
             spawnPoints[index].position,
             spawnPoints[index].rotation,
-            parentContainers[index] // Gán đúng parent theo index
+            parentContainers[index]
         );
 
         spawnedStickmen[index].Add(newStickman);
         currentCounts[index]++;
         UpdateFillBar(index);
     }
-
 
     void UpdateFillBar(int index)
     {
@@ -94,7 +100,6 @@ public class StickManMap : MonoBehaviour
 
     void OnActivateButtonClicked(int index)
     {
-        // Bật StickmanMover của nhóm tương ứng
         foreach (GameObject stickman in spawnedStickmen[index])
         {
             StickmanMover mover = stickman.GetComponent<StickmanMover>();
@@ -106,21 +111,15 @@ public class StickManMap : MonoBehaviour
 
         FindObjectOfType<StickmanLineupManager>()?.UpdateLineupAtIndex(index);
 
-
-        
-
-        // Reset thanh fill & số lượng
         currentCounts[index] = 0;
         UpdateFillBar(index);
 
-        // Hiện image & tắt sau 30s
         if (targetImages != null && index < targetImages.Count)
         {
             targetImages[index].gameObject.SetActive(true);
             StartCoroutine(DisableImageAfterTime(index, 30f));
         }
 
-        // Tạm ngưng spawn trong 30s
         StartCoroutine(PauseSpawning(index, 30f));
     }
 
