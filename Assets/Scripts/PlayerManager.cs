@@ -311,4 +311,9 @@ public class PlayerManager : MonoBehaviour
             }
         }
     }
+    public void DisablePlayerManager()
+    {
+        this.enabled = false;  // Tắt script PlayerManager
+        Debug.Log("PlayerManager disabled");
+    }
 }

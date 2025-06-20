@@ -12,11 +12,14 @@ public class stickManManager : MonoBehaviour
     {
         StickManAnimator = GetComponent<Animator>();
 
-        
-        
-            StickManAnimator.SetBool("run", true);
 
-       
+        StickManAnimator.SetBool("run", true);
+
+
+
+
+
+
 
     }
 
@@ -78,6 +81,11 @@ public class stickManManager : MonoBehaviour
             }
 
         }
+    }
+    public void DisablestStickManManager()
+    {
+        this.enabled = false;  // Tắt script PlayerManager
+        Debug.Log("StickManmanager disabled");
     }
 }
 

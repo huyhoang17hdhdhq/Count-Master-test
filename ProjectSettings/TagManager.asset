@@ -16,6 +16,7 @@ TagManager:
   - kill
   - Ship
   - Point
+  - WinCoin
   layers:
   - Default
   - TransparentFX
