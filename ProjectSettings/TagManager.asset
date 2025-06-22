@@ -17,6 +17,11 @@ TagManager:
   - Ship
   - Point
   - WinCoin
+  - end
+  - runcomplete
+  - Red Tower
+  - Enemy Tower
+  - runActive
   layers:
   - Default
   - TransparentFX

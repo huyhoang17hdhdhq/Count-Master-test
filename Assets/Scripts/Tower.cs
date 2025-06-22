@@ -63,7 +63,7 @@ public class Tower : MonoBehaviour
         {
             foreach (GameObject child in towerList)
             {
-                child.transform.DOLocalMove(child.transform.localPosition + new Vector3(0, yGap, 0), 0.2f).SetEase(Ease.OutQuad);
+                child.transform.DOLocalMove(child.transform.localPosition + new Vector3(0, yGap, 0), 0.09f).SetEase(Ease.OutQuad);
             }
 
             var tower = new GameObject("Tower" + towerId);
@@ -94,7 +94,7 @@ public class Tower : MonoBehaviour
             tower.transform.position = new Vector3(-towerNewPos.x / towerHumanCount, tower.transform.position.y - yOffset, tower.transform.position.z);
 
             towerId++;
-            yield return new WaitForSecondsRealtime(0.2f);
+            yield return new WaitForSecondsRealtime(0.08f);
         }
     }
 }

@@ -8,7 +8,7 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     public Transform player;
-    private int numberOfStickmans, numberOfEnemyStickmans;
+    public int numberOfStickmans, numberOfEnemyStickmans;
     [SerializeField] private TextMeshPro CounterTxt;
     [SerializeField] private GameObject stickMan;
     //****************************************************
@@ -30,6 +30,19 @@ public class PlayerManager : MonoBehaviour
     public GameObject SecondCam;
     public bool FinishLine, moveTheCamera;
     public bool moveThePlayer;
+
+    [Header("audio")]
+    public AudioSource gate;
+    public AudioSource jump;
+
+    [Header("Nguồn phát âm thanh")]
+    public AudioSource audioFinish;
+    public AudioClip finishClip;
+
+    private void Awake()
+    {
+        PlayerManagerInstance = this;
+    }
     void Start()
     {
         player = transform;
@@ -88,13 +101,19 @@ public class PlayerManager : MonoBehaviour
                 enemy.gameObject.SetActive(false);
 
             }
-
-            if (transform.childCount == 1)
+            if (transform.childCount == 1 && enemy != null && enemy.childCount > 1)
             {
-                enemy.transform.GetChild(1).GetComponent<enemyManager>().StopAttacking();
-                gameObject.SetActive(false);
+                var enemyChild = enemy.transform.GetChild(1);
 
+                var enemyMgr = enemyChild.GetComponent<enemyManager>();
+                if (enemyMgr != null)
+                {
+                    enemyMgr.StopAttacking();
+                }
+
+              
             }
+
         }
         else 
         {
@@ -242,6 +261,8 @@ public class PlayerManager : MonoBehaviour
                 MakeStickMan(numberOfStickmans + gateManager.randomNumber);
 
             }
+            gate.Play();
+
         }
 
         if (other.CompareTag("enemy"))
@@ -257,6 +278,7 @@ public class PlayerManager : MonoBehaviour
             Debug.Log("Event True");
 
         }
+       
 
         if (other.CompareTag("Finish"))
         {
@@ -273,6 +295,12 @@ public class PlayerManager : MonoBehaviour
 
             // Tắt Stickman chính (giả sử nằm ở index 0)
             transform.GetChild(0).gameObject.SetActive(false);
+
+            if (audioFinish != null && finishClip != null)
+            {
+                audioFinish.PlayOneShot(finishClip);
+                Debug.Log("Đã phát âm thanh finish từ: " + other.name);
+            }
         }
 
 
@@ -282,6 +310,10 @@ public class PlayerManager : MonoBehaviour
             numberOfStickmans = transform.childCount - 1;
             CounterTxt.text = numberOfStickmans.ToString();
             FormatStickMan();
+        }
+        if( other.CompareTag("jump"))
+        {
+            jump.Play();
         }
 
     }
@@ -298,6 +330,7 @@ public class PlayerManager : MonoBehaviour
             numberOfStickmans--;
 
             enemy.transform.GetChild(1).GetComponent<enemyManager>().CounterTxt.text = numberOfEnemyStickmans.ToString();
+           
             CounterTxt.text = numberOfStickmans.ToString();
 
             yield return null;
