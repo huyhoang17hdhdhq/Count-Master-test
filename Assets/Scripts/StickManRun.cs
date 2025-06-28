@@ -9,8 +9,14 @@ public class StickManRun : MonoBehaviour
     private void Start()
     {
         StickManAnimator = GetComponent<Animator>();
-        StickManAnimator.SetBool("run", true);
+      
 
     }
+    private void Update()
+    {
+        StickManAnimator.SetBool("run", true);
+    }
+
+
 
 }

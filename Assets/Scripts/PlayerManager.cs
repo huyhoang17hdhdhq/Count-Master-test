@@ -11,6 +11,7 @@ public class PlayerManager : MonoBehaviour
     public int numberOfStickmans, numberOfEnemyStickmans;
     [SerializeField] private TextMeshPro CounterTxt;
     [SerializeField] private GameObject stickMan;
+    [SerializeField] private GameObject stickManRun;
     //****************************************************
 
     [Range(0f, 1f)][SerializeField] private float DistanceFactor, Radius;
@@ -111,11 +112,11 @@ public class PlayerManager : MonoBehaviour
                     enemyMgr.StopAttacking();
                 }
 
-              
+
             }
 
         }
-        else 
+        else
         {
             MoveThePlayer();
 
@@ -156,7 +157,7 @@ public class PlayerManager : MonoBehaviour
 
         }
 
-      
+
 
     }
 
@@ -238,6 +239,18 @@ public class PlayerManager : MonoBehaviour
         CounterTxt.text = numberOfStickmans.ToString();
         FormatStickMan();
     }
+    public void MakeStickManRun(int number)
+    {
+        for (int i = numberOfStickmans; i < number; i++)
+        {
+            Instantiate(stickManRun, transform.position, quaternion.identity, transform);
+        }
+
+        numberOfStickmans = transform.childCount - 1;
+        CounterTxt.text = numberOfStickmans.ToString();
+        FormatStickMan();
+    }
+
 
 
     private void OnTriggerEnter(Collider other)
@@ -264,6 +277,18 @@ public class PlayerManager : MonoBehaviour
             gate.Play();
 
         }
+        if (other.CompareTag("gatebost"))
+            {
+            other.transform.GetComponent<BoxCollider>().enabled = false;
+            var gateBost = other.GetComponent<CloneGateBost>();
+            numberOfStickmans = transform.childCount - 1;
+
+            if (gateBost != null)
+                {
+                MakeStickManRun(numberOfStickmans + gateBost.randomGateBost);
+            }
+        }
+
 
         if (other.CompareTag("enemy"))
         {
@@ -278,7 +303,7 @@ public class PlayerManager : MonoBehaviour
             Debug.Log("Event True");
 
         }
-       
+
 
         if (other.CompareTag("Finish"))
         {
@@ -306,12 +331,12 @@ public class PlayerManager : MonoBehaviour
 
         if (other.CompareTag("kill"))
         {
-           
+
             numberOfStickmans = transform.childCount - 1;
             CounterTxt.text = numberOfStickmans.ToString();
             FormatStickMan();
         }
-        if( other.CompareTag("jump"))
+        if (other.CompareTag("jump"))
         {
             jump.Play();
         }
@@ -330,7 +355,7 @@ public class PlayerManager : MonoBehaviour
             numberOfStickmans--;
 
             enemy.transform.GetChild(1).GetComponent<enemyManager>().CounterTxt.text = numberOfEnemyStickmans.ToString();
-           
+
             CounterTxt.text = numberOfStickmans.ToString();
 
             yield return null;

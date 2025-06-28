@@ -1,8 +1,14 @@
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Timeline;
 
 public class menuManager : MonoBehaviour
 {
     [SerializeField] private GameObject startMenuObj;
+    public GameObject Setting;
+    [Header("Nguồn phát âm thanh")]
+    public AudioSource audiobutton;
+    public AudioClip button;
+    public AudioClip audioSetting;
 
     public void StartTheGame()
     {
@@ -11,4 +17,24 @@ public class menuManager : MonoBehaviour
 
         PlayerManager.PlayerManagerInstance.player.GetChild(1).GetComponent<Animator>().SetBool("run", true);
     }
+    public void SettingAll()
+    {
+        Setting.SetActive(true);
+        if (audiobutton != null && button != null)
+        {
+            audiobutton.PlayOneShot(audioSetting);
+
+        }
+
+    }
+    public void close()
+    {
+        Setting.SetActive(false );
+        if (audiobutton != null && button != null)
+        {
+            audiobutton.PlayOneShot(button);
+
+        }
+    }
+
 }

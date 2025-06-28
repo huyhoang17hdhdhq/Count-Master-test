@@ -8,7 +8,7 @@ public class stickManManager : MonoBehaviour
 {
     [SerializeField] private ParticleSystem blood;
     private Animator StickManAnimator;
-    private StickManRun stickManRun;
+   
 
     [Header("Nguồn phát âm thanh")]
     public AudioSource audioSource;
@@ -16,6 +16,7 @@ public class stickManManager : MonoBehaviour
     [Header("Âm thanh khi va chạm stair")]
     public AudioClip stairClip;
     public AudioClip attack;
+
 
 
     [Header("Audio All stickman")]
@@ -29,13 +30,9 @@ public class stickManManager : MonoBehaviour
     {
         StickManAnimator = GetComponent<Animator>();
 
-        stickManRun = GetComponent<StickManRun>();
+       
 
-        if (stickManRun != null)
-        {
-            stickManRun.enabled = false; // Tắt sẵn
-        }
-
+       
 
     }
 
@@ -50,7 +47,7 @@ public class stickManManager : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
 
-           //Instantiate(blood, transform.position, Quaternion.identity);
+           
         }
         
         
@@ -131,15 +128,29 @@ public class stickManManager : MonoBehaviour
 
             GetComponent<Rigidbody>().isKinematic = true;
         }
-        if (other.CompareTag("runActive") && stickManRun != null)
+        if (other.CompareTag("runActive"))
         {
-            stickManRun.enabled = true;
+            StickManAnimator.SetBool ("run", true);
             Debug.Log("StickManRun đã được bật do va chạm với tag runAtive ");
         }
+        //if (other.CompareTag("runfalse") )
+        //{
+        //    stickManRun.enabled = false;
+
+        //}
 
 
 
     }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.CompareTag("runActive"))
+    //    {
+    //       // StickManAnimator.SetBool("run",true);
+    //        Debug.Log("StickManRun đã được bật do va chạm với tag runAtive ");
+    //    }
+    //}
+
     public void DisablestStickManManager()
     {
         this.enabled = false;  // Tắt script PlayerManager

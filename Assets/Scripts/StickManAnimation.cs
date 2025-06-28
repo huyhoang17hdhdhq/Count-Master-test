@@ -11,9 +11,11 @@ public class StickManAnimation : MonoBehaviour
     [Header("Nguồn phát âm thanh")]
     public AudioSource audioAll;
     public AudioClip winClip;
+    private StickManRun stickManRun;
 
     private void Start()
     {
+       
         animator = GetComponent<Animator>();
         if (runButton != null)
         {
@@ -22,10 +24,7 @@ public class StickManAnimation : MonoBehaviour
     }
     void OnRunButtonClicked()
     {
-        if (animator != null)
-        {
-            animator.SetBool("run", true); // Gọi animation "Run"
-        }
+       animator.SetBool("run",true);
         runAudio.Play();
        
     }
@@ -33,11 +32,7 @@ public class StickManAnimation : MonoBehaviour
     {
         if (other.CompareTag("WinCoin"))
         {
-            if (animator != null)
-            {
-                animator.SetBool("run", false);
-                Debug.Log("Stickman chạm vào wincoin → Idle = true");
-            }
+            animator.SetBool("run", false);
             if (audioAll != null && winClip != null)
             {
                 audioAll.PlayOneShot(winClip);

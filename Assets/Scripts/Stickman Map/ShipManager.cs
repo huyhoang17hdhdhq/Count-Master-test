@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.Timeline;
 
 
 public class ShipManager : MonoBehaviour
@@ -18,6 +20,9 @@ public class ShipManager : MonoBehaviour
 
     [Header("Animator sẽ chạy Depart")]
     public Animator shipAnimator;
+    [Header("Nguồn phát âm thanh")]
+    public AudioSource audiobutton;
+    public AudioClip button;
 
     public AudioSource Attack;
     public AudioSource Attackship;
@@ -53,6 +58,12 @@ public class ShipManager : MonoBehaviour
             {
                 score++;
                 UpdateFillBars();
+
+                if (audiobutton != null && button != null)
+                {
+                    audiobutton.PlayOneShot(button);
+
+                }
             }
 
             Destroy(other.gameObject);
