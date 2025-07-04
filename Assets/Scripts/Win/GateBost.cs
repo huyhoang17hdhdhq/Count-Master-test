@@ -7,7 +7,7 @@ public class GateBost : MonoBehaviour
    
     public GameObject randomClone;
     public AudioSource audiorun;
-    private PlayerManager playerManager;
+   
 
     private void Start()
     {

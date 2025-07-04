@@ -16,6 +16,11 @@ public class stickManManager : MonoBehaviour
     [Header("Âm thanh khi va chạm stair")]
     public AudioClip stairClip;
     public AudioClip attack;
+    
+    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float stopDistance = 1.5f;
+    private Transform moveTarget;
+    public bool attackBoss;
 
 
 
@@ -35,11 +40,26 @@ public class stickManManager : MonoBehaviour
        
 
     }
-
-    public void play()
+    private void Update()
     {
-       
+        if (attackBoss && moveTarget != null)
+        {
+            Vector3 direction = (moveTarget.position - transform.position).normalized;
+            float distance = Vector3.Distance(transform.position, moveTarget.position);
+
+            if (distance > stopDistance)
+            {
+                transform.position += direction * moveSpeed * Time.deltaTime;
+            }
+            else
+            {
+                // Đã đến gần đủ, dừng lại
+                attackBoss = false;
+            }
+        }
     }
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("red") && other.transform.parent.childCount > 0)
@@ -133,11 +153,12 @@ public class stickManManager : MonoBehaviour
             StickManAnimator.SetBool ("run", true);
             Debug.Log("StickManRun đã được bật do va chạm với tag runAtive ");
         }
-        //if (other.CompareTag("runfalse") )
-        //{
-        //    stickManRun.enabled = false;
-
-        //}
+        if (other.CompareTag("Boss"))
+        {
+            GetComponent<Collider>().isTrigger = false;
+            GetComponent<Rigidbody>().isKinematic = true;
+            attackBoss = true;
+        }
 
 
 

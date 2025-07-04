@@ -1,8 +1,10 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using Cinemachine;
 using DG.Tweening;
 using TMPro;
 using Unity.Mathematics;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -31,7 +33,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject SecondCam;
     public bool FinishLine, moveTheCamera;
     public bool moveThePlayer;
-
+    
     [Header("audio")]
     public AudioSource gate;
     public AudioSource jump;
@@ -65,28 +67,73 @@ public class PlayerManager : MonoBehaviour
     {
         if (attack)
         {
-            var enemyDirection = new Vector3(enemy.position.x, transform.position.y, enemy.position.z) - transform.position;
+            var enemyTarget = enemy.GetChild(1).GetChild(0);
+            // Tìm "cháu" enemy đầu tiên còn sống
+            Transform enemyStickContainer = enemy.GetChild(1);
+            Transform targetChild = null;
 
-            for (int i = 1; i < transform.childCount; i++)
+            for (int i = 0; i < enemyStickContainer.childCount; i++)
             {
-                transform.GetChild(i).rotation =
-                    Quaternion.Slerp(transform.GetChild(i).rotation, Quaternion.LookRotation(enemyDirection, Vector3.up), Time.deltaTime * 3f);
+                Transform child = enemyStickContainer.GetChild(i);
+                if (child != null && child.gameObject.activeSelf)
+                {
+                    targetChild = child;
+                    break;
+                }
+            }
+
+            // Quay từng stickman về đúng targetChild
+            if (targetChild != null)
+            {
+                for (int i = 1; i < transform.childCount; i++)
+                {
+                    Transform stick = transform.GetChild(i);
+
+                    Vector3 dirToTarget = new Vector3(
+                        targetChild.position.x,
+                        stick.position.y,
+                        targetChild.position.z
+                    ) - stick.position;
+
+                    stick.rotation = Quaternion.Slerp(
+                        stick.rotation,
+                        Quaternion.LookRotation(dirToTarget.normalized, Vector3.up),
+                        Time.deltaTime * 3f
+                    );
+                }
             }
 
             if (enemy.GetChild(1).childCount > 1)
             {
-                for (int i = 0; i < transform.childCount; i++)
-                {
-                    var Distance = enemy.GetChild(1).GetChild(0).position - transform.GetChild(i).position;
+                Transform target = enemy.GetChild(1).GetChild(0);
 
-                    if (Distance.magnitude < 1.5f)
-                    {
-                        transform.GetChild(i).position = Vector3.Lerp(transform.GetChild(i).position,
-                            new Vector3(enemy.GetChild(1).GetChild(0).position.x, transform.GetChild(i).position.y,
-                                enemy.GetChild(1).GetChild(0).position.z), Time.deltaTime * 1f);
-                    }
+                List<Transform> stickmen = new List<Transform>();
+                for (int i = 1; i < transform.childCount; i++)
+                {
+                    if (transform.GetChild(i).gameObject.activeSelf)
+                        stickmen.Add(transform.GetChild(i));
+                }
+
+                for (int i = 0; i < stickmen.Count; i++)
+                {
+                    Transform stick = stickmen[i];
+                    Vector3 targetDir = (target.position - stick.position).normalized;
+
+                    // index càng cao thì moveFactor càng lớn
+                    float maxSpeed = 1.2f;
+                    float minSpeed = 0.5f;
+                    float t = (float)i / (stickmen.Count - 1 + 0.0001f);
+                    float moveFactor = Mathf.Lerp(minSpeed, maxSpeed, t);
+
+                    Vector3 newPos = stick.position + targetDir * moveFactor * Time.deltaTime;
+                    stick.position = Vector3.Lerp(stick.position, newPos, Time.deltaTime * 10f);
                 }
             }
+
+
+
+
+
 
             else
             {
@@ -99,7 +146,8 @@ public class PlayerManager : MonoBehaviour
                     transform.GetChild(i).rotation = Quaternion.identity;
 
 
-                enemy.gameObject.SetActive(false);
+                
+                    enemy.gameObject.SetActive(false);
 
             }
             if (transform.childCount == 1 && enemy != null && enemy.childCount > 1)
@@ -123,7 +171,7 @@ public class PlayerManager : MonoBehaviour
         }
 
 
-        if (transform.childCount == 1 && FinishLine)
+        if (transform.childCount ==3 && FinishLine)
         {
             gameState = false;
         }
@@ -217,6 +265,7 @@ public class PlayerManager : MonoBehaviour
 
     public void FormatStickMan()
     {
+        
         for (int i = 1; i < player.childCount; i++)
         {
             var x = DistanceFactor * Mathf.Sqrt(i) * Mathf.Cos(i * Radius);
@@ -303,6 +352,21 @@ public class PlayerManager : MonoBehaviour
             Debug.Log("Event True");
 
         }
+        if (other.CompareTag("Boss"))
+        {
+            enemy = other.transform;
+            roadSpeed = 1.5f;
+            attack = true;
+
+           other.transform.GetChild(1).GetComponent<BossManager>().Move();
+            
+  
+
+        }
+        if(other.CompareTag("stop"))
+        {
+            gameState = false;
+        }
 
 
         if (other.CompareTag("Finish"))
@@ -339,6 +403,11 @@ public class PlayerManager : MonoBehaviour
         if (other.CompareTag("jump"))
         {
             jump.Play();
+        }
+        if (other.CompareTag("attack"))
+        {
+           
+            
         }
 
     }

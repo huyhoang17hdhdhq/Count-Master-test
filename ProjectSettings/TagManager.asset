@@ -23,6 +23,10 @@ TagManager:
   - Enemy Tower
   - runActive
   - runfalse
+  - gatebost
+  - BossEnemy
+  - Boss
+  - stop
   layers:
   - Default
   - TransparentFX
