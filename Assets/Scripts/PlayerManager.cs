@@ -12,8 +12,10 @@ public class PlayerManager : MonoBehaviour
     public Transform player;
     public int numberOfStickmans, numberOfEnemyStickmans;
     [SerializeField] private TextMeshPro CounterTxt;
-    [SerializeField] private GameObject stickMan;
-    [SerializeField] private GameObject stickManRun;
+    public List<GameObject> stickManMain;
+
+    public List<GameObject> stickManPrefabs;
+
     //****************************************************
 
     [Range(0f, 1f)][SerializeField] private float DistanceFactor, Radius;
@@ -27,7 +29,7 @@ public class PlayerManager : MonoBehaviour
 
     [SerializeField] private Transform road;
     [SerializeField] private Transform enemy;
-    private bool attack;
+    public bool attack;
     public static PlayerManager PlayerManagerInstance;
     public ParticleSystem blood;
     public GameObject SecondCam;
@@ -120,8 +122,8 @@ public class PlayerManager : MonoBehaviour
                     Vector3 targetDir = (target.position - stick.position).normalized;
 
                     // index càng cao thì moveFactor càng lớn
-                    float maxSpeed = 1.2f;
-                    float minSpeed = 0.5f;
+                    float maxSpeed = 0.8f;
+                    float minSpeed = 0.3f;
                     float t = (float)i / (stickmen.Count - 1 + 0.0001f);
                     float moveFactor = Mathf.Lerp(minSpeed, maxSpeed, t);
 
@@ -171,7 +173,7 @@ public class PlayerManager : MonoBehaviour
         }
 
 
-        if (transform.childCount ==3 && FinishLine)
+        if (transform.childCount == 1 && FinishLine)
         {
             gameState = false;
         }
@@ -188,6 +190,7 @@ public class PlayerManager : MonoBehaviour
             //    
             // }
         }
+        
 
         if (moveTheCamera && transform.childCount > 1)
         {
@@ -279,25 +282,68 @@ public class PlayerManager : MonoBehaviour
 
     public void MakeStickMan(int number)
     {
+        // Lấy index đã chọn từ PickSkin (được lưu trong PlayerPrefs)
+        int selectedIndexMain = PlayerPrefs.GetInt("SelectedPlayerIndex", 0);
+
+        // Bảo vệ nếu index vượt ngoài danh sách
+        if (selectedIndexMain < 0 || selectedIndexMain >= stickManMain.Count)
+        {
+            Debug.LogWarning("Selected index không hợp lệ trong stickManMain, dùng index 0.");
+            selectedIndexMain = 0;
+        }
+
+        // Lấy prefab tương ứng
+        GameObject prefabToSpawnMain = stickManMain[selectedIndexMain];
+
+        // Sinh số lượng stickman theo yêu cầu
         for (int i = numberOfStickmans; i < number; i++)
         {
-            Instantiate(stickMan, transform.position, quaternion.identity, transform);
+            Instantiate(prefabToSpawnMain, transform.position, Quaternion.identity, transform);
+        }
+
+        // Cập nhật số lượng và UI
+        numberOfStickmans = transform.childCount - 1;
+        CounterTxt.text = numberOfStickmans.ToString();
+        FormatStickMan();
+    }
+
+    public void MakeStickManRun(int number)
+    {
+        int selectedIndex = PlayerPrefs.GetInt("SelectedPlayerIndex", 0);
+
+        // Bảo vệ nếu index không hợp lệ
+        if (selectedIndex < 0 || selectedIndex >= stickManPrefabs.Count)
+        {
+            Debug.LogWarning("Selected index không hợp lệ, dùng index 0 mặc định.");
+            selectedIndex = 0;
+        }
+
+        GameObject prefabToSpawn = stickManPrefabs[selectedIndex];
+
+        for (int i = numberOfStickmans; i < number; i++)
+        {
+            Instantiate(prefabToSpawn, transform.position, Quaternion.identity, transform);
         }
 
         numberOfStickmans = transform.childCount - 1;
         CounterTxt.text = numberOfStickmans.ToString();
         FormatStickMan();
     }
-    public void MakeStickManRun(int number)
+
+    public void WinBoss()
     {
-        for (int i = numberOfStickmans; i < number; i++)
+        attack = false;
+        FormatStickMan();
+        for (int i = 1; i < transform.childCount; i++) // Nếu bỏ qua index 0
         {
-            Instantiate(stickManRun, transform.position, quaternion.identity, transform);
+            Transform child = transform.GetChild(i);
+            Animator anim = child.GetComponent<Animator>();
+            if (anim != null)
+            {
+                anim.SetBool("run",false); 
+            }
         }
 
-        numberOfStickmans = transform.childCount - 1;
-        CounterTxt.text = numberOfStickmans.ToString();
-        FormatStickMan();
     }
 
 
@@ -357,8 +403,9 @@ public class PlayerManager : MonoBehaviour
             enemy = other.transform;
             roadSpeed = 1.5f;
             attack = true;
+            SecondCam.SetActive(true);
 
-           other.transform.GetChild(1).GetComponent<BossManager>().Move();
+            other.transform.GetChild(1).GetComponent<BossManager>().Move();
             
   
 
@@ -366,6 +413,7 @@ public class PlayerManager : MonoBehaviour
         if(other.CompareTag("stop"))
         {
             gameState = false;
+           
         }
 
 
@@ -404,11 +452,7 @@ public class PlayerManager : MonoBehaviour
         {
             jump.Play();
         }
-        if (other.CompareTag("attack"))
-        {
-           
-            
-        }
+        
 
     }
 
@@ -438,9 +482,5 @@ public class PlayerManager : MonoBehaviour
             }
         }
     }
-    public void DisablePlayerManager()
-    {
-        this.enabled = false;  // Tắt script PlayerManager
-        Debug.Log("PlayerManager disabled");
-    }
+    
 }

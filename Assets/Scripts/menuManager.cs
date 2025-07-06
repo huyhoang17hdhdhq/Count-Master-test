@@ -5,6 +5,7 @@ public class menuManager : MonoBehaviour
 {
     [SerializeField] private GameObject startMenuObj;
     public GameObject Setting;
+    public GameObject Skin;
     [Header("Nguồn phát âm thanh")]
     public AudioSource audiobutton;
     public AudioClip button;
@@ -27,6 +28,17 @@ public class menuManager : MonoBehaviour
         }
 
     }
+    public void Pick()
+    {
+        Skin.SetActive(true);
+        startMenuObj.SetActive(false);
+        audiobutton.PlayOneShot(button);
+    }
+    public void ExitPick()
+    {
+        Skin.SetActive(false);
+        startMenuObj.SetActive(true);
+    }
     public void close()
     {
         Setting.SetActive(false );
@@ -35,6 +47,7 @@ public class menuManager : MonoBehaviour
             audiobutton.PlayOneShot(button);
 
         }
+       
     }
 
 }

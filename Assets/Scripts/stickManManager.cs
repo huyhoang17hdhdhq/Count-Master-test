@@ -17,10 +17,9 @@ public class stickManManager : MonoBehaviour
     public AudioClip stairClip;
     public AudioClip attack;
     
-    [SerializeField] private float moveSpeed = 2f;
-    [SerializeField] private float stopDistance = 1.5f;
+   
     private Transform moveTarget;
-    public bool attackBoss;
+    //public bool attackBoss;
 
 
 
@@ -40,24 +39,24 @@ public class stickManManager : MonoBehaviour
        
 
     }
-    private void Update()
-    {
-        if (attackBoss && moveTarget != null)
-        {
-            Vector3 direction = (moveTarget.position - transform.position).normalized;
-            float distance = Vector3.Distance(transform.position, moveTarget.position);
+    //private void Update()
+    //{
+    //    if (attackBoss && moveTarget != null)
+    //    {
+    //        Vector3 direction = (moveTarget.position - transform.position).normalized;
+    //        float distance = Vector3.Distance(transform.position, moveTarget.position);
 
-            if (distance > stopDistance)
-            {
-                transform.position += direction * moveSpeed * Time.deltaTime;
-            }
-            else
-            {
-                // Đã đến gần đủ, dừng lại
-                attackBoss = false;
-            }
-        }
-    }
+    //        if (distance > stopDistance)
+    //        {
+    //            transform.position += direction * moveSpeed * Time.deltaTime;
+    //        }
+    //        else
+    //        {
+    //            // Đã đến gần đủ, dừng lại
+    //            attackBoss = false;
+    //        }
+    //    }
+    //}
 
 
     private void OnTriggerEnter(Collider other)
@@ -157,7 +156,7 @@ public class stickManManager : MonoBehaviour
         {
             GetComponent<Collider>().isTrigger = false;
             GetComponent<Rigidbody>().isKinematic = true;
-            attackBoss = true;
+            //attackBoss = true;
         }
 
 

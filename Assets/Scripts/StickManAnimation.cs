@@ -43,6 +43,10 @@ public class StickManAnimation : MonoBehaviour
         {
           runAudio.Pause();
         }
+        if(other.CompareTag("Boss"))
+        {
+            runAudio.Pause();
+        }
 
 
     }

@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class ImageSpinAndStop : MonoBehaviour
 {
-    public Image spinningImage;                   // Hình quay
-    public Renderer playerRenderer;               // Renderer của player
-    public List<Material> materials;              // 9 material tương ứng với vùng
+    public Image spinningImage;                          // Hình quay
+    public List<SkinnedMeshRenderer> playerRenderers;    // Danh sách skinned renderers
+    public List<Material> materials;                     // 9 material tương ứng với vùng
 
     const string MATERIAL_INDEX_KEY = "SavedMaterialIndex";
 
@@ -19,7 +19,10 @@ public class ImageSpinAndStop : MonoBehaviour
             int savedIndex = PlayerPrefs.GetInt(MATERIAL_INDEX_KEY);
             if (savedIndex >= 0 && savedIndex < materials.Count)
             {
-                playerRenderer.material = materials[savedIndex];
+                foreach (var r in playerRenderers)
+                {
+                    r.material = materials[savedIndex];
+                }
                 Debug.Log($"[DEBUG] Gán lại material đã lưu: Index {savedIndex}");
             }
         }
@@ -75,16 +78,18 @@ public class ImageSpinAndStop : MonoBehaviour
             materialIndex = 0; regionName = "Xanh lá cây";
         }
 
-        // DEBUG
         Debug.Log($"[DEBUG] Z: {zRotation:F2}° | Corrected: {correctedAngle:F2}°");
         Debug.Log($"[DEBUG] Vùng màu: {regionName} (material index: {materialIndex})");
 
-        // Áp dụng material
         if (materialIndex >= 0 && materialIndex < materials.Count)
         {
-            playerRenderer.material = materials[materialIndex];
-            PlayerPrefs.SetInt(MATERIAL_INDEX_KEY, materialIndex); // Lưu lại chỉ số material
-            PlayerPrefs.Save(); // Đảm bảo lưu
+            foreach (var r in playerRenderers)
+            {
+                r.material = materials[materialIndex];
+            }
+
+            PlayerPrefs.SetInt(MATERIAL_INDEX_KEY, materialIndex);
+            PlayerPrefs.Save();
         }
         else
         {
