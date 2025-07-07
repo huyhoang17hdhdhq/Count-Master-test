@@ -31,7 +31,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private Transform enemy;
     public bool attack;
     public static PlayerManager PlayerManagerInstance;
-    public ParticleSystem blood;
+   
     public GameObject SecondCam;
     public bool FinishLine, moveTheCamera;
     public bool moveThePlayer;
@@ -69,14 +69,12 @@ public class PlayerManager : MonoBehaviour
     {
         if (attack)
         {
-            var enemyTarget = enemy.GetChild(1).GetChild(0);
-            // Tìm "cháu" enemy đầu tiên còn sống
-            Transform enemyStickContainer = enemy.GetChild(1);
+            // Tìm "con" đầu tiên của enemy còn sống (không cần cháu)
             Transform targetChild = null;
 
-            for (int i = 0; i < enemyStickContainer.childCount; i++)
+            for (int i = 0; i < enemy.childCount; i++)
             {
-                Transform child = enemyStickContainer.GetChild(i);
+                Transform child = enemy.GetChild(i);
                 if (child != null && child.gameObject.activeSelf)
                 {
                     targetChild = child;
@@ -84,7 +82,7 @@ public class PlayerManager : MonoBehaviour
                 }
             }
 
-            // Quay từng stickman về đúng targetChild
+            // Quay từng stickman của bạn về targetChild
             if (targetChild != null)
             {
                 for (int i = 1; i < transform.childCount; i++)
@@ -122,8 +120,8 @@ public class PlayerManager : MonoBehaviour
                     Vector3 targetDir = (target.position - stick.position).normalized;
 
                     // index càng cao thì moveFactor càng lớn
-                    float maxSpeed = 0.8f;
-                    float minSpeed = 0.3f;
+                    float maxSpeed = 0.1f;
+                    float minSpeed = 0.05f;
                     float t = (float)i / (stickmen.Count - 1 + 0.0001f);
                     float moveFactor = Mathf.Lerp(minSpeed, maxSpeed, t);
 
@@ -140,7 +138,7 @@ public class PlayerManager : MonoBehaviour
             else
             {
                 attack = false;
-                roadSpeed = 2f;
+                roadSpeed = 4f;
 
                 FormatStickMan();
 
@@ -345,6 +343,17 @@ public class PlayerManager : MonoBehaviour
         }
 
     }
+    public void ClearCloneStickmans()
+    {
+        // Bắt đầu từ index 2 → xóa các stickman clone
+        for (int i = transform.childCount - 1; i >= 2; i--)
+        {
+            Destroy(transform.GetChild(i).gameObject);
+        }
+
+        numberOfStickmans = 0;
+    }
+
 
 
 
@@ -362,11 +371,11 @@ public class PlayerManager : MonoBehaviour
 
             if (gateManager.multiply)
             {
-                MakeStickMan(numberOfStickmans * gateManager.randomNumber);
+                MakeStickManRun(numberOfStickmans * gateManager.randomNumber);
             }
             else
             {
-                MakeStickMan(numberOfStickmans + gateManager.randomNumber);
+                MakeStickManRun(numberOfStickmans + gateManager.randomNumber);
 
             }
             gate.Play();

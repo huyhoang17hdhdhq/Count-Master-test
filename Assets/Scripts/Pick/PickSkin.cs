@@ -19,12 +19,16 @@ public class PickSkin : MonoBehaviour
     private int selectedIndex = 0;
     private const string PlayerPrefKey = "SelectedPlayerIndex";
 
+    // ✅ Sự kiện static để các class khác đăng ký theo dõi khi skin được chọn
+    public static System.Action OnSkinChanged;
+
     private void Start()
     {
         // Gán sự kiện click cho từng button
         for (int i = 0; i < buttons.Count; i++)
         {
             int index = i;
+
             buttons[i].onClick.AddListener(() => OnButtonClicked(index));
         }
 
@@ -40,16 +44,20 @@ public class PickSkin : MonoBehaviour
     {
         selectedIndex = index;
 
-        // Lưu vào PlayerPrefs
+        // ✅ Lưu trước khi gọi sự kiện
         PlayerPrefs.SetInt(PlayerPrefKey, selectedIndex);
         PlayerPrefs.Save();
 
-        Debug.Log("Đã chọn player index: " + selectedIndex);
+        Debug.Log("PickSkin: Đã chọn player index: " + selectedIndex);
 
-        // Cập nhật dấu chọn và player
+        // ✅ Hiển thị đúng main player
         UpdateSelectedMarks(index);
         UpdatePlayerMain(index);
+
+        // ✅ GỌI sự kiện sau khi đã lưu index
+        OnSkinChanged?.Invoke();
     }
+
 
     private void UpdateSelectedMarks(int activeIndex)
     {

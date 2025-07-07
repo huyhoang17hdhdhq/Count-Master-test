@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class stickManManager : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem blood;
+    //[SerializeField] private ParticleSystem blood;
     private Animator StickManAnimator;
    
 
@@ -65,8 +65,9 @@ public class stickManManager : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
-
+            //Instantiate(blood, other.transform.position, Quaternion.identity);
            
+
         }
         
         
@@ -147,11 +148,11 @@ public class stickManManager : MonoBehaviour
 
             GetComponent<Rigidbody>().isKinematic = true;
         }
-        if (other.CompareTag("runActive"))
-        {
-            StickManAnimator.SetBool ("run", true);
-            Debug.Log("StickManRun đã được bật do va chạm với tag runAtive ");
-        }
+        //if (other.CompareTag("runActive"))
+        //{
+        //    StickManAnimator.SetBool ("run", true);
+        //    Debug.Log("StickManRun đã được bật do va chạm với tag runAtive ");
+        //}
         if (other.CompareTag("Boss"))
         {
             GetComponent<Collider>().isTrigger = false;
@@ -171,10 +172,6 @@ public class stickManManager : MonoBehaviour
     //    }
     //}
 
-    public void DisablestStickManManager()
-    {
-        this.enabled = false;  // Tắt script PlayerManager
-        Debug.Log("StickManmanager disabled");
-    }
+   
 }
 
