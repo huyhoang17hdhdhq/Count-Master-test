@@ -69,12 +69,12 @@ public class PlayerManager : MonoBehaviour
     {
         if (attack)
         {
-            // Tìm "con" đầu tiên của enemy còn sống (không cần cháu)
+           
             Transform targetChild = null;
 
             for (int i = 0; i < enemy.childCount; i++)
             {
-                Transform child = enemy.GetChild(i);
+                Transform child = enemy;
                 if (child != null && child.gameObject.activeSelf)
                 {
                     targetChild = child;
@@ -98,14 +98,14 @@ public class PlayerManager : MonoBehaviour
                     stick.rotation = Quaternion.Slerp(
                         stick.rotation,
                         Quaternion.LookRotation(dirToTarget.normalized, Vector3.up),
-                        Time.deltaTime * 3f
+                        Time.deltaTime * 10f
                     );
                 }
             }
 
             if (enemy.GetChild(1).childCount > 1)
             {
-                Transform target = enemy.GetChild(1).GetChild(0);
+                Transform target = enemy.GetChild(1);
 
                 List<Transform> stickmen = new List<Transform>();
                 for (int i = 1; i < transform.childCount; i++)
@@ -120,8 +120,8 @@ public class PlayerManager : MonoBehaviour
                     Vector3 targetDir = (target.position - stick.position).normalized;
 
                     // index càng cao thì moveFactor càng lớn
-                    float maxSpeed = 0.1f;
-                    float minSpeed = 0.05f;
+                    float maxSpeed = 3f;
+                    float minSpeed = 2f;
                     float t = (float)i / (stickmen.Count - 1 + 0.0001f);
                     float moveFactor = Mathf.Lerp(minSpeed, maxSpeed, t);
 
@@ -410,9 +410,10 @@ public class PlayerManager : MonoBehaviour
         if (other.CompareTag("Boss"))
         {
             enemy = other.transform;
-            roadSpeed = 1.5f;
+            roadSpeed = 0.5f;
             attack = true;
             SecondCam.SetActive(true);
+            transform.position = new Vector3(0f, transform.position.y, transform.position.z);
 
             other.transform.GetChild(1).GetComponent<BossManager>().Move();
             

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 [System.Serializable]
@@ -16,6 +17,8 @@ public class StairManager : MonoBehaviour
 
     public float baseCoin = 50f;
     public int finalCoin;
+   
+    
 
     // Số bậc tổng cộng để chia coin (giả định luôn là 21 bậc)
     private int totalStairs = 21;
@@ -48,6 +51,11 @@ public class StairManager : MonoBehaviour
         float coin = rawCoin / totalStairs;
         finalCoin = Mathf.RoundToInt(coin);
 
+
+
+
+
+
         if (CoinManager.Instance != null)
         {
             CoinManager.Instance.AddCoin(finalCoin);
@@ -59,6 +67,8 @@ public class StairManager : MonoBehaviour
             CoinManager.Instance.AddCoin(LevelCoin.Instance.bonusCoinThisLevel);
         }
 
+
         Debug.Log($"[StairManager] Bậc {stairIndex + 1} → raw: {rawCoin} → chia {totalStairs} → +{finalCoin} coin");
     }
+    
 }

@@ -118,7 +118,8 @@ public class ArrowCircleMover : MonoBehaviour
             else
             {
                 Debug.Log($"✅ Mũi tên chạm vào: {name}");
-               
+                Time.timeScale = 1f;
+
             }
         }
 

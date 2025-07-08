@@ -22,7 +22,7 @@ public class GateBost : MonoBehaviour
            
             randomClone.SetActive(true);
 
-
+            Debug.Log("da cham gateboss");
 
         }
     }

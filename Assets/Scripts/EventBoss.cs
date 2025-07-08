@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; // để dùng Image
+using UnityEngine.UI;
 
 public class EventBoss : MonoBehaviour
 {
+    public static EventBoss Instance { get; private set; }
+
     [Header("Nguồn phát âm thanh")]
     public AudioSource audioSource;
 
-    [Header("Âm thanh khi danh boss")]
+    [Header("Âm thanh khi đánh boss")]
     public AudioClip hitBoss;
     public AudioClip DeadBoss;
 
@@ -16,10 +18,23 @@ public class EventBoss : MonoBehaviour
     public Image bossHpFill;
 
     private Animator animator;
-
     private Transform playerTransform;
     private int currentIndex = 1;
-    private const int killPerHit = 5;
+    private const int killPerHit = 3;
+
+    private void Awake()
+    {
+        // Singleton pattern
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
 
     private void Start()
     {
@@ -60,9 +75,8 @@ public class EventBoss : MonoBehaviour
             }
         }
 
-        currentIndex += killed; // Cập nhật index cho lần tiếp theo
+        currentIndex += killed;
 
-        // Giảm máu boss
         if (bossHpFill != null)
         {
             bossHpFill.fillAmount -= 1f / 3f;
@@ -74,7 +88,7 @@ public class EventBoss : MonoBehaviour
                 Debug.Log("Boss đã chết");
                 PlayerManager.PlayerManagerInstance.WinBoss();
                 audioSource.PlayOneShot(DeadBoss);
-
+                CoinManager.Instance.AddDiamond(20);
             }
         }
     }

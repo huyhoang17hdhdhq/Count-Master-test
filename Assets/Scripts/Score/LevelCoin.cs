@@ -30,6 +30,8 @@ public class LevelCoin : MonoBehaviour
         float bonus = finalCoin * 0.1f * level;
         bonusCoinThisLevel = Mathf.RoundToInt(bonus);
 
+       
+
         Debug.Log($"[LevelCoin] Tính bonus từ finalCoin: {finalCoin} x 0.1 x {level} = {bonusCoinThisLevel}");
     }
 
