@@ -29,10 +29,10 @@ public class menuManager : MonoBehaviour
     public void Update()
     {
         {
-            if (!winTriggered && PlayerManager.PlayerManagerInstance.transform.childCount == 1 && PlayerManager.PlayerManagerInstance.FinishLine && PlayerManager.PlayerManagerInstance.numberOfStickmans > 1)
+            if (CoinManager.Instance.showCoin)
             {
                 winTriggered = true;
-                StartCoroutine(CallAfterDelay(2f, Win));
+                StartCoroutine(CallAfterDelay(4f, Win));
             }
             if (!loseTriggered && PlayerManager.PlayerManagerInstance.numberOfStickmans < 1)
             {

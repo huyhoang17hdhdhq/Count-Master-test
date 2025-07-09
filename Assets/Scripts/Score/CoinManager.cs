@@ -19,6 +19,8 @@ public class CoinManager : MonoBehaviour
     private int lastAddedCoin = 0;
     private int lastAddedDiamond = 0;
 
+    public bool showCoin = false;
+
     private void Awake()
     {
         Instance = this;
@@ -36,13 +38,13 @@ public class CoinManager : MonoBehaviour
     public void AddCoin(int amount)
     {
         coin += amount;
-        lastAddedCoin += amount; // ✅ cộng dồn thay vì gán đè
+        lastAddedCoin += amount; 
 
         if (coin < 0) coin = 0;
         PlayerPrefs.SetInt("Coin", coin);
         UpdateUI();
 
-        ShowLastAddedCoin(); // ✅ vẫn gọi cập nhật hiển thị
+        ShowLastAddedCoin(); 
     }
 
 
@@ -76,12 +78,13 @@ public class CoinManager : MonoBehaviour
             diamondText.text = diamond.ToString();
     }
 
-    // ✅ Hàm mới để hiển thị coin mới cộng
+   
     private void ShowLastAddedCoin()
     {
         if (recentCoinText != null)
             recentCoinText.text = "+" + lastAddedCoin.ToString();
        ;
+        showCoin = true;
     }
     private void ShowLastAddedDiamond()
     {

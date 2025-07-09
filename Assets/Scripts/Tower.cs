@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -12,11 +12,12 @@ public class Tower : MonoBehaviour
     [Range(0f, 2f)][SerializeField] private float yGap;
     [Range(0f, 10f)][SerializeField] private float yOffset;
 
-    [SerializeField] private List<int> towerCountList = new List<int>();
-    [SerializeField] private List<GameObject> towerList = new List<GameObject>();
+    public List<int> towerCountList = new List<int>();
+    public List<GameObject> towerList = new List<GameObject>();
+
     public static Tower TowerInstance;
 
-    private void Start()
+    private void Awake()
     {
         TowerInstance = this;
     }
@@ -51,6 +52,21 @@ public class Tower : MonoBehaviour
         }
 
     }
+    //public void ClearTower()
+    //{
+    //    // Xóa tất cả object tầng nếu có trong scene
+    //    foreach (GameObject tower in towerList)
+    //    {
+    //        if (tower != null)
+    //            Destroy(tower);
+    //    }
+
+    //    towerCountList.Clear();
+    //    towerList.Clear();
+
+    //    Debug.Log("Tower: towerCountList và towerList đã được xóa sạch.");
+    //}
+
 
     IEnumerator BuildTowerCoroutine()
     {

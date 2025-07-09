@@ -22,6 +22,10 @@ public class StickManAnimation : MonoBehaviour
             runButton.onClick.AddListener(OnRunButtonClicked);
         }
     }
+    private void Update()
+    {
+        
+    }
     void OnRunButtonClicked()
     {
        animator.SetBool("run",true);

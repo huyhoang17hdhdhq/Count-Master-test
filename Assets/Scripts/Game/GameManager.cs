@@ -1,67 +1,60 @@
-﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    [Header("Tất cả prefab trong scene (10 cái chẳng hạn)")]
+    public List<GameObject> prefabsInScene;
 
-    [Header("Reference")]
-    public GameObject player;
-    public GameObject road;
-    public GameObject stickmanPrefab;
+    [Header("Các vị trí target (5 cái)")]
+    public List<Transform> targetPositions;
 
-    private bool needToRestoreStickman = false;
-
-    private void Awake()
+    private void Start()
     {
-        if (Instance == null)
+        if (prefabsInScene.Count < targetPositions.Count)
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-            SceneManager.sceneLoaded += OnSceneLoaded;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        if (needToRestoreStickman && player != null)
-        {
-            SpawnStickman();
-            needToRestoreStickman = false;
-        }
-    }
-
-    public void OnButtonClick()
-    {
-        if (player == null || stickmanPrefab == null || road == null)
-        {
-            Debug.LogWarning("Player, Road hoặc StickmanPrefab chưa được gán!");
+            Debug.LogError("Không đủ prefab để thay cho target!");
             return;
         }
 
-        // Đặt lại vị trí player và road
-        player.transform.position = new Vector3(0f, 12f, -7f);
-        road.transform.position = new Vector3(0f, 11.72f, 37.5f);
+        List<GameObject> selectedPrefabs = GetRandomPrefabs(prefabsInScene, targetPositions.Count);
 
-        // Nếu Player chỉ có 1 con → spawn thêm stickman
-        if (player.transform.childCount == 1)
+        for (int i = 0; i < targetPositions.Count; i++)
         {
-            SpawnStickman();
-            needToRestoreStickman = true;
+            GameObject prefab = selectedPrefabs[i];
+            Transform target = targetPositions[i];
+
+            // Lưu lại thông tin vị trí cũ của target trong hierarchy
+            int targetSiblingIndex = target.GetSiblingIndex();
+            Transform parent = target.parent;
+
+            // Đặt prefab vào đúng vị trí trong scene
+            prefab.transform.position = target.position;
+            
+
+            // Đưa prefab vào đúng chỗ của target trong hierarchy
+            prefab.transform.SetParent(parent);
+            prefab.transform.SetSiblingIndex(targetSiblingIndex);
+
+            Debug.Log($"✅ Đã đặt {prefab.name} vào vị trí của {target.name} tại index {targetSiblingIndex}");
+
+            // Ẩn hoặc xoá target (tuỳ bạn chọn)
+            target.gameObject.SetActive(false); // hoặc: Destroy(target.gameObject);
         }
     }
 
-    private void SpawnStickman()
+    private List<GameObject> GetRandomPrefabs(List<GameObject> sourceList, int count)
     {
-        GameObject stickman = Instantiate(stickmanPrefab);
+        List<GameObject> tempList = new List<GameObject>(sourceList);
+        List<GameObject> result = new List<GameObject>();
 
-        stickman.transform.SetParent(player.transform);
-        stickman.transform.localPosition = new Vector3(0f, -0.3f, 0f);
-        stickman.transform.localScale = stickmanPrefab.transform.localScale;
-        stickman.transform.SetSiblingIndex(2);
+        for (int i = 0; i < count; i++)
+        {
+            int randIndex = Random.Range(0, tempList.Count);
+            result.Add(tempList[randIndex]);
+            tempList.RemoveAt(randIndex); // không trùng
+        }
+
+        return result;
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Cinemachine;
 using DG.Tweening;
+using JetBrains.Annotations;
 using TMPro;
 using Unity.Mathematics;
 using UnityEditor.Tilemaps;
@@ -43,6 +44,8 @@ public class PlayerManager : MonoBehaviour
     [Header("Nguồn phát âm thanh")]
     public AudioSource audioFinish;
     public AudioClip finishClip;
+
+    public AudioSource runAudio;
 
     private void Awake()
     {
@@ -175,6 +178,10 @@ public class PlayerManager : MonoBehaviour
         {
             gameState = false;
         }
+        if (!gameState)
+        {
+            runAudio.Pause();
+        }
 
 
         if (gameState)
@@ -205,8 +212,10 @@ public class PlayerManager : MonoBehaviour
                 4f, Time.deltaTime * 1f), 0f);
 
         }
-
-
+       
+        numberOfStickmans = transform.childCount-1;
+        UpdateUI();
+       
 
     }
 
@@ -362,11 +371,14 @@ public class PlayerManager : MonoBehaviour
 
         if (other.CompareTag("gate"))
         {
-            other.transform.parent.GetChild(0).GetComponent<BoxCollider>().enabled = false; // gate 1
-            other.transform.parent.GetChild(1).GetComponent<BoxCollider>().enabled = false; // gate 2
+            // Lấy 2 cổng
+            BoxCollider gate1 = other.transform.parent.GetChild(0).GetComponent<BoxCollider>();
+            BoxCollider gate2 = other.transform.parent.GetChild(1).GetComponent<BoxCollider>();
+
+            // Tắt collider tạm thời
+            StartCoroutine(DisableCollidersTemporarily(gate1, gate2, 2f));
 
             var gateManager = other.GetComponent<GateManager>();
-
             numberOfStickmans = transform.childCount - 1;
 
             if (gateManager.multiply)
@@ -376,11 +388,12 @@ public class PlayerManager : MonoBehaviour
             else
             {
                 MakeStickManRun(numberOfStickmans + gateManager.randomNumber);
-
             }
-            gate.Play();
 
+            gate.Play();
         }
+
+
         if (other.CompareTag("gatebost"))
             {
             other.transform.GetComponent<BoxCollider>().enabled = false;
@@ -449,6 +462,7 @@ public class PlayerManager : MonoBehaviour
                 Debug.Log("Đã phát âm thanh finish từ: " + other.name);
             }
         }
+        
 
 
         if (other.CompareTag("kill"))
@@ -461,9 +475,14 @@ public class PlayerManager : MonoBehaviour
         if (other.CompareTag("jump"))
         {
             jump.Play();
+            Debug.Log("da phat jump");
         }
         
 
+    }
+    public void UpdateUI()
+    {
+        CounterTxt.text = numberOfStickmans.ToString();
     }
 
     IEnumerator UpdateTheEnemyAndPlayerStickMansNumbers()
@@ -492,5 +511,16 @@ public class PlayerManager : MonoBehaviour
             }
         }
     }
-    
+    private IEnumerator DisableCollidersTemporarily(BoxCollider col1, BoxCollider col2, float delay)
+    {
+        col1.enabled = false;
+        col2.enabled = false;
+
+        yield return new WaitForSeconds(delay);
+
+        col1.enabled = true;
+        col2.enabled = true;
+    }
+
+
 }

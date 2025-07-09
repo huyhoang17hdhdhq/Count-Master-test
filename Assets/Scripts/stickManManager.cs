@@ -92,7 +92,7 @@ public class stickManManager : MonoBehaviour
 
             case "jump":
 
-                transform.DOJump(transform.position, 1f, 1, 1f).SetEase(Ease.Flash).OnComplete(PlayerManager.PlayerManagerInstance.FormatStickMan);
+                transform.DOJump(transform.position, 1f, 1, 1.5f).SetEase(Ease.Flash).OnComplete(PlayerManager.PlayerManagerInstance.FormatStickMan);
                
 
                 break;
