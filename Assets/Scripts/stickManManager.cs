@@ -39,25 +39,7 @@ public class stickManManager : MonoBehaviour
        
 
     }
-    //private void Update()
-    //{
-    //    if (attackBoss && moveTarget != null)
-    //    {
-    //        Vector3 direction = (moveTarget.position - transform.position).normalized;
-    //        float distance = Vector3.Distance(transform.position, moveTarget.position);
-
-    //        if (distance > stopDistance)
-    //        {
-    //            transform.position += direction * moveSpeed * Time.deltaTime;
-    //        }
-    //        else
-    //        {
-    //            // Đã đến gần đủ, dừng lại
-    //            attackBoss = false;
-    //        }
-    //    }
-    //}
-
+   
 
     private void OnTriggerEnter(Collider other)
     {
@@ -65,7 +47,7 @@ public class stickManManager : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
-            //Instantiate(blood, other.transform.position, Quaternion.identity);
+            
            
 
         }
@@ -92,7 +74,7 @@ public class stickManManager : MonoBehaviour
 
             case "jump":
 
-                transform.DOJump(transform.position, 1f, 1, 1.5f).SetEase(Ease.Flash).OnComplete(PlayerManager.PlayerManagerInstance.FormatStickMan);
+                transform.DOJump(transform.position, 1f, 1, 1f).SetEase(Ease.Flash).OnComplete(PlayerManager.PlayerManagerInstance.FormatStickMan);
                
 
                 break;
@@ -148,29 +130,18 @@ public class stickManManager : MonoBehaviour
 
             GetComponent<Rigidbody>().isKinematic = true;
         }
-        //if (other.CompareTag("runActive"))
-        //{
-        //    StickManAnimator.SetBool ("run", true);
-        //    Debug.Log("StickManRun đã được bật do va chạm với tag runAtive ");
-        //}
+       
         if (other.CompareTag("Boss"))
         {
             GetComponent<Collider>().isTrigger = false;
             GetComponent<Rigidbody>().isKinematic = true;
-            //attackBoss = true;
+            
         }
 
 
 
     }
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.CompareTag("runActive"))
-    //    {
-    //       // StickManAnimator.SetBool("run",true);
-    //        Debug.Log("StickManRun đã được bật do va chạm với tag runAtive ");
-    //    }
-    //}
+    
 
    
 }

@@ -4,40 +4,21 @@ using UnityEngine;
 
 public class StickManRunAttack : MonoBehaviour
 {
-    public float speed = 3f;
-    private Queue<Vector3> movePoints = new Queue<Vector3>();
-    private bool isMoving = false;
-
-    public void SetTargetPoints(List<Transform> points)
+    public AudioSource audioAttack;
+    public AudioClip attack;
+    private void OnTriggerEnter(Collider other)
     {
-        movePoints.Clear();
-        foreach (Transform point in points)
+        if (other.CompareTag("red"))
+
         {
-            movePoints.Enqueue(point.position);
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+            audioAttack.PlayOneShot(attack);
         }
-
-        if (movePoints.Count > 0)
+        if (other.CompareTag("kill"))
         {
-            StartCoroutine(MoveToPoints());
+            Destroy(gameObject);
+            audioAttack.PlayOneShot(attack);
         }
-        
-
-    }
-
-    private IEnumerator MoveToPoints()
-    {
-        isMoving = true;
-
-        while (movePoints.Count > 0)
-        {
-            Vector3 target = movePoints.Dequeue();
-            while (Vector3.Distance(transform.position, target) > 0.1f)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-                yield return null;
-            }
-        }
-
-        isMoving = false;
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using Unity.Mathematics;
 using UnityEngine.UI;
+using UnityEngine.Timeline;
 
 public class GateAttack : MonoBehaviour
 {
@@ -24,14 +25,25 @@ public class GateAttack : MonoBehaviour
     private int numberOfStickmans;
     public Transform player;
     [SerializeField] private GameObject stickMan;
+    [SerializeField] private GameObject stickManRun;
     [Range(0f, 1f)][SerializeField] private float DistanceFactor, Radius;
 
     [Header("Điểm cố định cuối cùng sau khi chạy qua 3 điểm")]
     public Transform finalPoint;
 
+    public AudioSource audioGate;
+    public AudioClip gate;
+
+    public bool attack;
+    public Transform target;
+    public GameObject LoseCastle;
+
+    [SerializeField] private Transform enemy;
+
     void Start()
     {
         player = transform;
+        MakeStickMan(10);
 
         SetupButtons(list1Buttons, 0);
         SetupButtons(list2Buttons, 1);
@@ -43,11 +55,140 @@ public class GateAttack : MonoBehaviour
         ResetButtonColors(list3Buttons);
     }
 
+    private void Update()
+    {
+        if (attack)
+        {
+
+            Transform targetChild = null;
+
+            for (int i = 0; i < enemy.childCount; i++)
+            {
+                Transform child = enemy;
+                if (child != null && child.gameObject.activeSelf)
+                {
+                    targetChild = child;
+                    break;
+                }
+            }
+
+            // Quay từng stickman của bạn về targetChild
+            if (targetChild != null)
+            {
+                for (int i = 1; i < transform.childCount; i++)
+                {
+                    Transform stick = transform.GetChild(i);
+
+                    Vector3 dirToTarget = new Vector3(
+                        targetChild.position.x,
+                        stick.position.y,
+                        targetChild.position.z
+                    ) - stick.position;
+
+                    stick.rotation = Quaternion.Slerp(
+                        stick.rotation,
+                        Quaternion.LookRotation(dirToTarget.normalized, Vector3.up),
+                        Time.deltaTime * 10f
+                    );
+                }
+            }
+
+            if (enemy.GetChild(1).childCount > 0)
+            {
+                Transform target = enemy.GetChild(1);
+
+                List<Transform> stickmen = new List<Transform>();
+                for (int i = 1; i < transform.childCount; i++)
+                {
+                    if (transform.GetChild(i).gameObject.activeSelf)
+                        stickmen.Add(transform.GetChild(i));
+                }
+
+                for (int i = 0; i < stickmen.Count; i++)
+                {
+                    Transform stick = stickmen[i];
+                    Vector3 targetDir = (target.position - stick.position).normalized;
+
+                    // index càng cao thì moveFactor càng lớn
+                    float maxSpeed = 3f;
+                    float minSpeed = 2f;
+                    float t = (float)i / (stickmen.Count - 1 + 0.0001f);
+                    float moveFactor = Mathf.Lerp(minSpeed, maxSpeed, t);
+
+                    Vector3 newPos = stick.position + targetDir * moveFactor * Time.deltaTime;
+                    stick.position = Vector3.Lerp(stick.position, newPos, Time.deltaTime * 10f);
+                }
+            }
+            else
+            {
+                attack = false;
+               
+
+                FormatStickMan();
+
+                for (int i = 1; i < transform.childCount; i++)
+                    transform.GetChild(i).rotation = Quaternion.identity;
+
+
+
+                enemy.gameObject.SetActive(false);
+
+            }
+            if (transform.childCount == 1 && enemy != null && enemy.childCount > 1)
+            {
+                var enemyChild = enemy.transform.GetChild(1);
+
+                var enemyMgr = enemyChild.GetComponent<EnemyMini>();
+                if (enemyMgr != null)
+                {
+                    enemyMgr.StopAttacking();
+                }
+
+
+            }
+        }
+        if (transform.childCount == 1)
+        {
+            Destroy(transform.GetChild(0).gameObject);
+            transform.GetComponent<Collider>().isTrigger = false;
+            //StartCoroutine(DelayUICoroutine());
+        }
+       
+        
+       
+        if(enemy.GetChild(1).childCount == 0 && player.childCount > 0)
+        {
+
+            for (int i = 0; i < player.childCount; i++)
+            {
+                Transform stickman = player.GetChild(i);
+                StickManMove moveScript = stickman.GetComponent<StickManMove>();
+
+                if (moveScript != null)
+                {
+                    moveScript.Move(target.position);
+                }
+            }
+        }
+       
+
+    }
     public void MakeStickMan(int number)
     {
         for (int i = numberOfStickmans; i < number; i++)
         {
             Instantiate(stickMan, transform.position, quaternion.identity, transform);
+        }
+
+        numberOfStickmans = transform.childCount - 1;
+
+        FormatStickMan();
+    }
+    public void MakeStickManRun(int number)
+    {
+        for (int i = numberOfStickmans; i < number; i++)
+        {
+            Instantiate(stickManRun, transform.position, quaternion.identity, transform);
         }
 
         numberOfStickmans = transform.childCount - 1;
@@ -71,22 +212,35 @@ public class GateAttack : MonoBehaviour
     {
         if (other.CompareTag("gate"))
         {
-            other.transform.parent.GetChild(0).GetComponent<BoxCollider>().enabled = false; // gate 1
-            other.transform.parent.GetChild(1).GetComponent<BoxCollider>().enabled = false; // gate 2
+           
 
             var gateManager = other.GetComponent<GateManager>();
-            numberOfStickmans = transform.childCount - 1;
+            numberOfStickmans = transform.childCount ;
 
             if (gateManager.multiply)
             {
-                MakeStickMan(numberOfStickmans * gateManager.randomNumber);
+                MakeStickManRun(numberOfStickmans * gateManager.randomNumber);
             }
             else
             {
-                MakeStickMan(numberOfStickmans + gateManager.randomNumber);
+                MakeStickManRun(numberOfStickmans + gateManager.randomNumber);
             }
+            audioGate.PlayOneShot(gate);
+        }
+        if (other.CompareTag("enemy"))
+        {
+            enemy = other.transform;
+            attack = true;
+
+           
+            other.transform.GetChild(1).GetComponent<EnemyMini>().AttackThem(transform);
+
+            
+            Debug.Log("Event True");
+
         }
     }
+    
 
     void SetupButtons(List<Button> buttonList, int listIndex)
     {
@@ -135,6 +289,15 @@ public class GateAttack : MonoBehaviour
             }
 
             MovePlayerAlongSelectedPoints();
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                Animator anim = transform.GetChild(i).GetComponent<Animator>();
+                if (anim != null)
+                {
+                    anim.SetBool("run",true); 
+                }
+            }
+
 
         }
     }
@@ -199,30 +362,32 @@ public class GateAttack : MonoBehaviour
             path.Add(finalPoint);
         }
 
-        StartCoroutine(MoveAlongPoints(path, 1f));
+        MoveAlongPoints(path, 1f);
+
     }
 
 
-    IEnumerator MoveAlongPoints(List<Transform> points, float durationPerPoint)
+    void MoveAlongPoints(List<Transform> points, float durationPerPoint)
     {
-        foreach (var point in points)
+        Sequence moveSequence = DOTween.Sequence();
+
+        foreach (Transform point in points)
         {
-            // Di chuyển từ vị trí hiện tại đến điểm tiếp theo trong duration
-            Vector3 startPos = player.position;
-            Vector3 targetPos = point.position;
-            float t = 0f;
-
-            while (t < 1f)
-            {
-                t += Time.deltaTime / durationPerPoint;
-                player.position = Vector3.Lerp(startPos, targetPos, t);
-                yield return null;
-            }
-
-            player.position = targetPos;
+            
+            moveSequence.Append(player.DOMove(point.position, durationPerPoint).SetEase(Ease.Linear));
+            
         }
 
-        Debug.Log("🏁 Player đã đến điểm cuối cùng.");
+        moveSequence.Play();
     }
+    private IEnumerator DelayUICoroutine()
+    {
+        yield return new WaitForSeconds(2f);
+        if (LoseCastle != null)
+        {
+            LoseCastle.SetActive(true);
+        }
+    }
+
 
 }

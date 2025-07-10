@@ -1,12 +1,14 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+
 public class GateManager : MonoBehaviour
 {
     public TextMeshPro GateNo;
     public int randomNumber;
     public bool multiply;
+
     void Start()
     {
         if (multiply)
@@ -16,13 +18,10 @@ public class GateManager : MonoBehaviour
         }
         else
         {
-            randomNumber = Random.Range(10, 100);
-
-            if (randomNumber % 2 != 0)
-                randomNumber += 1;
-
+            // 👉 Chỉ chọn ngẫu nhiên 1 trong 3 số: 20, 14, 18
+            int[] allowedValues = { 20, 14, 18 };
+            randomNumber = allowedValues[Random.Range(0, allowedValues.Length)];
             GateNo.text = randomNumber.ToString();
         }
     }
-
 }
