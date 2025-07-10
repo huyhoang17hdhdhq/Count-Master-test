@@ -123,8 +123,8 @@ public class PlayerManager : MonoBehaviour
                     Vector3 targetDir = (target.position - stick.position).normalized;
 
                     // index càng cao thì moveFactor càng lớn
-                    float maxSpeed = 3f;
-                    float minSpeed = 2f;
+                    float maxSpeed = 1.5f;
+                    float minSpeed = 0.6f;
                     float t = (float)i / (stickmen.Count - 1 + 0.0001f);
                     float moveFactor = Mathf.Lerp(minSpeed, maxSpeed, t);
 
@@ -188,12 +188,7 @@ public class PlayerManager : MonoBehaviour
         {
             road.Translate(road.forward * Time.deltaTime * roadSpeed);
 
-            // for (int i = 1; i < transform.childCount; i++)
-            // {
-            //     if (transform.GetChild(i).GetComponent<Animator>() != null)
-            //         transform.GetChild(i).GetComponent<Animator>().SetBool("run",true);
-            //    
-            // }
+           
         }
         
 

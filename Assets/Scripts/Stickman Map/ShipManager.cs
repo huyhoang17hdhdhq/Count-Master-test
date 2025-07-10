@@ -112,18 +112,19 @@ public class ShipManager : MonoBehaviour
             Attackship.Play();
         }
 
-
         if (shipAnimator != null)
         {
             shipAnimator.SetTrigger("Depart");
-
         }
 
+        // ✅ Reset score và lưu vào PlayerPrefs
+        score = 0;
+        PlayerPrefs.SetInt("ShipScore", score);
+        PlayerPrefs.Save();
+
         StartCoroutine(LoadSceneAfterDelay());
-
-
-
     }
+
     IEnumerator LoadSceneAfterDelay()
     {
         yield return new WaitForSeconds(delay);

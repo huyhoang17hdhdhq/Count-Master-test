@@ -14,7 +14,7 @@ public class BossManager : MonoBehaviour
     {
         boss = transform.GetChild(0).GetComponent<Animator>();
 
-        for (int i = 0; i < Random.Range(2, 4); i++)
+        for (int i = 0; i < Random.Range(2,4); i++)
         {
             Instantiate(stickMan, transform.position, new Quaternion(0f, 180f, 0f, 1f), transform);
         }

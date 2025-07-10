@@ -29,16 +29,22 @@ public class menuManager : MonoBehaviour
     public void Update()
     {
         {
-            if (CoinManager.Instance.showCoin)
+            if (CoinManager.Instance.showCoin && !loseTriggered && !winTriggered)
             {
                 winTriggered = true;
                 StartCoroutine(CallAfterDelay(4f, Win));
+
+                StartCoroutine(CallAfterDelay(4f, () => {
+                    CoinSliderManager.Instance.AddCoinToSlider(CoinManager.Instance.ConsumeLastAddedCoin());
+                }));
             }
-            if (!loseTriggered && PlayerManager.PlayerManagerInstance.numberOfStickmans < 1)
+
+            if (!loseTriggered && !winTriggered && PlayerManager.PlayerManagerInstance.transform.childCount == 1)
             {
                 loseTriggered = true;
                 StartCoroutine(CallAfterDelay(2f, Lose));
             }
+
             if (!bossTriggered && bossHpFill.fillAmount <= 0f && !bossDeadHandled)
             {
                 bossDeadHandled = true;

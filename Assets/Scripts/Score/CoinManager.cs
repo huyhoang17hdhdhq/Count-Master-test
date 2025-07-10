@@ -86,6 +86,20 @@ public class CoinManager : MonoBehaviour
        ;
         showCoin = true;
     }
+   
+    public int ConsumeLastAddedCoin()
+    {
+        int value = lastAddedCoin;
+        lastAddedCoin = 0;
+        return value;
+    }
+    public int GetLastAddedCoin()
+    {
+        return lastAddedCoin;
+    }
+
+
+
     private void ShowLastAddedDiamond()
     {
         if (recentDiamondText != null)

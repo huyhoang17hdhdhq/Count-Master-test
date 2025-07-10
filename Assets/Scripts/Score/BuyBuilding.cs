@@ -25,9 +25,9 @@ public class BuyBuilding : MonoBehaviour
     [HideInInspector]
     public List<bool> buildingUnlocked = new List<bool>();
 
-
     private void Start()
     {
+        LoadPurchasedBuildings();         // 🔹 Tải dữ liệu tòa nhà đã mua
         UpdateCostText();
 
         if (buyButton != null)
@@ -70,11 +70,53 @@ public class BuyBuilding : MonoBehaviour
                 for (int i = buildingUnlocked.Count; i <= purchaseIndex; i++)
                     buildingUnlocked.Add(false);
             }
-            buildingUnlocked[purchaseIndex] = true;
 
+            buildingUnlocked[purchaseIndex] = true;
             purchaseIndex++;
+
+            SavePurchasedBuildings();     // 🔹 Lưu lại sau khi mua
             UpdateCostText();
         }
+    }
 
+    private void SavePurchasedBuildings()
+    {
+        List<string> flags = new List<string>();
+        foreach (bool unlocked in buildingUnlocked)
+        {
+            flags.Add(unlocked ? "1" : "0");
+        }
+
+        string saveString = string.Join(",", flags);
+        PlayerPrefs.SetString("BuildingsUnlocked", saveString);
+        PlayerPrefs.Save();
+    }
+
+    private void LoadPurchasedBuildings()
+    {
+        string saved = PlayerPrefs.GetString("BuildingsUnlocked", "");
+
+        if (!string.IsNullOrEmpty(saved))
+        {
+            string[] flags = saved.Split(',');
+            buildingUnlocked.Clear();
+
+            for (int i = 0; i < flags.Length; i++)
+            {
+                bool isUnlocked = flags[i] == "1";
+                buildingUnlocked.Add(isUnlocked);
+
+                if (i < buildings.Count && isUnlocked)
+                    buildings[i].SetActive(true);
+            }
+
+            purchaseIndex = buildingUnlocked.LastIndexOf(true) + 1;
+        }
+        else
+        {
+            // Nếu chưa có gì được lưu, khởi tạo trạng thái mặc định
+            for (int i = 0; i < buildings.Count; i++)
+                buildingUnlocked.Add(false);
+        }
     }
 }

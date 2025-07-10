@@ -151,7 +151,7 @@ public class GateAttack : MonoBehaviour
         {
             Destroy(transform.GetChild(0).gameObject);
             transform.GetComponent<Collider>().isTrigger = false;
-            //StartCoroutine(DelayUICoroutine());
+            StartCoroutine(DelayUICoroutine());
         }
        
         
