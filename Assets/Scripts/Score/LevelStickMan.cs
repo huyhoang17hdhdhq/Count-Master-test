@@ -17,7 +17,7 @@ public class LevelStickMan : MonoBehaviour
     private void Start()
     {
         // Đọc level đã lưu
-        numberLevel = PlayerPrefs.GetInt("NumberLevel", 1); // Mặc định là 1 nếu chưa có
+        numberLevel = PlayerPrefs.GetInt("NumberLevel", 0); // Mặc định là 1 nếu chưa có
 
         // Tạo stickman theo level đã lưu
         PlayerManager.PlayerManagerInstance.MakeStickMan(numberLevel);

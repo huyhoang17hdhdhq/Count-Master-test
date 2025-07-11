@@ -38,14 +38,20 @@ public class CoinManager : MonoBehaviour
     public void AddCoin(int amount)
     {
         coin += amount;
-        lastAddedCoin += amount; 
 
         if (coin < 0) coin = 0;
         PlayerPrefs.SetInt("Coin", coin);
         UpdateUI();
 
-        ShowLastAddedCoin(); 
+        // 👉 Nếu KHÔNG phải là 500 thì mới xử lý hiển thị cộng coin
+        if (amount != 500)
+        {
+            lastAddedCoin += amount;
+            ShowLastAddedCoin();
+            showCoin = true;
+        }
     }
+
 
 
     public void AddDiamond(int amount)

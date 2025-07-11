@@ -126,9 +126,24 @@ public class StickManMap : MonoBehaviour
     IEnumerator PauseSpawning(int index, float duration)
     {
         isPausedList[index] = true;
+
+       
+        if (activateButtons != null && index < activateButtons.Count)
+        {
+            activateButtons[index].interactable = false;
+        }
+
         yield return new WaitForSeconds(duration);
+
         isPausedList[index] = false;
+
+       
+        if (activateButtons != null && index < activateButtons.Count)
+        {
+            activateButtons[index].interactable = true;
+        }
     }
+
 
     IEnumerator DisableImageAfterTime(int index, float duration)
     {
