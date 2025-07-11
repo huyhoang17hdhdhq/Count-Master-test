@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class CastleManager : MonoBehaviour
 {
+    public static CastleManager instance;
     [Header("Máu lâu đài")]
     public int FillAmount = 15;
     public int maxHP = 15;
@@ -19,9 +20,14 @@ public class CastleManager : MonoBehaviour
 
     public UIDropMover UIDropMover;
     public GameObject WinCastle;
+   
     private int Diamond = 50;
-    private bool rewardGiven = false;
+    public bool rewardGiven = false;
 
+    private void Awake()
+    {
+        instance = this;
+    }
 
 
     private void Start()
@@ -96,4 +102,6 @@ public class CastleManager : MonoBehaviour
 
         }
     }
+
+    
 }

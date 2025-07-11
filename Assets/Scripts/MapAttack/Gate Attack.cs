@@ -37,8 +37,14 @@ public class GateAttack : MonoBehaviour
     public bool attack;
     public Transform target;
     public GameObject LoseCastle;
+    public GameObject Text;
+    [Header("Âm thanh khi chọn nút")]
+    public AudioSource clickSound;
+    public AudioClip clickClip;
+
 
     [SerializeField] private Transform enemy;
+    private bool losed = false;
 
     void Start()
     {
@@ -57,6 +63,8 @@ public class GateAttack : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log("Player Child Count: " + transform.childCount);
+
         if (attack)
         {
 
@@ -147,16 +155,17 @@ public class GateAttack : MonoBehaviour
 
             }
         }
-        if (transform.childCount == 1)
+
+        if (transform.childCount == 1 && !losed && !CastleManager.instance.rewardGiven)
         {
+            losed = true;
             Destroy(transform.GetChild(0).gameObject);
-            transform.GetComponent<Collider>().isTrigger = false;
+           
             StartCoroutine(DelayUICoroutine());
         }
-       
-        
-       
-        if(enemy.GetChild(1).childCount == 0 && player.childCount > 0)
+
+
+        if (enemy.GetChild(1).childCount == 0 && player.childCount > 0)
         {
 
             for (int i = 0; i < player.childCount; i++)
@@ -235,7 +244,8 @@ public class GateAttack : MonoBehaviour
            
             other.transform.GetChild(1).GetComponent<EnemyMini>().AttackThem(transform);
 
-            
+           
+
             Debug.Log("Event True");
 
         }
@@ -253,8 +263,16 @@ public class GateAttack : MonoBehaviour
 
     void OnButtonClicked(int listIndex, int indexInList)
     {
+        if (clickSound != null && clickClip != null)
+        {
+            clickSound.PlayOneShot(clickClip);
+        }
         if (listIndex != currentListIndex)
             return; // Chỉ cho chọn đúng list
+        if (Text != null)
+        {
+            Text.SetActive(false);
+        }
 
         List<Button> currentButtons = GetButtonListByIndex(listIndex);
 

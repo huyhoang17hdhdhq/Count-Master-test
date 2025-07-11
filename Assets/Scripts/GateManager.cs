@@ -18,9 +18,7 @@ public class GateManager : MonoBehaviour
         }
         else
         {
-            // 👉 Chỉ chọn ngẫu nhiên 1 trong 3 số: 20, 14, 18
-            int[] allowedValues = { 20, 14, 18 };
-            randomNumber = allowedValues[Random.Range(0, allowedValues.Length)];
+            randomNumber = Random.Range(20, 60);
             GateNo.text = randomNumber.ToString();
         }
     }
