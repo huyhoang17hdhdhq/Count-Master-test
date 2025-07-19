@@ -44,12 +44,13 @@ public class CoinManager : MonoBehaviour
         UpdateUI();
 
         // 👉 Nếu KHÔNG phải là 500 thì mới xử lý hiển thị cộng coin
-        if (amount != 500)
+        if (amount > 0 && amount != 500)
         {
             lastAddedCoin += amount;
             ShowLastAddedCoin();
             showCoin = true;
         }
+
     }
 
 

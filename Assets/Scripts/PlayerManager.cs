@@ -5,7 +5,7 @@ using DG.Tweening;
 using JetBrains.Annotations;
 using TMPro;
 using Unity.Mathematics;
-using UnityEditor.Tilemaps;
+
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour

@@ -3,16 +3,14 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.Timeline;
-
 
 public class ShipManager : MonoBehaviour
 {
+    public static ShipManager Instance { get; private set; }
+
     [Header("Các thanh fill điểm (tối đa 10)")]
     public Image fillBar1;
     public Image fillBar2;
-
 
     [Header("Hiển thị khi đầy điểm")]
     public GameObject imageAttack;
@@ -20,6 +18,7 @@ public class ShipManager : MonoBehaviour
 
     [Header("Animator sẽ chạy Depart")]
     public Animator shipAnimator;
+
     [Header("Nguồn phát âm thanh")]
     public AudioSource audiobutton;
     public AudioClip button;
@@ -31,22 +30,35 @@ public class ShipManager : MonoBehaviour
     private int maxScore = 10;
     public int MaxScore => maxScore;
 
-
     public float delay = 2f;
 
+    private void Awake()
+    {
+        // Gán instance singleton
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject); // đảm bảo chỉ có 1 instance tồn tại
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // nếu bạn muốn giữ nó khi load scene
+        }
+    }
 
     private void Start()
     {
         // Thêm sự kiện click nếu có Button component
         if (imageAttack != null)
         {
-            Button button = imageAttack.GetComponent<Button>();
-            if (button != null)
+            Button btn = imageAttack.GetComponent<Button>();
+            if (btn != null)
             {
-                button.onClick.AddListener(OnAttackClick);
+                btn.onClick.AddListener(OnAttackClick);
             }
         }
-        score = PlayerPrefs.GetInt("ShipScore", 0); 
+
+        score = PlayerPrefs.GetInt("ShipScore", 0);
         UpdateFillBars();
     }
 
@@ -62,7 +74,6 @@ public class ShipManager : MonoBehaviour
                 if (audiobutton != null && button != null)
                 {
                     audiobutton.PlayOneShot(button);
-
                 }
             }
 
@@ -85,11 +96,17 @@ public class ShipManager : MonoBehaviour
         {
             imageAttack.SetActive(true);
             imageAttackship.SetActive(true);
-            Attack.Play();
+            if (Attack != null) Attack.Play();
         }
+
         PlayerPrefs.SetInt("ShipScore", score);
         PlayerPrefs.Save();
     }
+    public bool IsFull()
+    {
+        return score >= maxScore;
+    }
+
 
     private void OnAttackClick()
     {
@@ -98,10 +115,12 @@ public class ShipManager : MonoBehaviour
             fillBar1.fillAmount = 0;
             fillBar1.gameObject.SetActive(false);
         }
+
         if (fillBar2 != null)
         {
             fillBar2.fillAmount = 0;
         }
+
         if (imageAttackship != null)
         {
             imageAttackship.SetActive(false);
@@ -117,7 +136,7 @@ public class ShipManager : MonoBehaviour
             shipAnimator.SetTrigger("Depart");
         }
 
-        // ✅ Reset score và lưu vào PlayerPrefs
+        // Reset score
         score = 0;
         PlayerPrefs.SetInt("ShipScore", score);
         PlayerPrefs.Save();
@@ -128,6 +147,6 @@ public class ShipManager : MonoBehaviour
     IEnumerator LoadSceneAfterDelay()
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene(2); 
+        SceneManager.LoadScene(2);
     }
 }

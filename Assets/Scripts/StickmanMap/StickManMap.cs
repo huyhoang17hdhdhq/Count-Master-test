@@ -22,13 +22,11 @@ public class StickManMap : MonoBehaviour
     [Header("Danh sách Button để bật StickManMover")]
     public List<Button> activateButtons;
 
-    [Header("Image dùng để hiện trong 30s")]
+    [Header("Image dùng để hiện khi dừng spawn")]
     public List<Image> targetImages;
 
-    // Danh sách các Stickman đã spawn, chia theo index
     private List<List<GameObject>> spawnedStickmen = new List<List<GameObject>>();
     private List<int> currentCounts = new List<int>();
-    private List<bool> isPausedList = new List<bool>();
 
     private BuyBuilding buyBuilding;
 
@@ -42,7 +40,6 @@ public class StickManMap : MonoBehaviour
 
             spawnedStickmen.Add(new List<GameObject>());
             currentCounts.Add(0);
-            isPausedList.Add(false);
 
             if (activateButtons != null && i < activateButtons.Count)
             {
@@ -57,7 +54,7 @@ public class StickManMap : MonoBehaviour
     {
         while (true)
         {
-            // ✳️ Chỉ spawn nếu building tương ứng đã được mua
+            // ❌ Không spawn nếu chưa mua building
             if (buyBuilding != null &&
                 (index >= buyBuilding.buildingUnlocked.Count || !buyBuilding.buildingUnlocked[index]))
             {
@@ -65,9 +62,23 @@ public class StickManMap : MonoBehaviour
                 continue;
             }
 
-            if (!isPausedList[index] && currentCounts[index] < maxStickmanCount)
+            // ✅ Nếu thanh fill trong ShipManager chưa đầy thì spawn
+            if (ShipManager.Instance != null && !ShipManager.Instance.IsFull())
             {
-                SpawnStickman(index);
+                if (currentCounts[index] < maxStickmanCount)
+                {
+                    SpawnStickman(index);
+                }
+
+                // Ẩn target image khi đang spawn
+                if (targetImages != null && index < targetImages.Count)
+                    targetImages[index].gameObject.SetActive(false);
+            }
+            else
+            {
+                // ✅ Nếu ShipManager đầy thì hiện target image
+                if (targetImages != null && index < targetImages.Count)
+                    targetImages[index].gameObject.SetActive(true);
             }
 
             yield return new WaitForSeconds(spawnInterval);
@@ -100,8 +111,16 @@ public class StickManMap : MonoBehaviour
 
     void OnActivateButtonClicked(int index)
     {
-        foreach (GameObject stickman in spawnedStickmen[index])
+        for (int i = spawnedStickmen[index].Count - 1; i >= 0; i--)
         {
+            GameObject stickman = spawnedStickmen[index][i];
+
+            if (stickman == null)
+            {
+                spawnedStickmen[index].RemoveAt(i);
+                continue;
+            }
+
             StickmanMover mover = stickman.GetComponent<StickmanMover>();
             if (mover != null)
             {
@@ -113,45 +132,5 @@ public class StickManMap : MonoBehaviour
 
         currentCounts[index] = 0;
         UpdateFillBar(index);
-
-        if (targetImages != null && index < targetImages.Count)
-        {
-            targetImages[index].gameObject.SetActive(true);
-            StartCoroutine(DisableImageAfterTime(index, 30f));
-        }
-
-        StartCoroutine(PauseSpawning(index, 30f));
-    }
-
-    IEnumerator PauseSpawning(int index, float duration)
-    {
-        isPausedList[index] = true;
-
-       
-        if (activateButtons != null && index < activateButtons.Count)
-        {
-            activateButtons[index].interactable = false;
-        }
-
-        yield return new WaitForSeconds(duration);
-
-        isPausedList[index] = false;
-
-       
-        if (activateButtons != null && index < activateButtons.Count)
-        {
-            activateButtons[index].interactable = true;
-        }
-    }
-
-
-    IEnumerator DisableImageAfterTime(int index, float duration)
-    {
-        yield return new WaitForSeconds(duration);
-
-        if (targetImages != null && index < targetImages.Count)
-        {
-            targetImages[index].gameObject.SetActive(false);
-        }
     }
 }
